@@ -15,7 +15,7 @@ def execute_in_sandbox(command: str, timeout: int = 15) -> str:
     from backend.security.command_validator import validate_command
     
     # 1. Validate and Parse Command into safe arguments
-    args, risk_level = validate_command(command)
+    allowed_command_list, risk_level = validate_command(command)
     
     # 2. Restrict Environment Variables
     safe_env = {
@@ -33,8 +33,9 @@ def execute_in_sandbox(command: str, timeout: int = 15) -> str:
     try:
         # Strict Shell=False enforcement.
         result = subprocess.run(
-            args,  # Pass array, not string
-            shell=False, # CRITICAL FIX 1
+            allowed_command_list,
+            shell=False,
+            check=True,
             cwd=safe_cwd,
             env=safe_env,
             capture_output=True,
@@ -45,6 +46,8 @@ def execute_in_sandbox(command: str, timeout: int = 15) -> str:
         if result.stderr:
             output += f"\n[STDERR]: {result.stderr}"
         return output
+    except subprocess.CalledProcessError as e:
+        raise SandboxViolation(f"Execution failed with error code {e.returncode}: {e.stderr}")
     except subprocess.TimeoutExpired:
         raise SandboxViolation(f"Execution exceeded the maximum allowed time of {timeout} seconds.")
     except Exception as e:

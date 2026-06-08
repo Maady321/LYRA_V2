@@ -44,8 +44,7 @@ async def get_current_user(token: str = Depends(oauth2_scheme)):
         headers={"WWW-Authenticate": "Bearer"},
     )
     if not token:
-        # Dummy bypass for local dev before setup
-        return {"username": "local_admin", "role": "admin"}
+        raise credentials_exception
         
     try:
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
