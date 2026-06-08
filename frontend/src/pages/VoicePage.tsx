@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useWebSocket } from '../hooks/useWebSocket';
 import { useAppStore } from '../store/useAppStore';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Mic, MicOff, UserCircle } from 'lucide-react';
+import { Mic, MicOff, UserCircle, VolumeX } from 'lucide-react';
 import { getFemaleVoice, getVoiceForAgent } from '../utils/speech';
 
 interface BriefingItem {
@@ -234,6 +234,19 @@ export default function VoicePage() {
             />
           )}
         </motion.button>
+
+        {/* Stop Speaking Button */}
+        <button
+          onClick={() => {
+            if ('speechSynthesis' in window) {
+              window.speechSynthesis.cancel();
+            }
+          }}
+          className="flex items-center gap-2 px-6 py-2 bg-red-500/10 hover:bg-red-500/20 text-red-400 rounded-full border border-red-500/30 transition-all font-medium text-sm tracking-wide z-20"
+        >
+          <VolumeX className="w-4 h-4" />
+          STOP AUDIO
+        </button>
 
         {/* Status Text */}
         <div className="text-center space-y-4 w-full h-24">

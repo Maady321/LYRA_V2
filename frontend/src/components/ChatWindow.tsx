@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState } from 'react';
 import { useAppStore } from '../store/useAppStore';
 import MessageItem from './MessageItem';
-import { Send, Sparkles, ShieldAlert, Cpu, Compass, AppWindow, ArrowDown } from 'lucide-react';
+import { Send, Sparkles, ShieldAlert, Cpu, Compass, AppWindow, ArrowDown, VolumeX } from 'lucide-react';
 import VoiceCommandButton from './VoiceCommandButton';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -256,6 +256,18 @@ export default function ChatWindow({ sendPrompt }: ChatWindowProps) {
             </div>
 
             <div className="flex items-center gap-2">
+              <button
+                type="button"
+                onClick={() => {
+                  if ('speechSynthesis' in window) {
+                    window.speechSynthesis.cancel();
+                  }
+                }}
+                className="p-3 bg-red-500/10 hover:bg-red-500/20 text-red-400 rounded-xl transition-all border border-red-500/20"
+                title="Stop Lyra from Speaking"
+              >
+                <VolumeX className="w-5 h-5" />
+              </button>
               <VoiceCommandButton
                 onTranscript={handleVoiceTranscript}
                 disabled={!currentConversationId || isStreaming}

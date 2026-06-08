@@ -1,10 +1,10 @@
 import os
 from cryptography.fernet import Fernet
 from sqlalchemy.types import TypeDecorator, String
-from backend.core.config import settings
+from backend.core.config import settings, BASE_DIR
 
 # Key management: Generate or load master key
-_ENCRYPTION_KEY_PATH = os.path.join(settings.BASE_DIR, ".env.key")
+_ENCRYPTION_KEY_PATH = os.path.join(BASE_DIR, ".env.key")
 
 def _get_or_create_key() -> bytes:
     if os.path.exists(_ENCRYPTION_KEY_PATH):

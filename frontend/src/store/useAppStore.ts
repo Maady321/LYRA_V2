@@ -86,7 +86,7 @@ export const useAppStore = create<AppState>((set, get) => ({
   error: null,
   sidebarOpen: true,
   settingsOpen: false,
-  currentView: 'chat',
+  currentView: 'voice',
   galleryImages: [],
   galleryLoading: false,
   agentsTelemetry: null,

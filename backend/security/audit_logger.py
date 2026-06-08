@@ -1,5 +1,5 @@
 import asyncio
-from backend.database.connection import SessionLocal
+from backend.database.connection import async_session
 from backend.database.models.security import SecurityAuditLog
 from backend.core.logger import logger
 
@@ -16,7 +16,7 @@ async def log_security_event(
     Asynchronously persists a security audit event to the database without blocking the main execution path.
     """
     try:
-        async with SessionLocal() as db:
+        async with async_session() as db:
             audit_record = SecurityAuditLog(
                 user_name=user_name,
                 agent_name=agent_name,

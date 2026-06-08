@@ -1,7 +1,7 @@
 import subprocess
 import shlex
 import os
-from backend.core.config import settings
+from backend.core.config import settings, BASE_DIR
 
 class SandboxViolation(Exception):
     pass
@@ -21,12 +21,12 @@ def execute_in_sandbox(command: str, timeout: int = 15) -> str:
     safe_env = {
         "PATH": os.environ.get("PATH", ""),
         "SYSTEMROOT": os.environ.get("SYSTEMROOT", ""),
-        "PYTHONPATH": settings.BASE_DIR,
+        "PYTHONPATH": str(BASE_DIR),
         # Strip AWS keys, DB passwords, etc.
     }
     
     # 3. Enforce CWD to be within the safe workspace
-    safe_cwd = os.path.join(settings.BASE_DIR, "sandbox_workspace")
+    safe_cwd = os.path.join(BASE_DIR, "sandbox_workspace")
     if not os.path.exists(safe_cwd):
         os.makedirs(safe_cwd, exist_ok=True)
         
