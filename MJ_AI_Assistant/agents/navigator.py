@@ -33,6 +33,10 @@ class NavigatorAgent:
         # If in the orchestrator, it passes, but we add local guardrails here as well
         if "rm" in url or "del" in url:
             return "[NAVIGATOR ERROR] Dangerous parameters in URL path."
+            
+        restricted_schemes = ["file://", "chrome://", "about:", "edge://"]
+        if any(url.lower().startswith(scheme) for scheme in restricted_schemes):
+            return f"[NAVIGATOR SECURITY BLOCK] Access to restricted browser scheme '{url}' denied by Security Kernel."
 
         if action == "search":
             return await self.execute_web_search(query)

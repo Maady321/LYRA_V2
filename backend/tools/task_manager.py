@@ -190,21 +190,21 @@ class TaskManager:
 
     def _open_notepad(self) -> str:
         try:
-            subprocess.Popen("notepad.exe")
+            subprocess.run(["notepad.exe"], shell=False)
             return "📝 **Task Executed:** I have successfully opened Windows Notepad for you!"
         except Exception as e:
             return f"❌ **Error Executing Task:** Failed to launch Notepad. Details: {str(e)}"
 
     def _open_calculator(self) -> str:
         try:
-            subprocess.Popen("calc.exe")
+            subprocess.run(["calc.exe"], shell=False)
             return "🔢 **Task Executed:** I have successfully opened the Windows Calculator!"
         except Exception as e:
             return f"❌ **Error Executing Task:** Failed to launch Calculator. Details: {str(e)}"
 
     def _open_explorer(self) -> str:
         try:
-            subprocess.Popen("explorer.exe")
+            subprocess.run(["explorer.exe"], shell=False)
             return "📁 **Task Executed:** I have successfully opened the Windows File Explorer!"
         except Exception as e:
             return f"❌ **Error Executing Task:** Failed to launch File Explorer. Details: {str(e)}"
@@ -228,7 +228,7 @@ class TaskManager:
                 f.write(content)
                 
             # Launch Notepad opening this file
-            subprocess.Popen(f'notepad.exe "{filepath}"')
+            subprocess.run(["notepad.exe", filepath], shell=False)
             
             # Return styled confirmation
             return (
@@ -341,8 +341,8 @@ class TaskManager:
             with open(filepath, "wb") as f:
                 f.write(image_bytes)
                 
-            # 5. Open it natively using default Windows Photo Viewer
-            os.startfile(filepath)
+            # 5. Open it securely using File Explorer to open associated app
+            subprocess.run(["explorer.exe", filepath], shell=False)
             
             # 6. Return standard Markdown content that will render inline in chat
             api_url = f"http://127.0.0.1:8000/api/images/{filename}"

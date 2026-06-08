@@ -88,16 +88,20 @@ class SQLiteDB:
 
     # --- Factual Memories (Vectored Store backup) ---
     def add_raw_memory(self, memory_id: str, fact: str, vector_floats: List[float]) -> None:
+        from backend.security.encryption import encrypt_value
+        # Encrypt the raw fact before saving to DB
+        encrypted_fact = encrypt_value(fact)
         # Serialize vector as binary BLOB (~100x faster than CSV text parsing)
         vector_blob = struct.pack(f'{len(vector_floats)}f', *vector_floats)
         with self._get_connection() as conn:
             conn.execute(
                 "INSERT OR REPLACE INTO memories (memory_id, fact, vector) VALUES (?, ?, ?)",
-                (memory_id, fact, vector_blob)
+                (memory_id, encrypted_fact, vector_blob)
             )
             conn.commit()
 
     def get_all_raw_memories(self) -> List[Dict[str, Any]]:
+        from backend.security.encryption import decrypt_value
         with self._get_connection() as conn:
             rows = conn.execute("SELECT memory_id, fact, vector FROM memories").fetchall()
             memories = []
@@ -109,9 +113,17 @@ class SQLiteDB:
                     vector_floats = list(struct.unpack(f'{count}f', blob))
                 else:
                     vector_floats = list(map(float, blob.split(",")))
+                
+                # Decrypt the fact on read
+                try:
+                    decrypted_fact = decrypt_value(r["fact"])
+                except Exception:
+                    # Fallback for unencrypted legacy memories
+                    decrypted_fact = r["fact"]
+                    
                 memories.append({
                     "memory_id": r["memory_id"],
-                    "fact": r["fact"],
+                    "fact": decrypted_fact,
                     "vector": vector_floats
                 })
             return memories

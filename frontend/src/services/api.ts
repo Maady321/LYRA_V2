@@ -9,6 +9,33 @@ export const apiClient = axios.create({
   },
 });
 
+// Auto-inject JWT token into requests
+apiClient.interceptors.request.use(async (config) => {
+  let token = localStorage.getItem('lyra_jwt_token');
+  
+  // Auto-login for local development if missing
+  if (!token) {
+    try {
+      const params = new URLSearchParams();
+      params.append('username', 'admin');
+      params.append('password', 'secret');
+      
+      const response = await axios.post(`${API_BASE_URL}/security/token`, params, {
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+      });
+      token = response.data.access_token;
+      if (token) localStorage.setItem('lyra_jwt_token', token);
+    } catch (e) {
+      console.error("Authentication failed against Security Kernel", e);
+    }
+  }
+  
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+});
+
 export interface Message {
   id: string;
   conversation_id: string;

@@ -26,7 +26,7 @@ interface AppState {
   sidebarOpen: boolean;
   settingsOpen: boolean;
   
-  currentView: 'chat' | 'gallery' | 'agents' | 'voice';
+  currentView: 'chat' | 'gallery' | 'agents' | 'voice' | 'security';
   galleryImages: GalleryImage[];
   galleryLoading: boolean;
 
@@ -35,7 +35,7 @@ interface AppState {
   agentsLoading: boolean;
 
   // Actions
-  setView: (view: 'chat' | 'gallery' | 'agents' | 'voice') => void;
+  setView: (view: 'chat' | 'gallery' | 'agents' | 'voice' | 'security') => void;
   fetchGalleryImages: () => Promise<void>;
   openImageNatively: (filename: string) => Promise<void>;
   deleteGalleryImage: (filename: string) => Promise<void>;

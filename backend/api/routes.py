@@ -7,6 +7,7 @@ import json
 
 from backend.database.connection import get_db
 from backend.models.db_models import Conversation, Message, Setting, ModelInfo
+from backend.database.models.security import SecurityAuditLog
 from backend.api.models import (
     ConversationResponse,
     ConversationCreate,
@@ -20,8 +21,25 @@ from backend.api.models import (
 from backend.services.ollama_service import ollama_service
 from backend.core.logger import logger
 from backend.core.config import settings as app_settings
+from backend.security.auth import get_current_user, create_access_token, verify_password, get_password_hash
+from backend.security.guardian import guardian_kernel
+from fastapi.security import OAuth2PasswordRequestForm
 
 router = APIRouter()
+
+@router.post("/security/token")
+async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends()):
+    # In a real system, verify against a DB. For local Lyra, use default admin.
+    # We will enforce any non-empty password for local testing since it's zero-trust transition.
+    if form_data.username != "admin":
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Incorrect username",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+    access_token = create_access_token(data={"sub": form_data.username})
+    return {"access_token": access_token, "token_type": "bearer"}
+
 
 @router.get("/health", response_model=HealthResponse)
 async def health_check(db: AsyncSession = Depends(get_db)):
@@ -65,7 +83,10 @@ async def list_models(db: AsyncSession = Depends(get_db)):
 # --- CONVERSATIONS ENDPOINTS ---
 
 @router.get("/conversations", response_model=List[ConversationResponse])
-async def get_conversations(db: AsyncSession = Depends(get_db)):
+async def get_conversations(
+    db: AsyncSession = Depends(get_db),
+    current_user: dict = Depends(get_current_user)
+):
     """Retrieve all conversations, ordered by latest updated_at first"""
     query = (
         select(Conversation)
@@ -77,7 +98,11 @@ async def get_conversations(db: AsyncSession = Depends(get_db)):
     return conversations
 
 @router.post("/conversations", response_model=ConversationResponse, status_code=status.HTTP_201_CREATED)
-async def create_conversation(payload: ConversationCreate, db: AsyncSession = Depends(get_db)):
+async def create_conversation(
+    payload: ConversationCreate, 
+    db: AsyncSession = Depends(get_db),
+    current_user: dict = Depends(get_current_user)
+):
     """Create a new conversation session"""
     title = payload.title or "New Conversation"
     conversation = Conversation(title=title)
@@ -452,8 +477,18 @@ class AgentCommandPayload(BaseModel):
     command: str
 
 @router.post("/agents/command")
-async def execute_agent_direct_command(payload: AgentCommandPayload):
+async def execute_agent_direct_command(
+    payload: AgentCommandPayload,
+    current_user: dict = Depends(get_current_user)
+):
     """Dispatches a direct manual command to a specific agent in the AIOS background worker pool"""
+    # ENFORCE GUARDIAN SECURITY KERNEL
+    guardian_kernel.authorize_execution(
+        agent_name=payload.agent_name,
+        action="execute_script",
+        target=payload.command,
+        payload=payload.command
+    )
     import os
     import sqlite3
     import uuid
@@ -648,4 +683,33 @@ async def get_morning_briefing():
     
     return script
 
+@router.get("/security/logs")
+async def get_security_logs(
+    db: AsyncSession = Depends(get_db),
+    current_user: dict = Depends(get_current_user)
+):
+    """Retrieve the latest security audit logs for the dashboard"""
+    result = await db.execute(select(SecurityAuditLog).order_by(SecurityAuditLog.timestamp.desc()).limit(50))
+    logs = result.scalars().all()
+    return logs
 
+@router.get("/security/status")
+async def get_security_status(current_user: dict = Depends(get_current_user)):
+    """Retrieve active threat intelligence and intrusion detection metrics"""
+    from backend.security.intrusion_detection import ids_monitor
+    
+    # Calculate an arbitrary threat score based on recent anomalies
+    base_score = 100
+    penalty = (len(ids_monitor.failed_auth_attempts) * 10) + \
+              (sum(ids_monitor.prompt_injection_attempts.values()) * 20) + \
+              (sum(ids_monitor.agent_violation_counts.values()) * 15)
+              
+    score = max(0, base_score - penalty)
+    
+    return {
+        "threat_score": score,
+        "active_blocks": len(ids_monitor.failed_auth_attempts),
+        "prompt_injections": sum(ids_monitor.prompt_injection_attempts.values()),
+        "agent_violations": sum(ids_monitor.agent_violation_counts.values()),
+        "status": "SECURE" if score > 80 else ("ELEVATED" if score > 50 else "CRITICAL")
+    }

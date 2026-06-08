@@ -8,6 +8,7 @@ import ChatPage from './pages/ChatPage';
 const GalleryPage = lazy(() => import('./pages/GalleryPage'));
 const AgentsPage = lazy(() => import('./pages/AgentsPage'));
 const VoicePage = lazy(() => import('./pages/VoicePage'));
+const SecurityCenterPage = lazy(() => import('./pages/SecurityCenterPage'));
 
 function PageLoader() {
   return (
@@ -84,6 +85,11 @@ export default function App() {
         {currentView === 'voice' && (
           <Suspense fallback={<PageLoader />}>
             <VoicePage />
+          </Suspense>
+        )}
+        {currentView === 'security' && (
+          <Suspense fallback={<PageLoader />}>
+            <SecurityCenterPage />
           </Suspense>
         )}
       </ErrorBoundary>

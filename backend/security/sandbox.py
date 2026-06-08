@@ -10,10 +10,12 @@ def execute_in_sandbox(command: str, timeout: int = 15) -> str:
     """
     Executes a shell command in a restricted environment.
     Prevents directory traversal out of workspace, strips dangerous env vars,
-    and enforces strict timeouts.
+    and enforces strict timeouts. Now uses CommandValidator to strip shell=True.
     """
-    # 1. Basic command sanitization (prevent chaining if we strictly want one command)
-    # For now, we allow standard commands but we could restrict `&&` or `;`
+    from backend.security.command_validator import validate_command
+    
+    # 1. Validate and Parse Command into safe arguments
+    args, risk_level = validate_command(command)
     
     # 2. Restrict Environment Variables
     safe_env = {
@@ -29,11 +31,10 @@ def execute_in_sandbox(command: str, timeout: int = 15) -> str:
         os.makedirs(safe_cwd, exist_ok=True)
         
     try:
-        # Use shell=True for powershell/cmd compatibility but with extreme prejudice
-        # In a true prod env on Linux, we would use `bwrap` or Docker.
+        # Strict Shell=False enforcement.
         result = subprocess.run(
-            command,
-            shell=True,
+            args,  # Pass array, not string
+            shell=False, # CRITICAL FIX 1
             cwd=safe_cwd,
             env=safe_env,
             capture_output=True,

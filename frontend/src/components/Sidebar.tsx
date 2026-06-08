@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useAppStore } from '../store/useAppStore';
-import { Plus, Search, Trash2, Edit2, Check, MessageSquare, Settings, Image, Users, Mic } from 'lucide-react';
+import { Plus, Search, Trash2, Edit2, Check, MessageSquare, Settings, Image, Users, Mic, Shield } from 'lucide-react';
 
 export default function Sidebar() {
   const {
@@ -91,11 +91,11 @@ export default function Sidebar() {
       </div>
 
       {/* Modern Navigation Tabs */}
-      <div className="flex px-3 py-3 gap-1 border-b border-slate-800/30 bg-slate-900/10">
+      <div className="flex flex-wrap px-3 py-3 gap-1 border-b border-slate-800/30 bg-slate-900/10">
         {settings.chat_enabled && (
           <button
             onClick={() => setView('chat')}
-            className={`flex-1 flex items-center justify-center gap-1.5 py-1.5 rounded-lg text-[10px] font-extrabold transition-all duration-300 border ${
+            className={`flex-1 min-w-[30%] flex items-center justify-center gap-1.5 py-1.5 rounded-lg text-[10px] font-extrabold transition-all duration-300 border ${
               currentView === 'chat'
                 ? 'bg-darkAccent/50 border-brandBlue/30 text-slate-100 shadow-[0_0_10px_rgba(6,182,212,0.06)]'
                 : 'bg-transparent border-transparent text-slate-500 hover:text-slate-300'
@@ -103,11 +103,6 @@ export default function Sidebar() {
           >
             <MessageSquare className="w-3 h-3" />
             <span>Chat</span>
-            <span className={`px-1 py-0.5 rounded-full text-[8px] leading-none ${
-              currentView === 'chat' ? 'bg-brandBlue/20 text-brandBlue font-bold' : 'bg-slate-800/55 text-slate-500'
-            }`}>
-              {conversations.length}
-            </span>
           </button>
         )}
         
@@ -116,7 +111,7 @@ export default function Sidebar() {
             setView('gallery');
             fetchGalleryImages();
           }}
-          className={`flex-1 flex items-center justify-center gap-1.5 py-1.5 rounded-lg text-[10px] font-extrabold transition-all duration-300 border ${
+          className={`flex-1 min-w-[30%] flex items-center justify-center gap-1.5 py-1.5 rounded-lg text-[10px] font-extrabold transition-all duration-300 border ${
             currentView === 'gallery'
               ? 'bg-darkAccent/50 border-brandPurple/30 text-slate-100 shadow-[0_0_10px_rgba(168,85,247,0.06)]'
               : 'bg-transparent border-transparent text-slate-500 hover:text-slate-300'
@@ -124,16 +119,11 @@ export default function Sidebar() {
         >
           <Image className="w-3 h-3" />
           <span>Gallery</span>
-          <span className={`px-1 py-0.5 rounded-full text-[8px] leading-none ${
-            currentView === 'gallery' ? 'bg-brandPurple/20 text-brandPurple font-bold' : 'bg-slate-800/55 text-slate-500'
-          }`}>
-            {galleryImages.length}
-          </span>
         </button>
 
         <button
           onClick={() => setView('voice')}
-          className={`flex-1 flex items-center justify-center gap-1.5 py-1.5 rounded-lg text-[10px] font-extrabold transition-all duration-300 border ${
+          className={`flex-1 min-w-[30%] flex items-center justify-center gap-1.5 py-1.5 rounded-lg text-[10px] font-extrabold transition-all duration-300 border ${
             currentView === 'voice'
               ? 'bg-darkAccent/50 border-cyan-400/30 text-slate-100 shadow-[0_0_10px_rgba(34,211,238,0.06)]'
               : 'bg-transparent border-transparent text-slate-500 hover:text-slate-300'
@@ -141,6 +131,18 @@ export default function Sidebar() {
         >
           <Mic className="w-3 h-3" />
           <span>Voice</span>
+        </button>
+        
+        <button
+          onClick={() => setView('security')}
+          className={`flex-1 min-w-[30%] flex items-center justify-center gap-1.5 py-1.5 rounded-lg text-[10px] font-extrabold transition-all duration-300 border ${
+            currentView === 'security'
+              ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400 shadow-[0_0_10px_rgba(16,185,129,0.1)]'
+              : 'bg-transparent border-transparent text-slate-500 hover:text-emerald-500/70'
+          }`}
+        >
+          <Shield className="w-3 h-3" />
+          <span>Security</span>
         </button>
       </div>
 
