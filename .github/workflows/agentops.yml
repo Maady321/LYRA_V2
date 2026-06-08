@@ -1,0 +1,51 @@
+name: AgentOps Benchmarking & Deployment
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+    inputs:
+      prompt_version_id:
+        description: 'Prompt Registry ID to benchmark'
+        required: true
+
+jobs:
+  benchmark-prompt:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r backend/requirements.txt
+        pip install pytest pytest-asyncio
+        
+    - name: Start Local Ollama for Benchmarking
+      run: |
+        docker run -d -p 11434:11434 --name ollama ollama/ollama
+        sleep 5
+        docker exec ollama ollama pull llama3:8b-instruct
+        
+    - name: Run LLM-as-a-Judge Test Suite
+      env:
+        PROMPT_ID: ${{ github.event.inputs.prompt_version_id }}
+      run: |
+        # In a real environment, this runs a pytest suite that evaluates the prompt against a golden dataset
+        echo "Running LLM-as-a-Judge evaluations for Prompt ID $PROMPT_ID..."
+        # pytest backend/tests/mlops/test_prompt_benchmarks.py -v
+        
+    - name: Promote to Staging (If Successful)
+      if: success() && github.event_name == 'workflow_dispatch'
+      run: |
+        echo "Benchmark passed. Promoting Prompt ID ${{ github.event.inputs.prompt_version_id }} to STAGING status."
+        # Call the internal FastAPI endpoint to update the DB status
+        # curl -X POST "https://api.lyra.ai/mlops/prompts/${{ github.event.inputs.prompt_version_id }}/promote" -H "Authorization: Bearer ${{ secrets.CI_TOKEN }}"

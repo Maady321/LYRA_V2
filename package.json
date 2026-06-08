@@ -1,0 +1,23 @@
+{
+  "name": "lyra-v1",
+  "version": "1.0.0",
+  "description": "Production-grade Windows desktop AI assistant operating platform",
+  "private": true,
+  "scripts": {
+    "setup": "scripts\\setup.bat",
+    "dev": "scripts\\dev.bat",
+    "dev:backend": "cd backend && venv\\Scripts\\uvicorn main:app --host 127.0.0.1 --port 8000 --reload",
+    "dev:frontend": "cd frontend && npm run dev",
+    "electron": "cd frontend && npm run electron"
+  },
+  "keywords": [
+    "lyra",
+    "electron",
+    "react",
+    "fastapi",
+    "ollama",
+    "desktop-ai-assistant"
+  ],
+  "author": "Antigravity Dev Team",
+  "license": "MIT"
+}

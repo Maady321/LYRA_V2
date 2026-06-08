@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  prometheus:
+    image: prom/prometheus:v2.51.2
+    container_name: lyra-prometheus
+    volumes:
+      - ./config/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    ports:
+      - "9090:9090"
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/usr/share/prometheus/console_libraries'
+      - '--web.console.templates=/usr/share/prometheus/consoles'
+
+  grafana:
+    image: grafana/grafana:10.4.1
+    container_name: lyra-grafana
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=lyra_admin
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana
+
+  loki:
+    image: grafana/loki:2.9.5
+    container_name: lyra-loki
+    ports:
+      - "3100:3100"
+    command: -config.file=/etc/loki/local-config.yaml
+
+  otel-collector:
+    image: otel/opentelemetry-collector:0.99.0
+    container_name: lyra-otel
+    command: ["--config=/etc/otel-collector-config.yaml"]
+    volumes:
+      - ./config/otel-collector-config.yaml:/etc/otel-collector-config.yaml
+    ports:
+      - "4317:4317"   # OTLP gRPC receiver
+      - "4318:4318"   # OTLP HTTP receiver
+      - "8889:8889"   # Prometheus exporter metrics
+
+volumes:
+  prometheus_data:
+  grafana_data:

@@ -1,0 +1,109 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lyra-fury
+  namespace: lyra-core
+  labels:
+    app: fury-agent
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fury-agent
+  template:
+    metadata:
+      labels:
+        app: fury-agent
+    spec:
+      containers:
+      - name: fury
+        image: lyra-agent:latest
+        command: ["python", "-m", "core.fury.leader"]
+        envFrom:
+        - configMapRef:
+            name: lyra-config
+        - secretRef:
+            name: lyra-secrets
+        resources:
+          requests:
+            memory: "1Gi"
+            cpu: "500m"
+          limits:
+            memory: "2Gi"
+            cpu: "1000m"
+        # Health check on an internal metric port
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: 9090
+          initialDelaySeconds: 10
+          periodSeconds: 20
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lyra-workers
+  namespace: lyra-core
+  labels:
+    app: worker-agent
+    version: v1
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: worker-agent
+  template:
+    metadata:
+      labels:
+        app: worker-agent
+        version: v1
+    spec:
+      containers:
+      - name: agent
+        image: lyra-agent:latest
+        command: ["python", "-m", "core.worker.main"]
+        envFrom:
+        - configMapRef:
+            name: lyra-config
+        - secretRef:
+            name: lyra-secrets
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "250m"
+          limits:
+            memory: "1Gi"
+            cpu: "500m"
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: 9090
+          initialDelaySeconds: 15
+          periodSeconds: 30
+---
+# Horizontal Pod Autoscaler for Worker Agents
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: worker-agent-hpa
+  namespace: lyra-core
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: lyra-workers
+  minReplicas: 3
+  maxReplicas: 20
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 70
+  - type: Resource
+    resource:
+      name: memory
+      target:
+        type: Utilization
+        averageUtilization: 80

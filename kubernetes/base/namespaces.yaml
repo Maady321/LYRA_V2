@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: lyra-core
+  labels:
+    environment: production
+    part-of: lyra-aios
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: lyra-data
+  labels:
+    environment: production
+    part-of: lyra-aios
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: lyra-monitoring
+  labels:
+    environment: production
+    part-of: lyra-aios

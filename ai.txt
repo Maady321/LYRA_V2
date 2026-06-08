@@ -1,0 +1,11 @@
+# Artificial Intelligence (AI) - Overview
+
+Artificial Intelligence (AI) represents the simulation of human intelligence processes by machines, especially computer systems. These processes include learning (the acquisition of information and rules for using the information), reasoning (using rules to reach approximate or definite conclusions), and self-correction.
+
+Key Subfields of AI:
+1. Machine Learning (ML) - Focuses on algorithms that allow computers to learn from data.
+2. Deep Learning (DL) - A subset of ML utilizing deep neural networks to model complex patterns.
+3. Natural Language Processing (NLP) - Enables machines to understand and interact in human language.
+4. Computer Vision - Allows systems to interpret and act on visual input from the real world.
+
+# Created by Lyra, an advanced desktop AI.

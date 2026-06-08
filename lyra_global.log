@@ -1,0 +1,349 @@
+[2026-05-23T18:27:52.110Z] Main script loaded at top-level.
+[2026-05-23T18:27:52.144Z] app.whenReady() fired.
+[2026-05-23T18:27:52.182Z] startBackend() finished.
+[2026-05-23T18:27:52.230Z] createWindow() finished.
+[2026-05-23T18:27:52.248Z] createTray() finished.
+[2026-05-26T15:07:32.036Z] Main script loaded at top-level.
+[2026-05-26T15:07:32.082Z] app.whenReady() fired.
+[2026-05-26T15:07:32.132Z] startBackend() finished.
+[2026-05-26T15:07:32.202Z] createWindow() finished.
+[2026-05-26T15:07:32.231Z] createTray() finished.
+[2026-05-27T04:39:00.920Z] Main script loaded at top-level.
+[2026-05-27T04:39:00.963Z] app.whenReady() fired.
+[2026-05-27T04:39:01.011Z] startBackend() finished.
+[2026-05-27T04:39:01.082Z] createWindow() finished.
+[2026-05-27T04:39:01.112Z] createTray() finished.
+[2026-05-29T16:02:55.835Z] Main script loaded at top-level.
+[2026-05-29T16:02:55.902Z] app.whenReady() fired.
+[2026-05-29T16:02:55.922Z] startBackend() finished.
+[2026-05-29T16:02:56.036Z] createWindow() finished.
+[2026-05-29T16:02:56.101Z] createTray() finished.
+[2026-05-29T16:11:01.113Z] Main script loaded at top-level.
+[2026-05-29T16:11:01.206Z] app.whenReady() fired.
+[2026-05-29T16:11:01.211Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-05-29T16:11:01.238Z] startBackend() finished.
+[2026-05-29T16:11:01.239Z] createWindow: shouldHide=false
+[2026-05-29T16:11:01.427Z] createWindow() finished.
+[2026-05-29T16:11:01.625Z] createTray() finished.
+[2026-05-29T16:16:39.658Z] Main script loaded at top-level.
+[2026-05-29T16:16:39.718Z] app.whenReady() fired.
+[2026-05-29T16:16:39.719Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-05-29T16:16:39.741Z] startBackend() finished.
+[2026-05-29T16:16:39.742Z] createWindow: shouldHide=false
+[2026-05-29T16:16:39.859Z] createWindow() finished.
+[2026-05-29T16:16:40.407Z] createTray() finished.
+[2026-05-29T16:20:05.778Z] Main script loaded at top-level.
+[2026-05-29T16:20:05.869Z] app.whenReady() fired.
+[2026-05-29T16:20:05.870Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-05-29T16:20:05.887Z] startBackend() finished.
+[2026-05-29T16:20:05.888Z] createWindow: shouldHide=false
+[2026-05-29T16:20:06.040Z] createWindow() finished.
+[2026-05-29T16:20:06.083Z] createTray() finished.
+[2026-05-29T16:22:02.782Z] Main script loaded at top-level.
+[2026-05-29T16:22:02.887Z] app.whenReady() fired.
+[2026-05-29T16:22:02.888Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-05-29T16:22:02.907Z] startBackend() finished.
+[2026-05-29T16:22:02.907Z] createWindow: shouldHide=false
+[2026-05-29T16:22:03.029Z] createWindow() finished.
+[2026-05-29T16:22:03.064Z] createTray() finished.
+[2026-05-29T16:29:25.596Z] Main script loaded at top-level.
+[2026-05-29T16:29:25.650Z] app.whenReady() fired.
+[2026-05-29T16:29:25.651Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-05-29T16:29:25.668Z] startBackend() finished.
+[2026-05-29T16:29:25.669Z] createWindow: shouldHide=false
+[2026-05-29T16:29:25.798Z] createWindow() finished.
+[2026-05-29T16:29:25.841Z] createTray() finished.
+[2026-05-29T17:50:50.460Z] Main script loaded at top-level.
+[2026-05-29T17:50:50.501Z] app.whenReady() fired.
+[2026-05-29T17:50:50.502Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-05-29T17:50:50.635Z] startBackend() finished.
+[2026-05-29T17:50:50.635Z] createWindow: shouldHide=true
+[2026-05-29T17:50:50.679Z] createWindow() finished.
+[2026-05-29T17:50:50.706Z] createTray() finished.
+[2026-05-29T17:51:14.103Z] Main script loaded at top-level.
+[2026-05-29T17:51:14.136Z] app.whenReady() fired.
+[2026-05-29T17:51:14.136Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-05-29T17:51:14.179Z] startBackend() finished.
+[2026-05-29T17:51:14.179Z] createWindow: shouldHide=false
+[2026-05-29T17:51:14.224Z] createWindow() finished.
+[2026-05-29T17:51:14.247Z] createTray() finished.
+[2026-05-29T18:00:32.029Z] Main script loaded at top-level.
+[2026-05-29T18:00:32.086Z] app.whenReady() fired.
+[2026-05-29T18:00:32.087Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-05-29T18:00:32.111Z] startBackend() finished.
+[2026-05-29T18:00:32.111Z] createWindow: shouldHide=false
+[2026-05-29T18:00:32.225Z] createWindow() finished.
+[2026-05-29T18:00:32.261Z] createTray() finished.
+[2026-05-29T18:20:41.297Z] Main script loaded at top-level.
+[2026-05-29T18:20:41.346Z] app.whenReady() fired.
+[2026-05-29T18:20:41.347Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-05-29T18:20:41.364Z] startBackend() finished.
+[2026-05-29T18:20:41.364Z] createWindow: shouldHide=false
+[2026-05-29T18:20:41.453Z] createWindow() finished.
+[2026-05-29T18:20:41.661Z] createTray() finished.
+[2026-05-29T18:29:44.733Z] Main script loaded at top-level.
+[2026-05-29T18:29:44.779Z] app.whenReady() fired.
+[2026-05-29T18:29:44.779Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-05-29T18:29:44.794Z] startBackend() finished.
+[2026-05-29T18:29:44.794Z] createWindow: shouldHide=false
+[2026-05-29T18:29:44.889Z] createWindow() finished.
+[2026-05-29T18:29:44.920Z] createTray() finished.
+[2026-05-30T04:18:42.902Z] Main script loaded at top-level.
+[2026-05-30T04:18:42.954Z] app.whenReady() fired.
+[2026-05-30T04:18:42.955Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-05-30T04:18:43.093Z] startBackend() finished.
+[2026-05-30T04:18:43.093Z] createWindow: shouldHide=true
+[2026-05-30T04:18:43.132Z] createWindow() finished.
+[2026-05-30T04:18:43.162Z] createTray() finished.
+[2026-05-30T04:19:06.269Z] Main script loaded at top-level.
+[2026-05-30T04:19:06.316Z] app.whenReady() fired.
+[2026-05-30T04:19:06.316Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-05-30T04:19:06.357Z] startBackend() finished.
+[2026-05-30T04:19:06.358Z] createWindow: shouldHide=true
+[2026-05-30T04:19:06.396Z] createWindow() finished.
+[2026-05-30T04:19:06.417Z] createTray() finished.
+[2026-05-30T09:23:03.823Z] Main script loaded at top-level.
+[2026-05-30T09:23:03.863Z] app.whenReady() fired.
+[2026-05-30T09:23:03.864Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-05-30T09:23:03.911Z] startBackend() finished.
+[2026-05-30T09:23:03.911Z] createWindow: shouldHide=true
+[2026-05-30T09:23:03.954Z] createWindow() finished.
+[2026-05-30T09:23:03.976Z] createTray() finished.
+[2026-05-30T09:23:13.204Z] Main script loaded at top-level.
+[2026-05-30T09:23:13.255Z] app.whenReady() fired.
+[2026-05-30T09:23:13.256Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-05-30T09:23:13.296Z] startBackend() finished.
+[2026-05-30T09:23:13.296Z] createWindow: shouldHide=true
+[2026-05-30T09:23:13.328Z] createWindow() finished.
+[2026-05-30T09:23:13.349Z] createTray() finished.
+[2026-06-01T03:51:57.057Z] Main script loaded at top-level.
+[2026-06-01T03:51:57.133Z] app.whenReady() fired.
+[2026-06-01T03:51:57.134Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-01T03:51:57.198Z] startBackend() finished.
+[2026-06-01T03:51:57.198Z] createWindow: shouldHide=true
+[2026-06-01T03:51:57.254Z] createWindow() finished.
+[2026-06-01T03:51:57.284Z] createTray() finished.
+[2026-06-01T03:52:06.420Z] Main script loaded at top-level.
+[2026-06-01T03:52:06.467Z] app.whenReady() fired.
+[2026-06-01T03:52:06.468Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-01T03:52:06.528Z] startBackend() finished.
+[2026-06-01T03:52:06.529Z] createWindow: shouldHide=true
+[2026-06-01T03:52:06.574Z] createWindow() finished.
+[2026-06-01T03:52:06.607Z] createTray() finished.
+[2026-06-01T06:43:07.577Z] Main script loaded at top-level.
+[2026-06-01T06:43:07.616Z] app.whenReady() fired.
+[2026-06-01T06:43:07.617Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-01T06:43:07.666Z] startBackend() finished.
+[2026-06-01T06:43:07.667Z] createWindow: shouldHide=false
+[2026-06-01T06:43:07.734Z] createWindow() finished.
+[2026-06-01T06:43:07.764Z] createTray() finished.
+[2026-06-01T15:23:17.785Z] Main script loaded at top-level.
+[2026-06-01T15:23:17.865Z] app.whenReady() fired.
+[2026-06-01T15:23:17.866Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-01T15:23:18.029Z] startBackend() finished.
+[2026-06-01T15:23:18.030Z] createWindow: shouldHide=true
+[2026-06-01T15:23:18.099Z] createWindow() finished.
+[2026-06-01T15:23:18.190Z] createTray() finished.
+[2026-06-01T15:23:34.928Z] Main script loaded at top-level.
+[2026-06-01T15:23:34.973Z] app.whenReady() fired.
+[2026-06-01T15:23:34.974Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-01T15:23:35.041Z] startBackend() finished.
+[2026-06-01T15:23:35.041Z] createWindow: shouldHide=true
+[2026-06-01T15:23:35.091Z] createWindow() finished.
+[2026-06-01T15:23:35.120Z] createTray() finished.
+[2026-06-02T02:56:40.989Z] Main script loaded at top-level.
+[2026-06-02T02:56:41.092Z] app.whenReady() fired.
+[2026-06-02T02:56:41.093Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-02T02:56:41.147Z] startBackend() finished.
+[2026-06-02T02:56:41.148Z] createWindow: shouldHide=true
+[2026-06-02T02:56:41.190Z] createWindow() finished.
+[2026-06-02T02:56:41.212Z] createTray() finished.
+[2026-06-02T02:57:39.032Z] Main script loaded at top-level.
+[2026-06-02T02:57:39.148Z] app.whenReady() fired.
+[2026-06-02T02:57:39.150Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-02T02:57:39.244Z] startBackend() finished.
+[2026-06-02T02:57:39.246Z] createWindow: shouldHide=true
+[2026-06-02T02:57:39.342Z] createWindow() finished.
+[2026-06-02T02:57:39.392Z] createTray() finished.
+[2026-06-02T03:23:27.186Z] Main script loaded at top-level.
+[2026-06-02T03:23:27.309Z] app.whenReady() fired.
+[2026-06-02T03:23:27.311Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-02T03:23:27.448Z] startBackend() finished.
+[2026-06-02T03:23:27.449Z] createWindow: shouldHide=false
+[2026-06-02T03:23:27.619Z] createWindow() finished.
+[2026-06-02T03:23:27.697Z] createTray() finished.
+[2026-06-02T03:23:30.901Z] Main script loaded at top-level.
+[2026-06-02T03:23:31.006Z] app.whenReady() fired.
+[2026-06-02T03:23:31.008Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-02T03:23:31.130Z] startBackend() finished.
+[2026-06-02T03:23:31.130Z] createWindow: shouldHide=false
+[2026-06-02T03:23:31.297Z] createWindow() finished.
+[2026-06-02T03:23:31.364Z] createTray() finished.
+[2026-06-02T03:23:32.004Z] Main script loaded at top-level.
+[2026-06-02T03:23:32.108Z] app.whenReady() fired.
+[2026-06-02T03:23:32.109Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-02T03:23:32.226Z] startBackend() finished.
+[2026-06-02T03:23:32.227Z] createWindow: shouldHide=false
+[2026-06-02T03:23:32.389Z] createWindow() finished.
+[2026-06-02T03:23:32.650Z] createTray() finished.
+[2026-06-02T07:15:05.802Z] Main script loaded at top-level.
+[2026-06-02T07:15:05.917Z] app.whenReady() fired.
+[2026-06-02T07:15:05.920Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-02T07:15:06.053Z] startBackend() finished.
+[2026-06-02T07:15:06.054Z] createWindow: shouldHide=false
+[2026-06-02T07:15:06.254Z] createWindow() finished.
+[2026-06-02T07:15:06.322Z] createTray() finished.
+[2026-06-02T07:16:25.664Z] Main script loaded at top-level.
+[2026-06-02T07:16:25.780Z] app.whenReady() fired.
+[2026-06-02T07:16:25.782Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-02T07:16:25.919Z] startBackend() finished.
+[2026-06-02T07:16:25.921Z] createWindow: shouldHide=false
+[2026-06-02T07:16:26.078Z] createWindow() finished.
+[2026-06-02T07:16:26.147Z] createTray() finished.
+[2026-06-02T07:16:30.456Z] Main script loaded at top-level.
+[2026-06-02T07:16:30.572Z] app.whenReady() fired.
+[2026-06-02T07:16:30.574Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-02T07:16:30.712Z] startBackend() finished.
+[2026-06-02T07:16:30.713Z] createWindow: shouldHide=false
+[2026-06-02T07:16:30.957Z] createWindow() finished.
+[2026-06-02T07:16:31.040Z] createTray() finished.
+[2026-06-02T07:26:56.153Z] Main script loaded at top-level.
+[2026-06-02T07:26:56.258Z] app.whenReady() fired.
+[2026-06-02T07:26:56.261Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-02T07:26:56.394Z] startBackend() finished.
+[2026-06-02T07:26:56.396Z] createWindow: shouldHide=false
+[2026-06-02T07:26:56.637Z] createWindow() finished.
+[2026-06-02T07:26:56.943Z] createTray() finished.
+[2026-06-02T07:51:26.581Z] Main script loaded at top-level.
+[2026-06-02T07:51:26.697Z] app.whenReady() fired.
+[2026-06-02T07:51:26.699Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-02T07:51:26.838Z] startBackend() finished.
+[2026-06-02T07:51:26.840Z] createWindow: shouldHide=false
+[2026-06-02T07:51:27.101Z] createWindow() finished.
+[2026-06-02T07:51:27.376Z] createTray() finished.
+[2026-06-03T03:23:51.269Z] Main script loaded at top-level.
+[2026-06-03T03:23:51.371Z] app.whenReady() fired.
+[2026-06-03T03:23:51.373Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-03T03:23:51.494Z] startBackend() finished.
+[2026-06-03T03:23:51.495Z] createWindow: shouldHide=true
+[2026-06-03T03:23:51.591Z] createWindow() finished.
+[2026-06-03T03:23:51.644Z] createTray() finished.
+[2026-06-03T03:25:14.045Z] Main script loaded at top-level.
+[2026-06-03T03:25:14.215Z] app.whenReady() fired.
+[2026-06-03T03:25:14.218Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-03T03:25:16.134Z] startBackend() finished.
+[2026-06-03T03:25:16.135Z] createWindow: shouldHide=true
+[2026-06-03T03:25:19.345Z] createWindow() finished.
+[2026-06-03T03:25:19.476Z] createTray() finished.
+[2026-06-03T04:23:46.930Z] Main script loaded at top-level.
+[2026-06-03T04:23:47.056Z] app.whenReady() fired.
+[2026-06-03T04:23:47.059Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-03T04:23:47.245Z] startBackend() finished.
+[2026-06-03T04:23:47.246Z] createWindow: shouldHide=false
+[2026-06-03T04:23:47.559Z] createWindow() finished.
+[2026-06-03T04:23:47.817Z] createTray() finished.
+[2026-06-04T03:37:30.838Z] Main script loaded at top-level.
+[2026-06-04T03:37:30.933Z] app.whenReady() fired.
+[2026-06-04T03:37:30.934Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-04T03:37:31.041Z] startBackend() finished.
+[2026-06-04T03:37:31.042Z] createWindow: shouldHide=true
+[2026-06-04T03:37:31.127Z] createWindow() finished.
+[2026-06-04T03:37:31.181Z] createTray() finished.
+[2026-06-04T05:20:45.739Z] Main script loaded at top-level.
+[2026-06-04T05:20:45.855Z] app.whenReady() fired.
+[2026-06-04T05:20:45.857Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-04T05:20:45.968Z] startBackend() finished.
+[2026-06-04T05:20:45.970Z] createWindow: shouldHide=false
+[2026-06-04T05:20:46.115Z] createWindow() finished.
+[2026-06-04T05:20:46.734Z] createTray() finished.
+[2026-06-05T04:38:23.295Z] Main script loaded at top-level.
+[2026-06-05T04:38:23.407Z] app.whenReady() fired.
+[2026-06-05T04:38:23.409Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-05T04:38:23.536Z] startBackend() finished.
+[2026-06-05T04:38:23.537Z] createWindow: shouldHide=true
+[2026-06-05T04:38:23.645Z] createWindow() finished.
+[2026-06-05T04:38:23.715Z] createTray() finished.
+[2026-06-05T04:39:17.753Z] Main script loaded at top-level.
+[2026-06-05T04:39:17.849Z] app.whenReady() fired.
+[2026-06-05T04:39:17.850Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-05T04:39:17.948Z] startBackend() finished.
+[2026-06-05T04:39:17.949Z] createWindow: shouldHide=true
+[2026-06-05T04:39:18.037Z] createWindow() finished.
+[2026-06-05T04:39:18.105Z] createTray() finished.
+[2026-06-07T05:58:15.151Z] Main script loaded at top-level.
+[2026-06-07T05:58:15.206Z] app.whenReady() fired.
+[2026-06-07T05:58:15.207Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-07T05:58:15.263Z] startBackend() finished.
+[2026-06-07T05:58:15.263Z] createWindow: shouldHide=true
+[2026-06-07T05:58:15.316Z] createWindow() finished.
+[2026-06-07T05:58:15.356Z] createTray() finished.
+[2026-06-07T05:58:24.086Z] Main script loaded at top-level.
+[2026-06-07T05:58:24.136Z] app.whenReady() fired.
+[2026-06-07T05:58:24.136Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-07T05:58:24.185Z] startBackend() finished.
+[2026-06-07T05:58:24.185Z] createWindow: shouldHide=true
+[2026-06-07T05:58:24.230Z] createWindow() finished.
+[2026-06-07T05:58:24.258Z] createTray() finished.
+[2026-06-07T06:37:57.025Z] Main script loaded at top-level.
+[2026-06-07T06:37:57.108Z] app.whenReady() fired.
+[2026-06-07T06:37:57.109Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-07T06:37:57.139Z] startBackend() finished.
+[2026-06-07T06:37:57.140Z] createWindow: shouldHide=false
+[2026-06-07T06:37:57.251Z] createWindow() finished.
+[2026-06-07T06:37:57.286Z] createTray() finished.
+[2026-06-07T06:38:47.805Z] Main script loaded at top-level.
+[2026-06-07T06:38:47.884Z] app.whenReady() fired.
+[2026-06-07T06:38:47.885Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-07T06:38:47.950Z] startBackend() finished.
+[2026-06-07T06:38:47.950Z] createWindow: shouldHide=true
+[2026-06-07T06:38:48.003Z] createWindow() finished.
+[2026-06-07T06:38:48.040Z] createTray() finished.
+[2026-06-07T06:40:01.047Z] Main script loaded at top-level.
+[2026-06-07T06:40:01.141Z] app.whenReady() fired.
+[2026-06-07T06:40:01.142Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-07T06:40:01.167Z] startBackend() finished.
+[2026-06-07T06:40:01.168Z] createWindow: shouldHide=true
+[2026-06-07T06:40:01.229Z] createWindow() finished.
+[2026-06-07T06:40:01.274Z] createTray() finished.
+[2026-06-08T03:33:26.743Z] Main script loaded at top-level.
+[2026-06-08T03:33:26.864Z] app.whenReady() fired.
+[2026-06-08T03:33:26.865Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-08T03:33:26.915Z] startBackend() finished.
+[2026-06-08T03:33:26.915Z] createWindow: shouldHide=true
+[2026-06-08T03:33:27.010Z] createWindow() finished.
+[2026-06-08T03:33:27.056Z] createTray() finished.
+[2026-06-08T03:34:32.094Z] Main script loaded at top-level.
+[2026-06-08T03:34:32.176Z] app.whenReady() fired.
+[2026-06-08T03:34:32.177Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-08T03:34:32.209Z] startBackend() finished.
+[2026-06-08T03:34:32.209Z] createWindow: shouldHide=true
+[2026-06-08T03:34:32.286Z] createWindow() finished.
+[2026-06-08T03:34:32.327Z] createTray() finished.
+[2026-06-08T06:49:57.595Z] Main script loaded at top-level.
+[2026-06-08T06:49:57.726Z] app.whenReady() fired.
+[2026-06-08T06:49:57.729Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-08T06:49:57.794Z] startBackend() finished.
+[2026-06-08T06:49:57.795Z] createWindow: shouldHide=false
+[2026-06-08T06:49:57.959Z] createWindow() finished.
+[2026-06-08T06:49:58.022Z] createTray() finished.
+[2026-06-08T07:03:35.654Z] Main script loaded at top-level.
+[2026-06-08T07:03:35.785Z] app.whenReady() fired.
+[2026-06-08T07:03:35.786Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-08T07:03:35.832Z] startBackend() finished.
+[2026-06-08T07:03:35.832Z] createWindow: shouldHide=false
+[2026-06-08T07:03:36.096Z] createWindow() finished.
+[2026-06-08T07:03:36.173Z] createTray() finished.
+[2026-06-08T09:46:57.364Z] Main script loaded at top-level.
+[2026-06-08T09:46:57.411Z] app.whenReady() fired.
+[2026-06-08T09:46:57.411Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-08T09:46:57.429Z] startBackend() finished.
+[2026-06-08T09:46:57.430Z] createWindow: shouldHide=true
+[2026-06-08T09:46:57.486Z] createWindow() finished.
+[2026-06-08T09:46:57.510Z] createTray() finished.
+[2026-06-08T09:47:48.216Z] Main script loaded at top-level.
+[2026-06-08T09:47:48.253Z] app.whenReady() fired.
+[2026-06-08T09:47:48.253Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-08T09:47:48.270Z] startBackend() finished.
+[2026-06-08T09:47:48.271Z] createWindow: shouldHide=true
+[2026-06-08T09:47:48.304Z] createWindow() finished.
+[2026-06-08T09:47:48.329Z] createTray() finished.
