@@ -6,15 +6,29 @@ from backend.core.config import settings, BASE_DIR
 # Key management: Generate or load master key
 _ENCRYPTION_KEY_PATH = os.path.join(BASE_DIR, ".env.key")
 
+import warnings
+
 def _get_or_create_key() -> bytes:
+    # 1. Check OS Environment Variables (Enterprise standard)
+    env_key = os.environ.get("LYRA_MASTER_KEY")
+    if env_key:
+        return env_key.encode('utf-8')
+        
+    # 2. Check local fallback file
     if os.path.exists(_ENCRYPTION_KEY_PATH):
         with open(_ENCRYPTION_KEY_PATH, "rb") as f:
             return f.read().strip()
-    else:
-        key = Fernet.generate_key()
-        with open(_ENCRYPTION_KEY_PATH, "wb") as f:
-            f.write(key)
-        return key
+    
+    # 3. Generate new key (Warn in production)
+    warnings.warn(
+        "LYRA_MASTER_KEY environment variable is missing. Generating a fallback key at .env.key. "
+        "This is insecure for production environments. Please use a credential manager.",
+        RuntimeWarning
+    )
+    key = Fernet.generate_key()
+    with open(_ENCRYPTION_KEY_PATH, "wb") as f:
+        f.write(key)
+    return key
 
 MASTER_KEY = _get_or_create_key()
 _fernet = Fernet(MASTER_KEY)

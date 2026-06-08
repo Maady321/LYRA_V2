@@ -7,6 +7,12 @@ from pathlib import Path
 from agents.base import BaseAgent
 from core.bus import Task
 from memory.analytics_db import AnalyticsDB
+import sys
+import os
+
+# Add Lyra to path to import backend modules
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+from backend.security.guardian import guardian_kernel
 
 class StarkAgent(BaseAgent):
     def _is_safe_command(self, cmd: str) -> bool:
@@ -83,6 +89,9 @@ class StarkAgent(BaseAgent):
         try:
             venv_python = Path(__file__).parent.parent / "venv" / "Scripts" / "python.exe"
             python_bin = str(venv_python) if venv_python.exists() else "python"
+
+            # Enforce Zero-Trust Security Kernel
+            guardian_kernel.authorize_execution("StarkAgent", "execute_script", str(script_path), code_block)
 
             process = subprocess.run(
                 [python_bin, str(script_path)],

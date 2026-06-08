@@ -4,6 +4,7 @@ import subprocess
 import urllib.parse
 import webbrowser
 from typing import Optional
+from backend.security.guardian import guardian_kernel
 
 class TaskManager:
     def __init__(self):
@@ -167,6 +168,7 @@ class TaskManager:
 
     def _open_chrome(self) -> str:
         try:
+            guardian_kernel.authorize_execution("TaskManager", "open_browser", "https://www.google.com")
             webbrowser.open("https://www.google.com")
             return "⚡ **Task Executed:** I have successfully launched Google Chrome for you!"
         except Exception as e:
@@ -175,6 +177,7 @@ class TaskManager:
     def _search_chrome(self, query: str) -> str:
         url = f"https://www.google.com/search?q={urllib.parse.quote(query)}"
         try:
+            guardian_kernel.authorize_execution("TaskManager", "search_browser", url)
             webbrowser.open(url)
             return f"🔍 **Task Executed:** I have launched Chrome and searched Google for: *\"{query}\"*"
         except Exception as e:
@@ -183,6 +186,7 @@ class TaskManager:
     def _play_youtube(self, query: str) -> str:
         url = f"https://www.youtube.com/results?search_query={urllib.parse.quote(query)}"
         try:
+            guardian_kernel.authorize_execution("TaskManager", "search_browser", url)
             webbrowser.open(url)
             return f"🎥 **Task Executed:** I have launched YouTube and searched for: *\"{query}\"*"
         except Exception as e:
@@ -190,6 +194,7 @@ class TaskManager:
 
     def _open_notepad(self) -> str:
         try:
+            guardian_kernel.authorize_execution("TaskManager", "run_command", "notepad.exe")
             subprocess.run(["notepad.exe"], shell=False)
             return "📝 **Task Executed:** I have successfully opened Windows Notepad for you!"
         except Exception as e:
@@ -197,6 +202,7 @@ class TaskManager:
 
     def _open_calculator(self) -> str:
         try:
+            guardian_kernel.authorize_execution("TaskManager", "run_command", "calc.exe")
             subprocess.run(["calc.exe"], shell=False)
             return "🔢 **Task Executed:** I have successfully opened the Windows Calculator!"
         except Exception as e:
@@ -204,6 +210,7 @@ class TaskManager:
 
     def _open_explorer(self) -> str:
         try:
+            guardian_kernel.authorize_execution("TaskManager", "run_command", "explorer.exe")
             subprocess.run(["explorer.exe"], shell=False)
             return "📁 **Task Executed:** I have successfully opened the Windows File Explorer!"
         except Exception as e:
@@ -223,10 +230,12 @@ class TaskManager:
         content = self._generate_topic_content(topic)
         
         try:
+            guardian_kernel.authorize_execution("TaskManager", "write_file", filepath)
             # Write content to the file
             with open(filepath, "w", encoding="utf-8") as f:
                 f.write(content)
                 
+            guardian_kernel.authorize_execution("TaskManager", "run_command", "notepad.exe", filepath)
             # Launch Notepad opening this file
             subprocess.run(["notepad.exe", filepath], shell=False)
             
@@ -338,10 +347,12 @@ class TaskManager:
                 image_bytes = response.content
                 
             # 4. Save to the workspace
+            guardian_kernel.authorize_execution("TaskManager", "write_file", filepath)
             with open(filepath, "wb") as f:
                 f.write(image_bytes)
                 
             # 5. Open it securely using File Explorer to open associated app
+            guardian_kernel.authorize_execution("TaskManager", "run_command", "explorer.exe", filepath)
             subprocess.run(["explorer.exe", filepath], shell=False)
             
             # 6. Return standard Markdown content that will render inline in chat

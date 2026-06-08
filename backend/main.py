@@ -5,9 +5,12 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from contextlib import asynccontextmanager
-from fastapi import FastAPI
+from fastapi import FastAPI, Response
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
+import prometheus_client
+from backend.security.metrics import SECURITY_SCORE_GAUGE
+from backend.security.security_score import security_engine
 
 from backend.core.config import settings
 from backend.core.logger import logger
@@ -57,6 +60,17 @@ async def root():
         "version": "1.0.0",
         "api_docs": "/docs"
     }
+
+@app.get("/metrics")
+async def metrics():
+    # Update gauge before responding
+    score_data = security_engine.calculate_overall_security_score()
+    SECURITY_SCORE_GAUGE.set(score_data["threat_score"])
+    
+    return Response(
+        content=prometheus_client.generate_latest(),
+        media_type=prometheus_client.CONTENT_TYPE_LATEST
+    )
 
 if __name__ == "__main__":
     logger.info("Launching FastAPI server via uvicorn...")

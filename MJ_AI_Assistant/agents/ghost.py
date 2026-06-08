@@ -2,6 +2,10 @@ import os
 import subprocess
 import sqlite3
 from pathlib import Path
+import sys
+# Add Lyra to path to import backend modules
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+from backend.security.guardian import guardian_kernel
 from agents.base import BaseAgent
 from core.bus import Task
 
@@ -46,6 +50,7 @@ class GhostAgent(BaseAgent):
                     return f"Permission Denied: GHOST blocked launching dangerous terminal '{target_app}'."
 
                 try:
+                    guardian_kernel.authorize_execution("GhostAgent", "run_command", target_app)
                     os.startfile(target_app)
                     self._log_audit("APP_LAUNCH", target_app, f"os.startfile({target_app})", 1, "PASSED")
                     return f"Success: GHOST launched system application '{target_app}'."
@@ -66,6 +71,7 @@ class GhostAgent(BaseAgent):
                 new_folder_path = safe_dir / folder_name
                 
                 try:
+                    guardian_kernel.authorize_execution("GhostAgent", "write_file", str(new_folder_path))
                     new_folder_path.mkdir(exist_ok=True)
                     self._log_audit("FILE_CREATE", str(new_folder_path), "mkdir", 1, "PASSED")
                     return f"Success: GHOST created sandboxed folder '{folder_name}' at: {new_folder_path.name}"

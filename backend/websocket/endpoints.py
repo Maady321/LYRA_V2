@@ -10,6 +10,8 @@ from backend.database.connection import async_session
 from backend.models.db_models import Conversation, Message
 from backend.services.ollama_service import ollama_service
 from backend.core.logger import logger
+from backend.security.prompt_firewall import prompt_firewall, ThreatLevel
+from backend.security.voice_guardian import voice_guardian, VoiceRiskCategory
 
 import sys
 import os
@@ -117,6 +119,7 @@ async def websocket_chat_endpoint(websocket: WebSocket):
             temperature = data.get("temperature")
             max_tokens = data.get("max_tokens")
             context_window = data.get("context_window")
+            is_voice = data.get("is_voice", False)
             
             if not conv_id or not user_content:
                 await manager.send_json(websocket, {
@@ -124,6 +127,27 @@ async def websocket_chat_endpoint(websocket: WebSocket):
                     "data": {"message": "Missing conversation_id or message content."}
                 })
                 continue
+                
+            # ENTERPRISE PROMPT FIREWALL CHECK
+            user_id = "ws_client" # In production, extract from JWT via subprotocol
+            threat_level, block_reason = prompt_firewall.evaluate_prompt(user_id, user_content)
+            
+            if threat_level in [ThreatLevel.CRITICAL, ThreatLevel.HIGH]:
+                await manager.send_json(websocket, {
+                    "event": "chat_error",
+                    "data": {"message": f"Lyra Prompt Firewall Blocked Request: {block_reason}"}
+                })
+                continue
+                
+            # ENTERPRISE VOICE GUARDIAN CHECK
+            if is_voice:
+                is_valid, voice_msg = voice_guardian.validate_command(user_content)
+                if not is_valid:
+                    await manager.send_json(websocket, {
+                        "event": "chat_error",
+                        "data": {"message": f"Lyra Voice Guardian Blocked Request: {voice_msg}"}
+                    })
+                    continue
                 
             assistant_msg_id = str(uuid.uuid4())
             

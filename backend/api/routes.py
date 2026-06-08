@@ -37,7 +37,7 @@ async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(
             detail="Incorrect username",
             headers={"WWW-Authenticate": "Bearer"},
         )
-    access_token = create_access_token(data={"sub": form_data.username})
+    access_token = create_access_token(data={"sub": form_data.username, "role": "admin"})
     return {"access_token": access_token, "token_type": "bearer"}
 
 
@@ -191,7 +191,7 @@ async def update_setting(payload: SettingUpdate, db: AsyncSession = Depends(get_
 # --- IMAGE SERVING & MANAGEMENT ENDPOINTS ---
 
 @router.get("/images")
-async def list_images():
+async def list_images(current_user: dict = Depends(get_current_user)):
     """Scan the local workspace and return a list of all AI-generated images"""
     import os
     import glob
@@ -241,7 +241,7 @@ async def list_images():
 
 
 @router.get("/images/{filename}")
-async def get_image(filename: str):
+async def get_image(filename: str, current_user: dict = Depends(get_current_user)):
     """Serve generated images from the local workspace directory"""
     from fastapi.responses import FileResponse
     import os
@@ -256,11 +256,13 @@ async def get_image(filename: str):
 
 
 @router.post("/images/{filename}/open")
-async def open_image_natively(filename: str):
+async def open_image_natively(filename: str, current_user: dict = Depends(get_current_user)):
     """Launch the image natively in the Windows default Photo Viewer"""
     import os
     clean_filename = os.path.basename(filename)
     filepath = os.path.join(app_settings.WORKSPACE_PATH, clean_filename)
+    
+    guardian_kernel.authorize_execution("API_User", "run_command", filepath)
     
     if not os.path.exists(filepath):
         raise HTTPException(
@@ -279,11 +281,13 @@ async def open_image_natively(filename: str):
 
 
 @router.delete("/images/{filename}")
-async def delete_image(filename: str):
+async def delete_image(filename: str, current_user: dict = Depends(get_current_user)):
     """Delete the generated image from the workspace filesystem"""
     import os
     clean_filename = os.path.basename(filename)
     filepath = os.path.join(app_settings.WORKSPACE_PATH, clean_filename)
+    
+    guardian_kernel.authorize_execution("API_User", "write_file", filepath, "delete")
     
     if not os.path.exists(filepath):
         raise HTTPException(
@@ -302,7 +306,7 @@ async def delete_image(filename: str):
 # --- AGENT HEALTH & DIAGNOSTIC ENDPOINTS ---
 
 @router.get("/agents")
-async def get_agents_telemetry():
+async def get_agents_telemetry(current_user: dict = Depends(get_current_user)):
     """Fetch real-time agent statuses and hardware resource loads"""
     import psutil
     import os
@@ -357,7 +361,7 @@ async def get_agents_telemetry():
 
 
 @router.get("/agents/logs")
-async def get_agent_logs():
+async def get_agent_logs(current_user: dict = Depends(get_current_user)):
     """Retrieve live activity logs from the SQLite database of MJ AI Assistant"""
     import os
     import sqlite3
@@ -386,7 +390,7 @@ async def get_agent_logs():
 # --- TASK VISUALIZER & GRAPH ENDPOINTS ---
 
 @router.get("/tasks/active")
-async def get_active_tasks():
+async def get_active_tasks(current_user: dict = Depends(get_current_user)):
     """Retrieve the proactive background planning queue (goals and subtasks) for the canvas visualizer"""
     import os
     import sqlite3
@@ -416,7 +420,7 @@ async def get_active_tasks():
 
 
 @router.get("/tasks/graph")
-async def get_knowledge_graph_visualizer():
+async def get_knowledge_graph_visualizer(current_user: dict = Depends(get_current_user)):
     """Format the Knowledge Graph entities and triple relationships as a d3-compatible nodes/links network"""
     import os
     import sqlite3
@@ -583,7 +587,7 @@ async def execute_agent_direct_command(
 
 
 @router.get("/briefing")
-async def get_morning_briefing():
+async def get_morning_briefing(current_user: dict = Depends(get_current_user)):
     """Generates a dynamic multi-agent standup briefing script"""
     import os
     import sqlite3
@@ -696,20 +700,32 @@ async def get_security_logs(
 @router.get("/security/status")
 async def get_security_status(current_user: dict = Depends(get_current_user)):
     """Retrieve active threat intelligence and intrusion detection metrics"""
-    from backend.security.intrusion_detection import ids_monitor
+    from backend.security.security_score import security_engine
     
-    # Calculate an arbitrary threat score based on recent anomalies
-    base_score = 100
-    penalty = (len(ids_monitor.failed_auth_attempts) * 10) + \
-              (sum(ids_monitor.prompt_injection_attempts.values()) * 20) + \
-              (sum(ids_monitor.agent_violation_counts.values()) * 15)
-              
-    score = max(0, base_score - penalty)
+    return security_engine.calculate_overall_security_score()
+
+@router.get("/security/logs")
+async def get_security_logs(current_user: dict = Depends(get_current_user)):
+    """Retrieve security audit logs for the Security Center Dashboard"""
+    from backend.database.connection import async_session
+    from backend.database.models.security import SecurityAuditLog
+    from sqlalchemy import select
     
-    return {
-        "threat_score": score,
-        "active_blocks": len(ids_monitor.failed_auth_attempts),
-        "prompt_injections": sum(ids_monitor.prompt_injection_attempts.values()),
-        "agent_violations": sum(ids_monitor.agent_violation_counts.values()),
-        "status": "SECURE" if score > 80 else ("ELEVATED" if score > 50 else "CRITICAL")
-    }
+    async with async_session() as db:
+        q = select(SecurityAuditLog).order_by(SecurityAuditLog.timestamp.desc()).limit(100)
+        res = await db.execute(q)
+        logs = res.scalars().all()
+        return [
+            {
+                "id": log.id,
+                "timestamp": log.timestamp.isoformat() if log.timestamp else None,
+                "user_name": log.user_name,
+                "agent_name": log.agent_name,
+                "action": log.action,
+                "target": log.target,
+                "risk_level": log.risk_level,
+                "result": log.result,
+                "ip_address": log.ip_address
+            }
+            for log in logs
+        ]
