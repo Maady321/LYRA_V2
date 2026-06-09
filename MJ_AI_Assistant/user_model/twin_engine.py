@@ -4,6 +4,7 @@ from datetime import datetime
 from typing import Dict, Any, List
 from pathlib import Path
 from config.settings import settings
+from MJ_AI_Assistant.security.guardian import guardian_kernel
 
 class UserModelTwin:
     def __init__(self, db_path: Path = settings.DB_PATH):
@@ -14,6 +15,7 @@ class UserModelTwin:
         """
         Seeds baseline preference attributes inside the profile.
         """
+        guardian_kernel.authorize_execution(agent_name="twin_engine", action="db_access", target="sqlite3")
         with sqlite3.connect(self.db_path) as conn:
             profile_defaults = [
                 ("preferred_name", "Friend", 1.0),
@@ -53,6 +55,7 @@ class UserModelTwin:
                 
         # Update user skills
         if detected_skills:
+            guardian_kernel.authorize_execution(agent_name="twin_engine", action="db_access", target="sqlite3")
             with sqlite3.connect(self.db_path) as conn:
                 conn.row_factory = sqlite3.Row
                 for skill in detected_skills:
@@ -90,6 +93,7 @@ class UserModelTwin:
         project_id = f"project_{int(datetime.utcnow().timestamp())}"
         tech_str = ",".join(tech_stack) if tech_stack else ""
         
+        guardian_kernel.authorize_execution(agent_name="twin_engine", action="db_access", target="sqlite3")
         with sqlite3.connect(self.db_path) as conn:
             conn.execute(
                 """INSERT INTO user_projects (project_id, name, description, associated_tech) 
@@ -103,6 +107,7 @@ class UserModelTwin:
         """
         Compiles the entire profile state, observed skills, and project list for visual rendering.
         """
+        guardian_kernel.authorize_execution(agent_name="twin_engine", action="db_access", target="sqlite3")
         with sqlite3.connect(self.db_path) as conn:
             conn.row_factory = sqlite3.Row
             skills = [dict(r) for r in conn.execute("SELECT * FROM user_skills ORDER BY confidence_score DESC").fetchall()]

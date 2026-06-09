@@ -6,6 +6,7 @@ from typing import List
 
 from database.postgres_engine import get_pg_session
 from database.models.governance import GovernanceRegistry, CapabilityRegistry, TrustRegistry, CertificationTier, LifecycleState
+from backend.security.guardian import guardian_kernel
 
 router = APIRouter(prefix="/governance", tags=["Governance"])
 
@@ -16,6 +17,7 @@ class OnboardRequest(BaseModel):
 
 @router.post("/agents/onboard")
 async def onboard_agent(req: OnboardRequest, session: AsyncSession = Depends(get_pg_session)):
+    guardian_kernel.authorize_execution(agent_name="anonymous", action="api_access", target="onboard_agent")
     agent = GovernanceRegistry(
         agent_name=req.agent_name,
         description=req.description,
@@ -41,6 +43,7 @@ async def onboard_agent(req: OnboardRequest, session: AsyncSession = Depends(get
 async def certify_agent(agent_id: str, session: AsyncSession = Depends(get_pg_session)):
     """Runs capability validation and promotes to TIER_2_VERIFIED if successful."""
     # Mocking capability validation test passing
+    guardian_kernel.authorize_execution(agent_name="anonymous", action="api_access", target="certify_agent")
     await session.execute(
         update(CapabilityRegistry)
         .where(CapabilityRegistry.agent_id == agent_id)
@@ -60,6 +63,7 @@ async def certify_agent(agent_id: str, session: AsyncSession = Depends(get_pg_se
 @router.put("/agents/{agent_id}/deprecate")
 async def deprecate_agent(agent_id: str, session: AsyncSession = Depends(get_pg_session)):
     """Marks an agent for deprecation, routing dependent workflows away."""
+    guardian_kernel.authorize_execution(agent_name="anonymous", action="api_access", target="deprecate_agent")
     await session.execute(
         update(GovernanceRegistry)
         .where(GovernanceRegistry.id == agent_id)
@@ -71,6 +75,7 @@ async def deprecate_agent(agent_id: str, session: AsyncSession = Depends(get_pg_
 @router.get("/marketplace/search")
 async def search_marketplace(capability: str, session: AsyncSession = Depends(get_pg_session)):
     """Search for ACTIVE agents matching a capability."""
+    guardian_kernel.authorize_execution(agent_name="anonymous", action="api_access", target="search_marketplace")
     result = await session.execute(
         select(GovernanceRegistry.agent_name, GovernanceRegistry.description, GovernanceRegistry.tier)
         .join(CapabilityRegistry, GovernanceRegistry.id == CapabilityRegistry.agent_id)

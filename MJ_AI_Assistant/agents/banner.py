@@ -2,6 +2,7 @@ import os
 from pathlib import Path
 from agents.base import BaseAgent
 from core.bus import Task
+from MJ_AI_Assistant.security.guardian import guardian_kernel
 
 class BannerAgent(BaseAgent):
     async def handle_task(self, task: Task) -> str:

@@ -1,6 +1,7 @@
 import asyncio
 import sqlite3
 from typing import Dict, List, Any, Optional
+from MJ_AI_Assistant.security.guardian import guardian_kernel
 
 class PeerNegotiationBroker:
     def __init__(self, bus, db_path: str):
@@ -46,6 +47,7 @@ class PeerNegotiationBroker:
 
         matching_agents = []
         try:
+            guardian_kernel.authorize_execution(agent_name="negotiation", action="db_access", target="sqlite3")
             with sqlite3.connect(self.db_path) as conn:
                 conn.row_factory = sqlite3.Row
                 cursor = conn.execute(

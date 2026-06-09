@@ -5,6 +5,7 @@ import re
 from datetime import datetime
 from typing import List, Dict, Any
 from config.settings import settings
+from MJ_AI_Assistant.security.guardian import guardian_kernel
 
 class DreamerMemoryConsolidator:
     def __init__(self, db_path: Path = settings.DB_PATH, graph_engine=None, ollama_client=None):
@@ -18,6 +19,7 @@ class DreamerMemoryConsolidator:
         builds knowledge graph triples, and prunes stale connections.
         """
         # 1. Fetch recent exchanges
+        guardian_kernel.authorize_execution(agent_name="dreamer", action="db_access", target="sqlite3")
         with sqlite3.connect(self.db_path) as conn:
             conn.row_factory = sqlite3.Row
             rows = conn.execute(

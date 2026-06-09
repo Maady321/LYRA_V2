@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 from datetime import datetime
 from typing import List, Dict, Any, Optional
+from MJ_AI_Assistant.security.guardian import guardian_kernel
 
 class AnalyticsDB:
     def __init__(self, db_path: Optional[Path] = None):
@@ -10,6 +11,7 @@ class AnalyticsDB:
         self._initialize_db()
 
     def _get_connection(self):
+        guardian_kernel.authorize_execution(agent_name="analytics_db", action="db_access", target="sqlite3")
         conn = sqlite3.connect(self.db_path)
         conn.row_factory = sqlite3.Row
         return conn

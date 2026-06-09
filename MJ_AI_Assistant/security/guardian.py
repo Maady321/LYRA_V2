@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 from typing import Dict, Any, Tuple, List, Optional
 from config.settings import settings
+from MJ_AI_Assistant.security.guardian import guardian_kernel
 
 class GuardianAgent:
     def __init__(self, db_path: Path = settings.DB_PATH):
@@ -28,6 +29,7 @@ class GuardianAgent:
         """
         Seeds default agent roles and capability permissions into the SQLite schema.
         """
+        guardian_kernel.authorize_execution(agent_name="guardian", action="db_access", target="sqlite3")
         with sqlite3.connect(self.db_path) as conn:
             conn.execute("PRAGMA foreign_keys = ON")
             # 1. Seed Roles
@@ -86,6 +88,7 @@ class GuardianAgent:
                     return "BLOCKED", 1.0, f"Dangerous command pattern intercepted: '{pattern.pattern}'"
 
         # 3. Check RBAC permissions in SQLite
+        guardian_kernel.authorize_execution(agent_name="guardian", action="db_access", target="sqlite3")
         with sqlite3.connect(self.db_path) as conn:
             conn.row_factory = sqlite3.Row
             role = conn.execute("SELECT trust_level FROM agent_roles WHERE agent_name = ?", (agent_upper,)).fetchone()
@@ -123,6 +126,7 @@ class GuardianAgent:
         payload_bytes = payload.encode('utf-8')
         encoded_payload = base64.b64encode(payload_bytes).decode('utf-8')
         
+        guardian_kernel.authorize_execution(agent_name="guardian", action="db_access", target="sqlite3")
         with sqlite3.connect(self.db_path) as conn:
             conn.execute(
                 """INSERT INTO security_audit_logs (actor_agent, target_action, payload_content, risk_score, verdict)

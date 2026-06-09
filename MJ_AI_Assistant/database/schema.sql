@@ -173,3 +173,17 @@ CREATE TABLE IF NOT EXISTS user_projects (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+
+
+-- PROMPT FIREWALL V2 LOGS
+CREATE TABLE IF NOT EXISTS security_prompt_events (
+    event_id TEXT PRIMARY KEY,
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    user TEXT NOT NULL,
+    prompt_hash TEXT NOT NULL,
+    threat_type TEXT NOT NULL,
+    risk_level TEXT NOT NULL,
+    decision TEXT NOT NULL,
+    blocked BOOLEAN NOT NULL,
+    reason TEXT
+);

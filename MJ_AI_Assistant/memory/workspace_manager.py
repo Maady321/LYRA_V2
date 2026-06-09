@@ -2,6 +2,7 @@ import sqlite3
 import uuid
 from typing import List, Dict, Any, Optional
 from memory.sqlite_db import SQLiteDB
+from MJ_AI_Assistant.security.guardian import guardian_kernel
 
 class AIWorkspaceManager:
     def __init__(self, db: SQLiteDB):
@@ -10,6 +11,7 @@ class AIWorkspaceManager:
     # --- Markdown Notes ---
     def create_note(self, title: str, content: str = "") -> str:
         note_id = f"note_{uuid.uuid4().hex[:8]}"
+        guardian_kernel.authorize_execution(agent_name="workspace_manager", action="db_access", target="sqlite3")
         with sqlite3.connect(self.db.db_path) as conn:
             conn.execute(
                 "INSERT INTO workspace_notes (note_id, title, content) VALUES (?, ?, ?)",
@@ -23,6 +25,7 @@ class AIWorkspaceManager:
         Conducts full-text searches inside SQLite notes using LIKE mapping indexes.
         """
         query = "SELECT note_id, title, content, updated_at FROM workspace_notes WHERE content LIKE ? OR title LIKE ?"
+        guardian_kernel.authorize_execution(agent_name="workspace_manager", action="db_access", target="sqlite3")
         with sqlite3.connect(self.db.db_path) as conn:
             conn.row_factory = sqlite3.Row
             rows = conn.execute(query, (f"%{search_term}%", f"%{search_term}%")).fetchall()
@@ -31,6 +34,7 @@ class AIWorkspaceManager:
     # --- Project management ---
     def create_project(self, title: str, description: str = "") -> str:
         project_id = f"project_{uuid.uuid4().hex[:8]}"
+        guardian_kernel.authorize_execution(agent_name="workspace_manager", action="db_access", target="sqlite3")
         with sqlite3.connect(self.db.db_path) as conn:
             conn.execute(
                 "INSERT INTO workspace_projects (project_id, title, description, status) VALUES (?, ?, ?, ?)",
@@ -41,6 +45,7 @@ class AIWorkspaceManager:
 
     def list_active_projects(self) -> List[Dict[str, Any]]:
         query = "SELECT project_id, title, description, status, created_at FROM workspace_projects WHERE status != 'ARCHIVED'"
+        guardian_kernel.authorize_execution(agent_name="workspace_manager", action="db_access", target="sqlite3")
         with sqlite3.connect(self.db.db_path) as conn:
             conn.row_factory = sqlite3.Row
             rows = conn.execute(query).fetchall()

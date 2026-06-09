@@ -1,0 +1,901 @@
+[
+  {
+    "type": "API Route",
+    "name": "root",
+    "file": "c:\\sabari\\Lyra\\backend\\main.py",
+    "line": 58,
+    "has_guardian": true
+  },
+  {
+    "type": "API Route",
+    "name": "metrics",
+    "file": "c:\\sabari\\Lyra\\backend\\main.py",
+    "line": 67,
+    "has_guardian": true
+  },
+  {
+    "type": "API Route",
+    "name": "login_for_access_token",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routes.py",
+    "line": 31,
+    "has_guardian": true
+  },
+  {
+    "type": "API Route",
+    "name": "health_check",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routes.py",
+    "line": 46,
+    "has_guardian": true
+  },
+  {
+    "type": "API Route",
+    "name": "list_models",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routes.py",
+    "line": 71,
+    "has_guardian": true
+  },
+  {
+    "type": "API Route",
+    "name": "get_conversations",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routes.py",
+    "line": 89,
+    "has_guardian": true
+  },
+  {
+    "type": "API Route",
+    "name": "create_conversation",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routes.py",
+    "line": 105,
+    "has_guardian": true
+  },
+  {
+    "type": "API Route",
+    "name": "get_conversation",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routes.py",
+    "line": 120,
+    "has_guardian": true
+  },
+  {
+    "type": "API Route",
+    "name": "update_conversation",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routes.py",
+    "line": 135,
+    "has_guardian": true
+  },
+  {
+    "type": "API Route",
+    "name": "delete_conversation",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routes.py",
+    "line": 154,
+    "has_guardian": true
+  },
+  {
+    "type": "API Route",
+    "name": "get_settings",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routes.py",
+    "line": 175,
+    "has_guardian": true
+  },
+  {
+    "type": "API Route",
+    "name": "update_setting",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routes.py",
+    "line": 183,
+    "has_guardian": true
+  },
+  {
+    "type": "API Route",
+    "name": "list_images",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routes.py",
+    "line": 204,
+    "has_guardian": true
+  },
+  {
+    "type": "API Route",
+    "name": "get_image",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routes.py",
+    "line": 255,
+    "has_guardian": true
+  },
+  {
+    "type": "API Route",
+    "name": "open_image_natively",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routes.py",
+    "line": 271,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "os.startfile",
+    "category": "OS Execution",
+    "func_name": "open_image_natively",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routes.py",
+    "line": 287,
+    "has_guardian": true
+  },
+  {
+    "type": "API Route",
+    "name": "delete_image",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routes.py",
+    "line": 297,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "os.remove",
+    "category": "File Deletion",
+    "func_name": "delete_image",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routes.py",
+    "line": 313,
+    "has_guardian": true
+  },
+  {
+    "type": "API Route",
+    "name": "get_agents_telemetry",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routes.py",
+    "line": 323,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "get_agents_telemetry",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routes.py",
+    "line": 343,
+    "has_guardian": true
+  },
+  {
+    "type": "API Route",
+    "name": "get_agent_logs",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routes.py",
+    "line": 380,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "get_agent_logs",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routes.py",
+    "line": 392,
+    "has_guardian": true
+  },
+  {
+    "type": "API Route",
+    "name": "get_active_tasks",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routes.py",
+    "line": 411,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "get_active_tasks",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routes.py",
+    "line": 423,
+    "has_guardian": true
+  },
+  {
+    "type": "API Route",
+    "name": "get_knowledge_graph_visualizer",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routes.py",
+    "line": 443,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "get_knowledge_graph_visualizer",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routes.py",
+    "line": 456,
+    "has_guardian": true
+  },
+  {
+    "type": "API Route",
+    "name": "execute_agent_direct_command",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routes.py",
+    "line": 506,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "execute_agent_direct_command",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routes.py",
+    "line": 536,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "execute_agent_direct_command",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routes.py",
+    "line": 567,
+    "has_guardian": true
+  },
+  {
+    "type": "API Route",
+    "name": "get_morning_briefing",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routes.py",
+    "line": 613,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "get_morning_briefing",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routes.py",
+    "line": 631,
+    "has_guardian": true
+  },
+  {
+    "type": "API Route",
+    "name": "get_security_logs",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routes.py",
+    "line": 716,
+    "has_guardian": true
+  },
+  {
+    "type": "API Route",
+    "name": "get_security_status",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routes.py",
+    "line": 727,
+    "has_guardian": true
+  },
+  {
+    "type": "API Route",
+    "name": "get_security_logs",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routes.py",
+    "line": 735,
+    "has_guardian": true
+  },
+  {
+    "type": "API Route",
+    "name": "onboard_agent",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routers\\governance.py",
+    "line": 19,
+    "has_guardian": true
+  },
+  {
+    "type": "API Route",
+    "name": "certify_agent",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routers\\governance.py",
+    "line": 43,
+    "has_guardian": true
+  },
+  {
+    "type": "API Route",
+    "name": "deprecate_agent",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routers\\governance.py",
+    "line": 64,
+    "has_guardian": true
+  },
+  {
+    "type": "API Route",
+    "name": "search_marketplace",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routers\\governance.py",
+    "line": 76,
+    "has_guardian": true
+  },
+  {
+    "type": "API Route",
+    "name": "create_prompt",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routers\\mlops.py",
+    "line": 27,
+    "has_guardian": true
+  },
+  {
+    "type": "API Route",
+    "name": "initialize_ab_test",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routers\\mlops.py",
+    "line": 41,
+    "has_guardian": true
+  },
+  {
+    "type": "API Route",
+    "name": "rollback_prompt",
+    "file": "c:\\sabari\\Lyra\\backend\\api\\routers\\mlops.py",
+    "line": 62,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "open",
+    "category": "File Access",
+    "func_name": "_get_or_create_key",
+    "file": "c:\\sabari\\Lyra\\backend\\security\\encryption.py",
+    "line": 20,
+    "has_guardian": false
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "open",
+    "category": "File Access",
+    "func_name": "_get_or_create_key",
+    "file": "c:\\sabari\\Lyra\\backend\\security\\encryption.py",
+    "line": 30,
+    "has_guardian": false
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "subprocess.run",
+    "category": "OS Execution",
+    "func_name": "execute_in_sandbox",
+    "file": "c:\\sabari\\Lyra\\backend\\security\\sandbox.py",
+    "line": 37,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "webbrowser.open",
+    "category": "Browser Execution",
+    "func_name": "_open_chrome",
+    "file": "c:\\sabari\\Lyra\\backend\\tools\\task_manager.py",
+    "line": 172,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "webbrowser.open",
+    "category": "Browser Execution",
+    "func_name": "_search_chrome",
+    "file": "c:\\sabari\\Lyra\\backend\\tools\\task_manager.py",
+    "line": 181,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "webbrowser.open",
+    "category": "Browser Execution",
+    "func_name": "_play_youtube",
+    "file": "c:\\sabari\\Lyra\\backend\\tools\\task_manager.py",
+    "line": 190,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "subprocess.run",
+    "category": "OS Execution",
+    "func_name": "_open_notepad",
+    "file": "c:\\sabari\\Lyra\\backend\\tools\\task_manager.py",
+    "line": 198,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "subprocess.run",
+    "category": "OS Execution",
+    "func_name": "_open_calculator",
+    "file": "c:\\sabari\\Lyra\\backend\\tools\\task_manager.py",
+    "line": 206,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "subprocess.run",
+    "category": "OS Execution",
+    "func_name": "_open_explorer",
+    "file": "c:\\sabari\\Lyra\\backend\\tools\\task_manager.py",
+    "line": 214,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "open",
+    "category": "File Access",
+    "func_name": "_write_in_notepad",
+    "file": "c:\\sabari\\Lyra\\backend\\tools\\task_manager.py",
+    "line": 235,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "subprocess.run",
+    "category": "OS Execution",
+    "func_name": "_write_in_notepad",
+    "file": "c:\\sabari\\Lyra\\backend\\tools\\task_manager.py",
+    "line": 240,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "open",
+    "category": "File Access",
+    "func_name": "_create_image",
+    "file": "c:\\sabari\\Lyra\\backend\\tools\\task_manager.py",
+    "line": 351,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "subprocess.run",
+    "category": "OS Execution",
+    "func_name": "_create_image",
+    "file": "c:\\sabari\\Lyra\\backend\\tools\\task_manager.py",
+    "line": 356,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "open",
+    "category": "File Access",
+    "func_name": "handle_task",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\agents\\banner.py",
+    "line": 33,
+    "has_guardian": false
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "_log_audit",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\agents\\ghost.py",
+    "line": 19,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "os.startfile",
+    "category": "OS Execution",
+    "func_name": "handle_task",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\agents\\ghost.py",
+    "line": 55,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "open",
+    "category": "File Access",
+    "func_name": "handle_task",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\agents\\stark.py",
+    "line": 83,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "subprocess.run",
+    "category": "OS Execution",
+    "func_name": "handle_task",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\agents\\stark.py",
+    "line": 96,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "_handle_negotiation_request",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\core\\negotiation.py",
+    "line": 51,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "_initialize_oracle_tables",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\core\\oracle.py",
+    "line": 18,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "route_task",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\core\\oracle.py",
+    "line": 61,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "log_metrics",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\core\\oracle.py",
+    "line": 92,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "open",
+    "category": "File Access",
+    "func_name": "scan_and_hot_load",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\core\\plugin_loader.py",
+    "line": 29,
+    "has_guardian": false
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "_get_connection",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\memory\\analytics_db.py",
+    "line": 15,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "open",
+    "category": "File Access",
+    "func_name": "_initialize_db",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\memory\\analytics_db.py",
+    "line": 24,
+    "has_guardian": false
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "consolidate_recent_memories",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\memory\\dreamer.py",
+    "line": 23,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "register_goal",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\memory\\goal_manager.py",
+    "line": 18,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "add_subtask",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\memory\\goal_manager.py",
+    "line": 34,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "get_pending_subtasks",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\memory\\goal_manager.py",
+    "line": 55,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "update_subtask_status",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\memory\\goal_manager.py",
+    "line": 66,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "add_entity",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\memory\\graph_engine.py",
+    "line": 20,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "add_relationship",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\memory\\graph_engine.py",
+    "line": 44,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "traverse_multi_hop",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\memory\\graph_engine.py",
+    "line": 81,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "query_semantic_context",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\memory\\graph_engine.py",
+    "line": 100,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "_get_connection",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\memory\\sqlite_db.py",
+    "line": 17,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "open",
+    "category": "File Access",
+    "func_name": "_initialize_db",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\memory\\sqlite_db.py",
+    "line": 30,
+    "has_guardian": false
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "search_similar_memories",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\memory\\vector_store.py",
+    "line": 68,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "create_note",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\memory\\workspace_manager.py",
+    "line": 15,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "search_notes_full_text",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\memory\\workspace_manager.py",
+    "line": 29,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "create_project",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\memory\\workspace_manager.py",
+    "line": 38,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "list_active_projects",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\memory\\workspace_manager.py",
+    "line": 49,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "_initialize_default_rules",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\security\\guardian.py",
+    "line": 33,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "validate_action",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\security\\guardian.py",
+    "line": 92,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "log_security_audit",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\security\\guardian.py",
+    "line": 130,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "open",
+    "category": "File Access",
+    "func_name": "setUp",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_dreamer.py",
+    "line": 20,
+    "has_guardian": false
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "setUp",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_dreamer.py",
+    "line": 23,
+    "has_guardian": false
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "test_fallback_triple_extraction",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_dreamer.py",
+    "line": 53,
+    "has_guardian": false
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "test_fallback_triple_extraction",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_dreamer.py",
+    "line": 63,
+    "has_guardian": false
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "open",
+    "category": "File Access",
+    "func_name": "setUp",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_guardian.py",
+    "line": 25,
+    "has_guardian": false
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "setUp",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_guardian.py",
+    "line": 28,
+    "has_guardian": false
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "open",
+    "category": "File Access",
+    "func_name": "setUp",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_negotiation_and_fts.py",
+    "line": 34,
+    "has_guardian": false
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "setUp",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_negotiation_and_fts.py",
+    "line": 37,
+    "has_guardian": false
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "setUp",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_negotiation_and_fts.py",
+    "line": 47,
+    "has_guardian": false
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "test_fts5_trigger_sync",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_negotiation_and_fts.py",
+    "line": 96,
+    "has_guardian": false
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "test_fts5_trigger_sync",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_negotiation_and_fts.py",
+    "line": 106,
+    "has_guardian": false
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "test_metrics_logging",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_oracle.py",
+    "line": 57,
+    "has_guardian": false
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "open",
+    "category": "File Access",
+    "func_name": "setUp",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_user_twin.py",
+    "line": 19,
+    "has_guardian": false
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "setUp",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_user_twin.py",
+    "line": 22,
+    "has_guardian": false
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "subprocess.run",
+    "category": "OS Execution",
+    "func_name": "execute_python_script",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tools\\code_runner.py",
+    "line": 27,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "_initialize_default_profile",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\user_model\\twin_engine.py",
+    "line": 19,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "analyze_query_for_twin",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\user_model\\twin_engine.py",
+    "line": 59,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "add_project",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\user_model\\twin_engine.py",
+    "line": 97,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "sqlite3.connect",
+    "category": "Direct DB Access",
+    "func_name": "serialize_digital_twin",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\user_model\\twin_engine.py",
+    "line": 111,
+    "has_guardian": true
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "open",
+    "category": "File Access",
+    "func_name": "download_file",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\voice\\tts.py",
+    "line": 74,
+    "has_guardian": false
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "open",
+    "category": "File Access",
+    "func_name": "download_file",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\voice\\tts.py",
+    "line": 81,
+    "has_guardian": false
+  },
+  {
+    "type": "Execution Sink",
+    "sink": "open",
+    "category": "File Access",
+    "func_name": "_run_tts_loop",
+    "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\voice\\tts.py",
+    "line": 244,
+    "has_guardian": false
+  }
+]

@@ -2,6 +2,7 @@ import sys
 import subprocess
 from pathlib import Path
 from typing import Dict, Any
+from MJ_AI_Assistant.security.guardian import guardian_kernel
 
 class SafeCodeRunner:
     @staticmethod
@@ -22,6 +23,7 @@ class SafeCodeRunner:
             venv_python = script_path.parent.parent / "venv" / "Scripts" / "python.exe"
             python_bin = str(venv_python) if venv_python.exists() else sys.executable
 
+            guardian_kernel.authorize_execution(agent_name="code_runner", action="os_execution", target="subprocess")
             process = subprocess.run(
                 [python_bin, str(script_path)],
                 capture_output=True,

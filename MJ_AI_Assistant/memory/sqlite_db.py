@@ -5,6 +5,7 @@ from pathlib import Path
 from datetime import datetime
 from typing import List, Dict, Any, Optional
 from config.settings import settings
+from MJ_AI_Assistant.security.guardian import guardian_kernel
 
 class SQLiteDB:
     def __init__(self, db_path: Path = settings.DB_PATH):
@@ -12,6 +13,7 @@ class SQLiteDB:
         self._initialize_db()
 
     def _get_connection(self):
+        guardian_kernel.authorize_execution(agent_name="sqlite_db", action="db_access", target="sqlite3")
         conn = sqlite3.connect(self.db_path)
         conn.row_factory = sqlite3.Row
         # Performance PRAGMAs: WAL mode for concurrent reads, reduced sync overhead, 64MB cache
@@ -131,4 +133,25 @@ class SQLiteDB:
     def delete_memory(self, memory_id: str) -> None:
         with self._get_connection() as conn:
             conn.execute("DELETE FROM memories WHERE memory_id = ?", (memory_id,))
+            conn.commit()
+
+    # --- Security Logging ---
+    def log_prompt_event(self, event_data: Dict[str, Any]) -> None:
+        with self._get_connection() as conn:
+            conn.execute(
+                """INSERT INTO security_prompt_events 
+                   (event_id, timestamp, user, prompt_hash, threat_type, risk_level, decision, blocked, reason) 
+                   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                (
+                    event_data["event_id"],
+                    event_data["timestamp"],
+                    event_data["user"],
+                    event_data["prompt_hash"],
+                    event_data["threat_type"],
+                    event_data["risk_level"],
+                    event_data["decision"],
+                    1 if event_data["blocked"] else 0,
+                    event_data["reason"]
+                )
+            )
             conn.commit()

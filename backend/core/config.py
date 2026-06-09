@@ -10,6 +10,7 @@ WORKSPACE_ROOT = BASE_DIR.parent
 class Settings(BaseSettings):
     PROJECT_NAME: str = "Lyra AI"
     API_V1_STR: str = "/api"
+    DEBUG_SECURITY: bool = False
     
     # Workspace path (project root)
     WORKSPACE_PATH: str = str(WORKSPACE_ROOT)

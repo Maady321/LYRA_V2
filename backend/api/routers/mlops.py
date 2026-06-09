@@ -6,6 +6,7 @@ from typing import List, Optional
 
 from database.postgres_engine import get_pg_session
 from database.models.mlops import PromptRegistry, DeploymentStatus
+from backend.security.guardian import guardian_kernel
 
 router = APIRouter(prefix="/mlops", tags=["MLOps"])
 
@@ -24,6 +25,7 @@ class ABTestRequest(BaseModel):
 
 @router.post("/prompts/")
 async def create_prompt(prompt: PromptCreate, session: AsyncSession = Depends(get_pg_session)):
+    guardian_kernel.authorize_execution(agent_name="anonymous", action="api_access", target="create_prompt")
     new_prompt = PromptRegistry(
         agent_type=prompt.agent_type,
         version=prompt.version,
@@ -37,6 +39,7 @@ async def create_prompt(prompt: PromptCreate, session: AsyncSession = Depends(ge
 
 @router.post("/ab-test/")
 async def initialize_ab_test(req: ABTestRequest, session: AsyncSession = Depends(get_pg_session)):
+    guardian_kernel.authorize_execution(agent_name="anonymous", action="api_access", target="initialize_ab_test")
     if req.weight_a + req.weight_b != 100:
         raise HTTPException(status_code=400, detail="Weights must sum to 100")
         
@@ -58,6 +61,7 @@ async def initialize_ab_test(req: ABTestRequest, session: AsyncSession = Depends
 @router.post("/rollbacks/{prompt_id}")
 async def rollback_prompt(prompt_id: str, session: AsyncSession = Depends(get_pg_session)):
     # Find prompt
+    guardian_kernel.authorize_execution(agent_name="anonymous", action="api_access", target="rollback_prompt")
     res = await session.execute(select(PromptRegistry).where(PromptRegistry.id == prompt_id))
     prompt = res.scalar_one_or_none()
     if not prompt: raise HTTPException(404)

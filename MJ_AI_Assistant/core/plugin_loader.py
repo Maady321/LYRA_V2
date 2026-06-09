@@ -3,6 +3,7 @@ import json
 import importlib.util
 from pathlib import Path
 from typing import Dict, Any, List, Optional
+from MJ_AI_Assistant.security.guardian import guardian_kernel
 
 class HotPluginLoader:
     def __init__(self, plugins_dir: Optional[Path] = None):

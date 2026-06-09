@@ -3,6 +3,7 @@ import uuid
 import json
 from typing import List, Dict, Any, Tuple, Optional
 from memory.sqlite_db import SQLiteDB
+from MJ_AI_Assistant.security.guardian import guardian_kernel
 
 class KnowledgeGraphEngine:
     def __init__(self, db: SQLiteDB):
@@ -15,6 +16,7 @@ class KnowledgeGraphEngine:
         entity_id = str(uuid.uuid4())
         metadata_str = json.dumps(metadata) if metadata else None
         
+        guardian_kernel.authorize_execution(agent_name="graph_engine", action="db_access", target="sqlite3")
         with sqlite3.connect(self.db.db_path) as conn:
             try:
                 conn.execute(
@@ -38,6 +40,7 @@ class KnowledgeGraphEngine:
         target_id = self.add_entity(target_name, "concept")
         
         relationship_id = str(uuid.uuid4())
+        guardian_kernel.authorize_execution(agent_name="graph_engine", action="db_access", target="sqlite3")
         with sqlite3.connect(self.db.db_path) as conn:
             try:
                 conn.execute(
@@ -74,6 +77,7 @@ class KnowledgeGraphEngine:
         """
         
         paths = []
+        guardian_kernel.authorize_execution(agent_name="graph_engine", action="db_access", target="sqlite3")
         with sqlite3.connect(self.db.db_path) as conn:
             conn.row_factory = sqlite3.Row
             try:
@@ -92,6 +96,7 @@ class KnowledgeGraphEngine:
         # Basic token keyword extractor
         keywords = [word.strip('?,.!"\'') for word in user_query.split() if len(word) >= 2]
         
+        guardian_kernel.authorize_execution(agent_name="graph_engine", action="db_access", target="sqlite3")
         with sqlite3.connect(self.db.db_path) as conn:
             conn.row_factory = sqlite3.Row
             for kw in keywords:

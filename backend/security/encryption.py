@@ -7,6 +7,7 @@ from backend.core.config import settings, BASE_DIR
 _ENCRYPTION_KEY_PATH = os.path.join(BASE_DIR, ".env.key")
 
 import warnings
+from backend.security.guardian import guardian_kernel
 
 def _get_or_create_key() -> bytes:
     # 1. Check OS Environment Variables (Enterprise standard)

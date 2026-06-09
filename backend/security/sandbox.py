@@ -2,6 +2,7 @@ import subprocess
 import shlex
 import os
 from backend.core.config import settings, BASE_DIR
+from backend.security.guardian import guardian_kernel
 
 class SandboxViolation(Exception):
     pass
@@ -32,6 +33,7 @@ def execute_in_sandbox(command: str, timeout: int = 15) -> str:
         
     try:
         # Strict Shell=False enforcement.
+        guardian_kernel.authorize_execution(agent_name="sandbox", action="os_execution", target="subprocess")
         result = subprocess.run(
             allowed_command_list,
             shell=False,

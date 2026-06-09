@@ -22,6 +22,11 @@ from security.guardian import GuardianAgent
 from user_model.twin_engine import UserModelTwin
 from agents.navigator import NavigatorAgent
 from memory.dreamer import DreamerMemoryConsolidator
+from agents.red_agent import RedAgent
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+from backend.security.prompt_firewall_v2 import PromptFirewallV2
 
 class MJOrchestrator:
     def __init__(self):
@@ -35,6 +40,7 @@ class MJOrchestrator:
         self.graph_engine = KnowledgeGraphEngine(self.db)
         self.goal_manager = AutonomousGoalManager(self.db)
         self.guardian = GuardianAgent(self.db.db_path)
+        self.firewall = PromptFirewallV2(db_connection=self.db)
         self.user_twin = UserModelTwin(self.db.db_path)
         self.dreamer = DreamerMemoryConsolidator(self.db.db_path, self.graph_engine, self.client)
         
@@ -51,6 +57,7 @@ class MJOrchestrator:
         self.ghost = GhostAgent("GHOST", self.bus, self.client, self.db)
         self.eagle = EagleAgent("EAGLE", self.bus, self.client, self.db)
         self.navigator = NavigatorAgent("NAVIGATOR", self.bus, self.client, self.db)
+        self.red_agent = RedAgent("RED_AGENT", self.bus, self.client, self.db)
 
 
 
@@ -65,22 +72,28 @@ class MJOrchestrator:
         """
         Coordinates cooperative execution, injecting knowledge graph context parameters.
         """
+        # Validate through PROMPT FIREWALL V2
+        is_allowed, firewall_response, audit_data = self.firewall.inspect_prompt("local_user", prompt)
+        if not is_allowed:
+            return firewall_response
+            
+        # Use sanitized prompt if necessary
+        safe_prompt = firewall_response
+            
         # Validate through GUARDIAN security wall first!
-        verdict, risk_score, reasoning = self.guardian.validate_action("FURY", "CHAT", prompt)
+        verdict, risk_score, reasoning = self.guardian.validate_action("FURY", "CHAT", safe_prompt)
         if verdict == "BLOCKED":
             return f"[GUARDIAN BLOCK] Action denied by kernel security. Verdict: {verdict}. Risk: {risk_score}. Reasoning: {reasoning}"
 
         # Analyze and update the User Digital Twin state!
-        self.user_twin.analyze_query_for_twin(prompt)
+        self.user_twin.analyze_query_for_twin(safe_prompt)
 
         # Save user prompt
         user_msg_id = str(uuid.uuid4())
-        self.db.add_message(user_msg_id, conversation_id, "user", prompt)
-
-
+        self.db.add_message(user_msg_id, conversation_id, "user", safe_prompt)
 
         # 1. Query Knowledge Graph semantic context links!
-        graph_context = self.graph_engine.query_semantic_context(prompt)
+        graph_context = self.graph_engine.query_semantic_context(safe_prompt)
         
         task_id = f"task_{uuid.uuid4().hex[:8]}"
         coordinator_task = Task(
@@ -89,7 +102,7 @@ class MJOrchestrator:
             assigner="USER",
             assignee="FURY",
             payload={
-                "prompt": prompt, 
+                "prompt": safe_prompt, 
                 "conversation_id": conversation_id,
                 "graph_context": graph_context
             }

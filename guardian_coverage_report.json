@@ -1,0 +1,443 @@
+{
+  "total_execution_paths": 107,
+  "paths_covered_by_guardian": 84,
+  "paths_bypassing_guardian": 23,
+  "paths_bypassing_rbac": 23,
+  "paths_bypassing_audit": 23,
+  "paths_bypassing_risk_engine": 23,
+  "coverage_percentage": 78.5,
+  "top_risk_bypasses": [
+    {
+      "type": "Execution Sink",
+      "sink": "sqlite3.connect",
+      "category": "Direct DB Access",
+      "func_name": "setUp",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_dreamer.py",
+      "line": 23,
+      "has_guardian": false,
+      "risk_score": 80
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "sqlite3.connect",
+      "category": "Direct DB Access",
+      "func_name": "test_fallback_triple_extraction",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_dreamer.py",
+      "line": 53,
+      "has_guardian": false,
+      "risk_score": 80
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "sqlite3.connect",
+      "category": "Direct DB Access",
+      "func_name": "test_fallback_triple_extraction",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_dreamer.py",
+      "line": 63,
+      "has_guardian": false,
+      "risk_score": 80
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "sqlite3.connect",
+      "category": "Direct DB Access",
+      "func_name": "setUp",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_guardian.py",
+      "line": 28,
+      "has_guardian": false,
+      "risk_score": 80
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "sqlite3.connect",
+      "category": "Direct DB Access",
+      "func_name": "setUp",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_negotiation_and_fts.py",
+      "line": 37,
+      "has_guardian": false,
+      "risk_score": 80
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "sqlite3.connect",
+      "category": "Direct DB Access",
+      "func_name": "setUp",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_negotiation_and_fts.py",
+      "line": 47,
+      "has_guardian": false,
+      "risk_score": 80
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "sqlite3.connect",
+      "category": "Direct DB Access",
+      "func_name": "test_fts5_trigger_sync",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_negotiation_and_fts.py",
+      "line": 96,
+      "has_guardian": false,
+      "risk_score": 80
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "sqlite3.connect",
+      "category": "Direct DB Access",
+      "func_name": "test_fts5_trigger_sync",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_negotiation_and_fts.py",
+      "line": 106,
+      "has_guardian": false,
+      "risk_score": 80
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "sqlite3.connect",
+      "category": "Direct DB Access",
+      "func_name": "test_metrics_logging",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_oracle.py",
+      "line": 57,
+      "has_guardian": false,
+      "risk_score": 80
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "sqlite3.connect",
+      "category": "Direct DB Access",
+      "func_name": "setUp",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_user_twin.py",
+      "line": 22,
+      "has_guardian": false,
+      "risk_score": 80
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "open",
+      "category": "File Access",
+      "func_name": "_get_or_create_key",
+      "file": "c:\\sabari\\Lyra\\backend\\security\\encryption.py",
+      "line": 20,
+      "has_guardian": false,
+      "risk_score": 40
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "open",
+      "category": "File Access",
+      "func_name": "_get_or_create_key",
+      "file": "c:\\sabari\\Lyra\\backend\\security\\encryption.py",
+      "line": 30,
+      "has_guardian": false,
+      "risk_score": 40
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "open",
+      "category": "File Access",
+      "func_name": "handle_task",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\agents\\banner.py",
+      "line": 33,
+      "has_guardian": false,
+      "risk_score": 40
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "open",
+      "category": "File Access",
+      "func_name": "scan_and_hot_load",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\core\\plugin_loader.py",
+      "line": 29,
+      "has_guardian": false,
+      "risk_score": 40
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "open",
+      "category": "File Access",
+      "func_name": "_initialize_db",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\memory\\analytics_db.py",
+      "line": 24,
+      "has_guardian": false,
+      "risk_score": 40
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "open",
+      "category": "File Access",
+      "func_name": "_initialize_db",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\memory\\sqlite_db.py",
+      "line": 30,
+      "has_guardian": false,
+      "risk_score": 40
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "open",
+      "category": "File Access",
+      "func_name": "setUp",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_dreamer.py",
+      "line": 20,
+      "has_guardian": false,
+      "risk_score": 40
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "open",
+      "category": "File Access",
+      "func_name": "setUp",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_guardian.py",
+      "line": 25,
+      "has_guardian": false,
+      "risk_score": 40
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "open",
+      "category": "File Access",
+      "func_name": "setUp",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_negotiation_and_fts.py",
+      "line": 34,
+      "has_guardian": false,
+      "risk_score": 40
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "open",
+      "category": "File Access",
+      "func_name": "setUp",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_user_twin.py",
+      "line": 19,
+      "has_guardian": false,
+      "risk_score": 40
+    }
+  ],
+  "all_bypasses": [
+    {
+      "type": "Execution Sink",
+      "sink": "sqlite3.connect",
+      "category": "Direct DB Access",
+      "func_name": "setUp",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_dreamer.py",
+      "line": 23,
+      "has_guardian": false,
+      "risk_score": 80
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "sqlite3.connect",
+      "category": "Direct DB Access",
+      "func_name": "test_fallback_triple_extraction",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_dreamer.py",
+      "line": 53,
+      "has_guardian": false,
+      "risk_score": 80
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "sqlite3.connect",
+      "category": "Direct DB Access",
+      "func_name": "test_fallback_triple_extraction",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_dreamer.py",
+      "line": 63,
+      "has_guardian": false,
+      "risk_score": 80
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "sqlite3.connect",
+      "category": "Direct DB Access",
+      "func_name": "setUp",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_guardian.py",
+      "line": 28,
+      "has_guardian": false,
+      "risk_score": 80
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "sqlite3.connect",
+      "category": "Direct DB Access",
+      "func_name": "setUp",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_negotiation_and_fts.py",
+      "line": 37,
+      "has_guardian": false,
+      "risk_score": 80
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "sqlite3.connect",
+      "category": "Direct DB Access",
+      "func_name": "setUp",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_negotiation_and_fts.py",
+      "line": 47,
+      "has_guardian": false,
+      "risk_score": 80
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "sqlite3.connect",
+      "category": "Direct DB Access",
+      "func_name": "test_fts5_trigger_sync",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_negotiation_and_fts.py",
+      "line": 96,
+      "has_guardian": false,
+      "risk_score": 80
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "sqlite3.connect",
+      "category": "Direct DB Access",
+      "func_name": "test_fts5_trigger_sync",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_negotiation_and_fts.py",
+      "line": 106,
+      "has_guardian": false,
+      "risk_score": 80
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "sqlite3.connect",
+      "category": "Direct DB Access",
+      "func_name": "test_metrics_logging",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_oracle.py",
+      "line": 57,
+      "has_guardian": false,
+      "risk_score": 80
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "sqlite3.connect",
+      "category": "Direct DB Access",
+      "func_name": "setUp",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_user_twin.py",
+      "line": 22,
+      "has_guardian": false,
+      "risk_score": 80
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "open",
+      "category": "File Access",
+      "func_name": "_get_or_create_key",
+      "file": "c:\\sabari\\Lyra\\backend\\security\\encryption.py",
+      "line": 20,
+      "has_guardian": false,
+      "risk_score": 40
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "open",
+      "category": "File Access",
+      "func_name": "_get_or_create_key",
+      "file": "c:\\sabari\\Lyra\\backend\\security\\encryption.py",
+      "line": 30,
+      "has_guardian": false,
+      "risk_score": 40
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "open",
+      "category": "File Access",
+      "func_name": "handle_task",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\agents\\banner.py",
+      "line": 33,
+      "has_guardian": false,
+      "risk_score": 40
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "open",
+      "category": "File Access",
+      "func_name": "scan_and_hot_load",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\core\\plugin_loader.py",
+      "line": 29,
+      "has_guardian": false,
+      "risk_score": 40
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "open",
+      "category": "File Access",
+      "func_name": "_initialize_db",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\memory\\analytics_db.py",
+      "line": 24,
+      "has_guardian": false,
+      "risk_score": 40
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "open",
+      "category": "File Access",
+      "func_name": "_initialize_db",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\memory\\sqlite_db.py",
+      "line": 30,
+      "has_guardian": false,
+      "risk_score": 40
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "open",
+      "category": "File Access",
+      "func_name": "setUp",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_dreamer.py",
+      "line": 20,
+      "has_guardian": false,
+      "risk_score": 40
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "open",
+      "category": "File Access",
+      "func_name": "setUp",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_guardian.py",
+      "line": 25,
+      "has_guardian": false,
+      "risk_score": 40
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "open",
+      "category": "File Access",
+      "func_name": "setUp",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_negotiation_and_fts.py",
+      "line": 34,
+      "has_guardian": false,
+      "risk_score": 40
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "open",
+      "category": "File Access",
+      "func_name": "setUp",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\tests\\test_user_twin.py",
+      "line": 19,
+      "has_guardian": false,
+      "risk_score": 40
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "open",
+      "category": "File Access",
+      "func_name": "download_file",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\voice\\tts.py",
+      "line": 74,
+      "has_guardian": false,
+      "risk_score": 40
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "open",
+      "category": "File Access",
+      "func_name": "download_file",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\voice\\tts.py",
+      "line": 81,
+      "has_guardian": false,
+      "risk_score": 40
+    },
+    {
+      "type": "Execution Sink",
+      "sink": "open",
+      "category": "File Access",
+      "func_name": "_run_tts_loop",
+      "file": "c:\\sabari\\Lyra\\MJ_AI_Assistant\\voice\\tts.py",
+      "line": 244,
+      "has_guardian": false,
+      "risk_score": 40
+    }
+  ]
+}

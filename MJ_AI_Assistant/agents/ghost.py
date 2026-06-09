@@ -15,6 +15,7 @@ class GhostAgent(BaseAgent):
         Logs OS transactions securely in the database for tracking.
         """
         try:
+            guardian_kernel.authorize_execution(agent_name="ghost", action="db_access", target="sqlite3")
             with sqlite3.connect(self.db.db_path) as conn:
                 conn.execute(
                     """INSERT INTO computer_control_audit 

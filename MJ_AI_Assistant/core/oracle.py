@@ -2,6 +2,7 @@ import sqlite3
 from pathlib import Path
 from typing import Dict, Any, List
 from config.settings import settings
+from MJ_AI_Assistant.security.guardian import guardian_kernel
 
 class OracleRouter:
     def __init__(self, db_path: Path = settings.DB_PATH, ollama_client=None):
@@ -13,6 +14,7 @@ class OracleRouter:
         """
         Builds the model registry and performance tracking tables if not already present.
         """
+        guardian_kernel.authorize_execution(agent_name="oracle", action="db_access", target="sqlite3")
         with sqlite3.connect(self.db_path) as conn:
             conn.execute(
                 """CREATE TABLE IF NOT EXISTS local_models_registry (
@@ -55,6 +57,7 @@ class OracleRouter:
         """
         task_upper = task_type.upper().strip()
         
+        guardian_kernel.authorize_execution(agent_name="oracle", action="db_access", target="sqlite3")
         with sqlite3.connect(self.db_path) as conn:
             conn.row_factory = sqlite3.Row
             row = conn.execute(
@@ -85,6 +88,7 @@ class OracleRouter:
         """
         Logs runtime latency and execution status of the routed model.
         """
+        guardian_kernel.authorize_execution(agent_name="oracle", action="db_access", target="sqlite3")
         with sqlite3.connect(self.db_path) as conn:
             conn.execute(
                 "INSERT INTO model_performance_logs (model_name, task_type, tokens_per_sec, status) VALUES (?, ?, ?, ?)",

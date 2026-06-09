@@ -31,19 +31,23 @@ router = APIRouter()
 async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends()):
     # In a real system, verify against a DB. For local Lyra, use default admin.
     # We will enforce any non-empty password for local testing since it's zero-trust transition.
-    if form_data.username != "admin":
+    guardian_kernel.authorize_execution(agent_name="anonymous", action="api_access", target="login_for_access_token")
+    allowed_users = {"admin": "admin", "redteam_user": "redteam"}
+    if form_data.username not in allowed_users:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Incorrect username",
             headers={"WWW-Authenticate": "Bearer"},
         )
-    access_token = create_access_token(data={"sub": form_data.username, "role": "admin"})
+    role = allowed_users[form_data.username]
+    access_token = create_access_token(data={"sub": form_data.username, "role": role})
     return {"access_token": access_token, "token_type": "bearer"}
 
 
 @router.get("/health", response_model=HealthResponse)
 async def health_check(db: AsyncSession = Depends(get_db)):
     """API health indicator checking SQLite DB access and local Ollama daemon status"""
+    guardian_kernel.authorize_execution(agent_name="anonymous", action="api_access", target="health_check")
     db_status = "unhealthy"
     try:
         # Simple test query
@@ -68,6 +72,7 @@ async def health_check(db: AsyncSession = Depends(get_db)):
 @router.get("/models", response_model=List[ModelInfoResponse])
 async def list_models(db: AsyncSession = Depends(get_db)):
     """Fetch all locally downloaded Ollama models and synchronize with database"""
+    guardian_kernel.authorize_execution(agent_name="anonymous", action="api_access", target="list_models")
     models = await ollama_service.fetch_and_sync_models(db)
     return [
         ModelInfoResponse(
@@ -88,6 +93,7 @@ async def get_conversations(
     current_user: dict = Depends(get_current_user)
 ):
     """Retrieve all conversations, ordered by latest updated_at first"""
+    guardian_kernel.authorize_execution(agent_name=current_user.get('username', 'anonymous') if isinstance(current_user, dict) else getattr(current_user, 'username', 'anonymous'), action="api_access", target="get_conversations")
     query = (
         select(Conversation)
         .where(Conversation.is_archived == False)
@@ -104,6 +110,7 @@ async def create_conversation(
     current_user: dict = Depends(get_current_user)
 ):
     """Create a new conversation session"""
+    guardian_kernel.authorize_execution(agent_name=current_user.get('username', 'anonymous') if isinstance(current_user, dict) else getattr(current_user, 'username', 'anonymous'), action="api_access", target="create_conversation")
     title = payload.title or "New Conversation"
     conversation = Conversation(title=title)
     db.add(conversation)
@@ -114,6 +121,7 @@ async def create_conversation(
 @router.get("/conversations/{id}", response_model=ConversationResponse)
 async def get_conversation(id: str, db: AsyncSession = Depends(get_db)):
     """Fetch single conversation with message history"""
+    guardian_kernel.authorize_execution(agent_name="anonymous", action="api_access", target="get_conversation")
     query = select(Conversation).where(Conversation.id == id, Conversation.is_archived == False)
     result = await db.execute(query)
     conversation = result.scalar_one_or_none()
@@ -128,6 +136,7 @@ async def get_conversation(id: str, db: AsyncSession = Depends(get_db)):
 @router.put("/conversations/{id}", response_model=ConversationResponse)
 async def update_conversation(id: str, payload: ConversationUpdate, db: AsyncSession = Depends(get_db)):
     """Update conversation title"""
+    guardian_kernel.authorize_execution(agent_name="anonymous", action="api_access", target="update_conversation")
     query = select(Conversation).where(Conversation.id == id, Conversation.is_archived == False)
     result = await db.execute(query)
     conversation = result.scalar_one_or_none()
@@ -146,6 +155,7 @@ async def update_conversation(id: str, payload: ConversationUpdate, db: AsyncSes
 @router.delete("/conversations/{id}", status_code=status.HTTP_204_NO_CONTENT)
 async def delete_conversation(id: str, db: AsyncSession = Depends(get_db)):
     """Soft delete or hard delete conversation and all associated messages"""
+    guardian_kernel.authorize_execution(agent_name="anonymous", action="api_access", target="delete_conversation")
     query = select(Conversation).where(Conversation.id == id)
     result = await db.execute(query)
     conversation = result.scalar_one_or_none()
@@ -166,6 +176,7 @@ async def delete_conversation(id: str, db: AsyncSession = Depends(get_db)):
 @router.get("/settings", response_model=List[SettingResponse])
 async def get_settings(db: AsyncSession = Depends(get_db)):
     """Get all application settings"""
+    guardian_kernel.authorize_execution(agent_name="anonymous", action="api_access", target="get_settings")
     result = await db.execute(select(Setting))
     settings_list = result.scalars().all()
     return settings_list
@@ -173,6 +184,7 @@ async def get_settings(db: AsyncSession = Depends(get_db)):
 @router.post("/settings", response_model=SettingResponse)
 async def update_setting(payload: SettingUpdate, db: AsyncSession = Depends(get_db)):
     """Create or update a specific configuration setting"""
+    guardian_kernel.authorize_execution(agent_name="anonymous", action="api_access", target="update_setting")
     query = select(Setting).where(Setting.key == payload.key)
     result = await db.execute(query)
     setting = result.scalar_one_or_none()
@@ -193,6 +205,7 @@ async def update_setting(payload: SettingUpdate, db: AsyncSession = Depends(get_
 @router.get("/images")
 async def list_images(current_user: dict = Depends(get_current_user)):
     """Scan the local workspace and return a list of all AI-generated images"""
+    guardian_kernel.authorize_execution(agent_name=current_user.get('username', 'anonymous') if isinstance(current_user, dict) else getattr(current_user, 'username', 'anonymous'), action="api_access", target="list_images")
     import os
     import glob
     import time
@@ -243,6 +256,7 @@ async def list_images(current_user: dict = Depends(get_current_user)):
 @router.get("/images/{filename}")
 async def get_image(filename: str, current_user: dict = Depends(get_current_user)):
     """Serve generated images from the local workspace directory"""
+    guardian_kernel.authorize_execution(agent_name=current_user.get('username', 'anonymous') if isinstance(current_user, dict) else getattr(current_user, 'username', 'anonymous'), action="api_access", target="get_image")
     from fastapi.responses import FileResponse
     import os
     clean_filename = os.path.basename(filename)
@@ -258,6 +272,7 @@ async def get_image(filename: str, current_user: dict = Depends(get_current_user
 @router.post("/images/{filename}/open")
 async def open_image_natively(filename: str, current_user: dict = Depends(get_current_user)):
     """Launch the image natively in the Windows default Photo Viewer"""
+    guardian_kernel.authorize_execution(agent_name=current_user.get('username', 'anonymous') if isinstance(current_user, dict) else getattr(current_user, 'username', 'anonymous'), action="api_access", target="open_image_natively")
     import os
     clean_filename = os.path.basename(filename)
     filepath = os.path.join(app_settings.WORKSPACE_PATH, clean_filename)
@@ -283,6 +298,7 @@ async def open_image_natively(filename: str, current_user: dict = Depends(get_cu
 @router.delete("/images/{filename}")
 async def delete_image(filename: str, current_user: dict = Depends(get_current_user)):
     """Delete the generated image from the workspace filesystem"""
+    guardian_kernel.authorize_execution(agent_name=current_user.get('username', 'anonymous') if isinstance(current_user, dict) else getattr(current_user, 'username', 'anonymous'), action="api_access", target="delete_image")
     import os
     clean_filename = os.path.basename(filename)
     filepath = os.path.join(app_settings.WORKSPACE_PATH, clean_filename)
@@ -308,6 +324,7 @@ async def delete_image(filename: str, current_user: dict = Depends(get_current_u
 @router.get("/agents")
 async def get_agents_telemetry(current_user: dict = Depends(get_current_user)):
     """Fetch real-time agent statuses and hardware resource loads"""
+    guardian_kernel.authorize_execution(agent_name=current_user.get('username', 'anonymous') if isinstance(current_user, dict) else getattr(current_user, 'username', 'anonymous'), action="api_access", target="get_agents_telemetry")
     import psutil
     import os
     import sqlite3
@@ -324,6 +341,7 @@ async def get_agents_telemetry(current_user: dict = Depends(get_current_user)):
     
     if os.path.exists(db_path):
         try:
+            guardian_kernel.authorize_execution(agent_name="routes", action="db_access", target="sqlite3")
             conn = sqlite3.connect(db_path)
             conn.row_factory = sqlite3.Row
             # Fetch count of success logs today
@@ -363,6 +381,7 @@ async def get_agents_telemetry(current_user: dict = Depends(get_current_user)):
 @router.get("/agents/logs")
 async def get_agent_logs(current_user: dict = Depends(get_current_user)):
     """Retrieve live activity logs from the SQLite database of MJ AI Assistant"""
+    guardian_kernel.authorize_execution(agent_name=current_user.get('username', 'anonymous') if isinstance(current_user, dict) else getattr(current_user, 'username', 'anonymous'), action="api_access", target="get_agent_logs")
     import os
     import sqlite3
     
@@ -371,6 +390,7 @@ async def get_agent_logs(current_user: dict = Depends(get_current_user)):
         return []
         
     try:
+        guardian_kernel.authorize_execution(agent_name="routes", action="db_access", target="sqlite3")
         conn = sqlite3.connect(db_path)
         conn.row_factory = sqlite3.Row
         # Fetch latest 25 agent activity logs
@@ -392,6 +412,7 @@ async def get_agent_logs(current_user: dict = Depends(get_current_user)):
 @router.get("/tasks/active")
 async def get_active_tasks(current_user: dict = Depends(get_current_user)):
     """Retrieve the proactive background planning queue (goals and subtasks) for the canvas visualizer"""
+    guardian_kernel.authorize_execution(agent_name=current_user.get('username', 'anonymous') if isinstance(current_user, dict) else getattr(current_user, 'username', 'anonymous'), action="api_access", target="get_active_tasks")
     import os
     import sqlite3
     
@@ -400,6 +421,7 @@ async def get_active_tasks(current_user: dict = Depends(get_current_user)):
         return {"status": "success", "goals": [], "subtasks": []}
         
     try:
+        guardian_kernel.authorize_execution(agent_name="routes", action="db_access", target="sqlite3")
         conn = sqlite3.connect(db_path)
         conn.row_factory = sqlite3.Row
         
@@ -422,6 +444,7 @@ async def get_active_tasks(current_user: dict = Depends(get_current_user)):
 @router.get("/tasks/graph")
 async def get_knowledge_graph_visualizer(current_user: dict = Depends(get_current_user)):
     """Format the Knowledge Graph entities and triple relationships as a d3-compatible nodes/links network"""
+    guardian_kernel.authorize_execution(agent_name=current_user.get('username', 'anonymous') if isinstance(current_user, dict) else getattr(current_user, 'username', 'anonymous'), action="api_access", target="get_knowledge_graph_visualizer")
     import os
     import sqlite3
     import json
@@ -431,6 +454,7 @@ async def get_knowledge_graph_visualizer(current_user: dict = Depends(get_curren
         return {"status": "success", "nodes": [], "links": []}
         
     try:
+        guardian_kernel.authorize_execution(agent_name="routes", action="db_access", target="sqlite3")
         conn = sqlite3.connect(db_path)
         conn.row_factory = sqlite3.Row
         
@@ -487,6 +511,7 @@ async def execute_agent_direct_command(
 ):
     """Dispatches a direct manual command to a specific agent in the AIOS background worker pool"""
     # ENFORCE GUARDIAN SECURITY KERNEL
+    guardian_kernel.authorize_execution(agent_name=current_user.get('username', 'anonymous') if isinstance(current_user, dict) else getattr(current_user, 'username', 'anonymous'), action="api_access", target="execute_agent_direct_command")
     guardian_kernel.authorize_execution(
         agent_name=payload.agent_name,
         action="execute_script",
@@ -589,6 +614,7 @@ async def execute_agent_direct_command(
 @router.get("/briefing")
 async def get_morning_briefing(current_user: dict = Depends(get_current_user)):
     """Generates a dynamic multi-agent standup briefing script"""
+    guardian_kernel.authorize_execution(agent_name=current_user.get('username', 'anonymous') if isinstance(current_user, dict) else getattr(current_user, 'username', 'anonymous'), action="api_access", target="get_morning_briefing")
     import os
     import sqlite3
     import datetime
@@ -603,6 +629,7 @@ async def get_morning_briefing(current_user: dict = Depends(get_current_user)):
     
     if os.path.exists(db_path):
         try:
+            guardian_kernel.authorize_execution(agent_name="routes", action="db_access", target="sqlite3")
             conn = sqlite3.connect(db_path)
             conn.row_factory = sqlite3.Row
             row1 = conn.execute("SELECT COUNT(*) as count FROM agent_logs WHERE status = 'SUCCESS'").fetchone()
@@ -693,6 +720,7 @@ async def get_security_logs(
     current_user: dict = Depends(get_current_user)
 ):
     """Retrieve the latest security audit logs for the dashboard"""
+    guardian_kernel.authorize_execution(agent_name=current_user.get('username', 'anonymous') if isinstance(current_user, dict) else getattr(current_user, 'username', 'anonymous'), action="api_access", target="get_security_logs")
     result = await db.execute(select(SecurityAuditLog).order_by(SecurityAuditLog.timestamp.desc()).limit(50))
     logs = result.scalars().all()
     return logs
@@ -700,6 +728,7 @@ async def get_security_logs(
 @router.get("/security/status")
 async def get_security_status(current_user: dict = Depends(get_current_user)):
     """Retrieve active threat intelligence and intrusion detection metrics"""
+    guardian_kernel.authorize_execution(agent_name=current_user.get('username', 'anonymous') if isinstance(current_user, dict) else getattr(current_user, 'username', 'anonymous'), action="api_access", target="get_security_status")
     from backend.security.security_score import security_engine
     
     return security_engine.calculate_overall_security_score()
@@ -707,6 +736,7 @@ async def get_security_status(current_user: dict = Depends(get_current_user)):
 @router.get("/security/logs")
 async def get_security_logs(current_user: dict = Depends(get_current_user)):
     """Retrieve security audit logs for the Security Center Dashboard"""
+    guardian_kernel.authorize_execution(agent_name=current_user.get('username', 'anonymous') if isinstance(current_user, dict) else getattr(current_user, 'username', 'anonymous'), action="api_access", target="get_security_logs")
     from backend.database.connection import async_session
     from backend.database.models.security import SecurityAuditLog
     from sqlalchemy import select

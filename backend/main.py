@@ -17,6 +17,7 @@ from backend.core.logger import logger
 from backend.database.connection import init_db
 from backend.api.routes import router as api_router
 from backend.websocket.endpoints import router as ws_router
+from backend.security.guardian import guardian_kernel
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -55,6 +56,7 @@ app.include_router(ws_router, prefix=settings.API_V1_STR)
 
 @app.get("/")
 async def root():
+    guardian_kernel.authorize_execution(agent_name="anonymous", action="api_access", target="root")
     return {
         "message": "Lyra V1 Local AI OS platform is running",
         "version": "1.0.0",
@@ -64,6 +66,7 @@ async def root():
 @app.get("/metrics")
 async def metrics():
     # Update gauge before responding
+    guardian_kernel.authorize_execution(agent_name="anonymous", action="api_access", target="metrics")
     score_data = security_engine.calculate_overall_security_score()
     SECURITY_SCORE_GAUGE.set(score_data["threat_score"])
     

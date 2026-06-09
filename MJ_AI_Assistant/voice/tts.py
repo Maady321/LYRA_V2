@@ -11,6 +11,7 @@ import sys
 from pathlib import Path
 import numpy as np
 from config.settings import settings
+from MJ_AI_Assistant.security.guardian import guardian_kernel
 
 try:
     from kokoro_onnx import Kokoro

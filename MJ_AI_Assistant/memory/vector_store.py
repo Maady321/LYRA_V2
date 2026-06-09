@@ -3,6 +3,7 @@ import numpy as np
 from typing import List, Dict, Any, Tuple
 from core.ollama_client import OllamaClient
 from memory.sqlite_db import SQLiteDB
+from MJ_AI_Assistant.security.guardian import guardian_kernel
 
 class SQLiteVectorStore:
     def __init__(self, db: SQLiteDB, client: OllamaClient):
@@ -63,6 +64,7 @@ class SQLiteVectorStore:
         
         if clean_query:
             try:
+                guardian_kernel.authorize_execution(agent_name="vector_store", action="db_access", target="sqlite3")
                 with sqlite3.connect(self.db.db_path) as conn:
                     conn.row_factory = sqlite3.Row
                     cursor = conn.execute(
