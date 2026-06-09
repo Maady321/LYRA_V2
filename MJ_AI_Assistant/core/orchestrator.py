@@ -73,7 +73,7 @@ class MJOrchestrator:
         Coordinates cooperative execution, injecting knowledge graph context parameters.
         """
         # Validate through PROMPT FIREWALL V2
-        is_allowed, firewall_response, audit_data = self.firewall.inspect_prompt("local_user", prompt)
+        is_allowed, firewall_response, audit_data = await self.firewall.inspect_prompt("local_user", prompt)
         if not is_allowed:
             return firewall_response
             

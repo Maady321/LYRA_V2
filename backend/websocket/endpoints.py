@@ -10,7 +10,7 @@ from backend.database.connection import async_session
 from backend.models.db_models import Conversation, Message
 from backend.services.ollama_service import ollama_service
 from backend.core.logger import logger
-from backend.security.prompt_firewall import prompt_firewall, ThreatLevel
+from backend.security.prompt_firewall_v2 import prompt_firewall
 from backend.security.voice_guardian import voice_guardian, VoiceRiskCategory
 
 import sys
@@ -130,14 +130,16 @@ async def websocket_chat_endpoint(websocket: WebSocket):
                 
             # ENTERPRISE PROMPT FIREWALL CHECK
             user_id = "ws_client" # In production, extract from JWT via subprotocol
-            threat_level, block_reason = prompt_firewall.evaluate_prompt(user_id, user_content)
+            is_allowed, firewall_response, audit_data = await prompt_firewall.inspect_prompt(user_id, user_content)
             
-            if threat_level in [ThreatLevel.CRITICAL, ThreatLevel.HIGH]:
+            if not is_allowed:
                 await manager.send_json(websocket, {
                     "event": "chat_error",
-                    "data": {"message": f"Lyra Prompt Firewall Blocked Request: {block_reason}"}
+                    "data": {"message": f"Lyra Prompt Firewall Blocked Request: {firewall_response}"}
                 })
                 continue
+            
+            user_content = firewall_response # use sanitized prompt
                 
             # ENTERPRISE VOICE GUARDIAN CHECK
             if is_voice:
