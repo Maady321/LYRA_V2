@@ -522,3 +522,10 @@
 [2026-06-12T13:19:25.150Z] createWindow: shouldHide=true
 [2026-06-12T13:19:25.178Z] createWindow() finished.
 [2026-06-12T13:19:25.197Z] createTray() finished.
+[2026-06-12T13:34:54.865Z] Main script loaded at top-level.
+[2026-06-12T13:34:54.922Z] app.whenReady() fired.
+[2026-06-12T13:34:54.924Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-12T13:34:54.983Z] startBackend() finished.
+[2026-06-12T13:34:54.983Z] createWindow: shouldHide=false
+[2026-06-12T13:34:55.076Z] createWindow() finished.
+[2026-06-12T13:34:55.389Z] createTray() finished.

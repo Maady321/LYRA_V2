@@ -27829,3 +27829,80 @@ INFO:     Application shutdown complete.
 [2026-06-12T13:19:32.698Z] stdout: INFO:     127.0.0.1:50957 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
 [2026-06-12T13:19:34.710Z] stdout: 2026-06-12 18:49:33,442 - lyra - WARNING - Ollama is not running. Unable to sync models.
 [2026-06-12T13:19:34.712Z] stdout: INFO:     127.0.0.1:57557 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-12T13:34:54.925Z] Wake System Launcher: Starting backend.
+[2026-06-12T13:34:54.925Z] isDev: true
+[2026-06-12T13:34:54.926Z] process.resourcesPath: C:\sabari\Lyra\frontend\node_modules\electron\dist\resources
+[2026-06-12T13:34:54.927Z] backendPath: C:\sabari\Lyra\backend
+[2026-06-12T13:34:54.927Z] pythonExe: C:\sabari\Lyra\backend\venv\Scripts\python.exe
+[2026-06-12T13:34:54.928Z] pythonExe exists: true
+[2026-06-12T13:34:54.929Z] backendPath exists: true
+[2026-06-12T13:34:54.930Z] Creating stream to logPath: C:\sabari\Lyra\backend\backend_spawn.log
+[2026-06-12T13:34:54.932Z] Spawning backendProcess...
+[2026-06-12T13:34:54.982Z] backendProcess PID: 60196
+[2026-06-12T13:34:56.836Z] stderr: INFO:     Started server process [51516]
+INFO:     Waiting for application startup.
+[2026-06-12T13:34:56.837Z] stdout: 2026-06-12 19:04:56,835 - lyra - INFO - Initializing Lyra V1 Core platform services...
+2026-06-12 19:04:56,835 - lyra - INFO - Initializing database tables...
+[2026-06-12T13:34:56.851Z] stdout: 2026-06-12 19:04:56,851 - lyra - INFO - Database initialized successfully.
+2026-06-12 19:04:56,851 - lyra - INFO - Lyra V1 startup routine completed successfully.
+[2026-06-12T13:34:56.852Z] stdout: 2026-06-12 19:04:56,852 - lyra - INFO - Shutting down Lyra V1 backend processes...
+[2026-06-12T13:34:56.852Z] stderr: INFO:     Application startup complete.
+ERROR:    [Errno 10048] error while attempting to bind on address ('127.0.0.1', 8000): only one usage of each socket address (protocol/network address/port) is normally permitted
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+[2026-06-12T13:34:57.134Z] Process EXIT event: exited with code 1, signal null
+[2026-06-12T13:34:57.134Z] Process CLOSE event: exited with code 1
+[2026-06-12T13:35:05.453Z] stdout: INFO:     127.0.0.1:58519 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-12T13:35:05.457Z] stdout: INFO:     127.0.0.1:58405 - "POST /api/security/token HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58424 - "POST /api/security/token HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61756 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-12T13:35:05.460Z] stdout: INFO:     127.0.0.1:58519 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-12T13:35:05.463Z] stdout: INFO:     127.0.0.1:62384 - "POST /api/security/token HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58405 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-12T13:35:05.465Z] stdout: INFO:     127.0.0.1:50235 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-12T13:35:05.474Z] stdout: INFO:     127.0.0.1:61756 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-12T13:35:05.622Z] stdout: INFO:     127.0.0.1:62384 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-12T13:35:05.634Z] stdout: INFO:     127.0.0.1:54947 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-12T13:35:05.638Z] stdout: INFO:     127.0.0.1:60388 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-12T13:35:05.643Z] stdout: INFO:     127.0.0.1:60783 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-12T13:35:05.650Z] stdout: INFO:     127.0.0.1:54947 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-12T13:35:05.675Z] stdout: INFO:     127.0.0.1:58519 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-12T13:35:05.677Z] stdout: INFO:     127.0.0.1:50556 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-12T13:35:05.681Z] stdout: INFO:     127.0.0.1:63801 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-12T13:35:05.687Z] stdout: INFO:     127.0.0.1:60388 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-12T13:35:05.700Z] stdout: INFO:     127.0.0.1:50626 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-12T13:35:05.775Z] stdout: INFO:     127.0.0.1:50235 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-12T13:35:05.781Z] stdout: INFO:     127.0.0.1:50626 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-12T13:35:05.795Z] stdout: INFO:     127.0.0.1:62384 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-12T13:35:05.807Z] stdout: INFO:     127.0.0.1:62384 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-12T13:35:05.811Z] stdout: INFO:     127.0.0.1:50235 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-12T13:35:05.860Z] stdout: INFO:     127.0.0.1:50235 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-12T13:35:05.896Z] stdout: INFO:     127.0.0.1:58405 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-12T13:35:05.941Z] stdout: INFO:     127.0.0.1:50626 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-12T13:35:06.031Z] stdout: INFO:     127.0.0.1:60388 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-12T13:35:06.054Z] stdout: INFO:     127.0.0.1:50626 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-12T13:35:06.100Z] stdout: INFO:     127.0.0.1:60388 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-12T13:35:06.182Z] stdout: INFO:     127.0.0.1:50556 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-12T13:35:06.370Z] stdout: INFO:     127.0.0.1:50235 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-12T13:35:06.423Z] stdout: INFO:     127.0.0.1:50626 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-12T13:35:06.431Z] stdout: INFO:     127.0.0.1:63801 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-12T13:35:07.523Z] stdout: INFO:     127.0.0.1:63801 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-12T13:35:09.797Z] stdout: INFO:     127.0.0.1:63801 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-12T13:35:13.498Z] stdout: INFO:     127.0.0.1:62753 - "OPTIONS /api/images HTTP/1.1" 200 OK
+[2026-06-12T13:35:13.502Z] stdout: INFO:     127.0.0.1:55734 - "OPTIONS /api/settings HTTP/1.1" 200 OK
+[2026-06-12T13:35:13.504Z] stdout: INFO:     127.0.0.1:51062 - "OPTIONS /api/conversations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50761 - "OPTIONS /api/models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57561 - "OPTIONS /api/images HTTP/1.1" 200 OK
+[2026-06-12T13:35:13.505Z] stdout: INFO:     127.0.0.1:52929 - "OPTIONS /api/settings HTTP/1.1" 200 OK
+[2026-06-12T13:35:13.507Z] stdout: INFO:     127.0.0.1:55734 - "OPTIONS /api/models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62753 - "OPTIONS /api/conversations HTTP/1.1" 200 OK
+[2026-06-12T13:35:13.515Z] stdout: INFO:     127.0.0.1:62753 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-12T13:35:13.562Z] stdout: INFO:     127.0.0.1:50761 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-12T13:35:13.573Z] stdout: INFO:     127.0.0.1:55734 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-12T13:35:13.624Z] stdout: INFO:     127.0.0.1:52929 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-12T13:35:13.637Z] stdout: INFO:     127.0.0.1:50761 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-12T13:35:13.650Z] stdout: INFO:     127.0.0.1:62753 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-12T13:35:13.679Z] stdout: INFO:     127.0.0.1:57561 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-12T13:35:13.718Z] stdout: INFO:     127.0.0.1:57561 - "OPTIONS /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-12T13:35:13.779Z] stdout: INFO:     127.0.0.1:57561 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-12T13:35:13.807Z] stdout: INFO:     127.0.0.1:62753 - "GET /api/models HTTP/1.1" 200 OK
