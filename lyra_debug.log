@@ -26253,3 +26253,1579 @@ INFO:     Application shutdown complete.
 [2026-06-09T16:04:29.036Z] stdout: INFO:     127.0.0.1:65508 - "GET /api/conversations/16948e84-d93d-4c90-8e00-a1d6718381bf HTTP/1.1" 200 OK
 [2026-06-09T16:04:31.045Z] stdout: 2026-06-09 21:34:31,042 - lyra - WARNING - Ollama is not running. Unable to sync models.
 [2026-06-09T16:04:31.049Z] stdout: INFO:     127.0.0.1:50893 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T16:33:31.764Z] Wake System Launcher: Starting backend.
+[2026-06-09T16:33:31.765Z] isDev: true
+[2026-06-09T16:33:31.766Z] process.resourcesPath: C:\sabari\Lyra\frontend\node_modules\electron\dist\resources
+[2026-06-09T16:33:31.766Z] backendPath: C:\sabari\Lyra\backend
+[2026-06-09T16:33:31.767Z] pythonExe: C:\sabari\Lyra\backend\venv\Scripts\python.exe
+[2026-06-09T16:33:31.768Z] pythonExe exists: true
+[2026-06-09T16:33:31.769Z] backendPath exists: true
+[2026-06-09T16:33:31.769Z] Creating stream to logPath: C:\sabari\Lyra\backend\backend_spawn.log
+[2026-06-09T16:33:31.771Z] Spawning backendProcess...
+[2026-06-09T16:33:31.817Z] backendProcess PID: 45800
+[2026-06-09T16:33:33.458Z] stderr: INFO:     Started server process [43216]
+INFO:     Waiting for application startup.
+[2026-06-09T16:33:33.460Z] stdout: 2026-06-09 22:03:33,453 - lyra - INFO - Initializing Lyra V1 Core platform services...
+2026-06-09 22:03:33,453 - lyra - INFO - Initializing database tables...
+[2026-06-09T16:33:33.475Z] stdout: 2026-06-09 22:03:33,474 - lyra - INFO - Database initialized successfully.
+2026-06-09 22:03:33,474 - lyra - INFO - Lyra V1 startup routine completed successfully.
+[2026-06-09T16:33:33.476Z] stderr: INFO:     Application startup complete.
+ERROR:    [Errno 10048] error while attempting to bind on address ('127.0.0.1', 8000): only one usage of each socket address (protocol/network address/port) is normally permitted
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+[2026-06-09T16:33:33.476Z] stdout: 2026-06-09 22:03:33,474 - lyra - INFO - Shutting down Lyra V1 backend processes...
+[2026-06-09T16:33:33.601Z] Process EXIT event: exited with code 1, signal null
+[2026-06-09T16:33:33.602Z] Process CLOSE event: exited with code 1
+[2026-06-09T16:33:41.153Z] stdout: INFO:     127.0.0.1:60702 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T16:33:41.157Z] stdout: INFO:     127.0.0.1:61149 - "POST /api/security/token HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56596 - "POST /api/security/token HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61938 - "POST /api/security/token HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60702 - "POST /api/security/token HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60503 - "POST /api/security/token HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61149 - "POST /api/security/token HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57529 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T16:33:41.483Z] stdout: INFO:     127.0.0.1:57529 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T16:33:41.606Z] stdout: INFO:     127.0.0.1:60702 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T16:33:41.675Z] stdout: INFO:     127.0.0.1:57529 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T16:33:41.687Z] stderr: INFO:     127.0.0.1:58952 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T16:33:41.688Z] stdout: 2026-06-09 22:03:41,685 - lyra - INFO - WebSocket connected. Total connections: 3
+[2026-06-09T16:33:41.690Z] stderr: INFO:     connection open
+[2026-06-09T16:33:41.769Z] stdout: INFO:     127.0.0.1:61149 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T16:33:41.772Z] stdout: INFO:     127.0.0.1:61938 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T16:33:41.807Z] stderr: INFO:     127.0.0.1:60361 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T16:33:41.808Z] stdout: 2026-06-09 22:03:41,805 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T16:33:41.811Z] stderr: INFO:     connection open
+[2026-06-09T16:33:41.825Z] stdout: 2026-06-09 22:03:41,824 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+[2026-06-09T16:33:41.826Z] stdout: 2026-06-09 22:03:41,825 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:33:41.832Z] stdout: INFO:     127.0.0.1:56596 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T16:33:41.836Z] stderr: INFO:     connection closed
+[2026-06-09T16:33:41.898Z] stdout: INFO:     127.0.0.1:60702 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T16:33:41.904Z] stdout: INFO:     127.0.0.1:60503 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T16:33:42.032Z] stdout: INFO:     127.0.0.1:60503 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T16:33:42.526Z] stdout: INFO:     127.0.0.1:60503 - "GET /api/conversations/16948e84-d93d-4c90-8e00-a1d6718381bf HTTP/1.1" 200 OK
+[2026-06-09T16:33:45.496Z] stdout: INFO:     127.0.0.1:60739 - "OPTIONS /api/images HTTP/1.1" 200 OK
+[2026-06-09T16:33:45.497Z] stdout: INFO:     127.0.0.1:60593 - "OPTIONS /api/settings HTTP/1.1" 200 OK
+[2026-06-09T16:33:45.499Z] stdout: INFO:     127.0.0.1:55247 - "OPTIONS /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T16:33:45.501Z] stdout: INFO:     127.0.0.1:64598 - "OPTIONS /api/models HTTP/1.1" 200 OK
+[2026-06-09T16:33:45.503Z] stdout: INFO:     127.0.0.1:62365 - "OPTIONS /api/images HTTP/1.1" 200 OK
+[2026-06-09T16:33:45.503Z] stdout: INFO:     127.0.0.1:55247 - "OPTIONS /api/settings HTTP/1.1" 200 OK
+[2026-06-09T16:33:45.504Z] stdout: INFO:     127.0.0.1:60593 - "OPTIONS /api/conversations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60739 - "OPTIONS /api/models HTTP/1.1" 200 OK
+[2026-06-09T16:33:45.510Z] stdout: INFO:     127.0.0.1:60739 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T16:33:45.533Z] stdout: INFO:     127.0.0.1:64598 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T16:33:45.547Z] stdout: INFO:     127.0.0.1:60593 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T16:33:45.604Z] stdout: INFO:     127.0.0.1:55247 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T16:33:45.608Z] stdout: INFO:     127.0.0.1:64598 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T16:33:45.628Z] stdout: INFO:     127.0.0.1:60593 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T16:33:45.647Z] stdout: INFO:     127.0.0.1:62365 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T16:33:45.650Z] stderr: INFO:     127.0.0.1:53541 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T16:33:45.651Z] stdout: 2026-06-09 22:03:45,649 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T16:33:45.681Z] stderr: INFO:     connection open
+[2026-06-09T16:33:45.687Z] stdout: INFO:     127.0.0.1:62365 - "OPTIONS /api/conversations/16948e84-d93d-4c90-8e00-a1d6718381bf HTTP/1.1" 200 OK
+[2026-06-09T16:33:45.758Z] stdout: INFO:     127.0.0.1:62365 - "GET /api/conversations/16948e84-d93d-4c90-8e00-a1d6718381bf HTTP/1.1" 200 OK
+[2026-06-09T16:33:45.791Z] stdout: INFO:     127.0.0.1:60593 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T16:33:52.769Z] stdout: INFO:     127.0.0.1:61747 - "OPTIONS /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T16:33:52.799Z] stdout: INFO:     127.0.0.1:61747 - "POST /api/conversations HTTP/1.1" 201 Created
+[2026-06-09T16:33:52.832Z] stderr: INFO:     connection closed
+[2026-06-09T16:33:52.832Z] stdout: 2026-06-09 22:03:52,828 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:03:52,828 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:33:52.841Z] stdout: 2026-06-09 22:03:52,838 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T16:33:52.842Z] stderr: INFO:     127.0.0.1:62252 - "WebSocket /api/ws/chat" [accepted]
+INFO:     connection open
+[2026-06-09T16:33:52.859Z] stdout: INFO:     127.0.0.1:61747 - "OPTIONS /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T16:33:52.860Z] stderr: INFO:     127.0.0.1:51337 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T16:33:52.861Z] stdout: 2026-06-09 22:03:52,859 - lyra - INFO - WebSocket connected. Total connections: 5
+[2026-06-09T16:33:52.862Z] stderr: INFO:     connection open
+[2026-06-09T16:33:52.865Z] stderr: Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\Users\sabar\AppData\Local\Programs\Python\Python310\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\sabar\AppData\Local\Programs\Python\Python310\lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+[2026-06-09T16:33:52.872Z] stdout: INFO:     127.0.0.1:60031 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T16:33:52.908Z] stdout: 2026-06-09 22:03:52,900 - lyra - INFO - WebSocket disconnected. Remaining connections: 4
+2026-06-09 22:03:52,900 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:33:52.909Z] stderr: INFO:     connection closed
+[2026-06-09T16:33:54.099Z] stdout: 2026-06-09 22:03:54,096 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:03:54,096 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:33:54.100Z] stderr: INFO:     connection closed
+[2026-06-09T16:33:54.403Z] stdout: INFO:     127.0.0.1:60031 - "OPTIONS /api/security/status HTTP/1.1" 200 OK
+[2026-06-09T16:33:54.404Z] stdout: INFO:     127.0.0.1:65003 - "OPTIONS /api/security/logs HTTP/1.1" 200 OK
+[2026-06-09T16:33:54.406Z] stdout: INFO:     127.0.0.1:54333 - "OPTIONS /api/security/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56701 - "OPTIONS /api/security/logs HTTP/1.1" 200 OK
+[2026-06-09T16:33:54.408Z] stdout: INFO:     127.0.0.1:65003 - "GET /api/security/status HTTP/1.1" 404 Not Found
+[2026-06-09T16:33:54.409Z] stdout: INFO:     127.0.0.1:56701 - "GET /api/security/logs HTTP/1.1" 404 Not Found
+[2026-06-09T16:33:54.410Z] stdout: INFO:     127.0.0.1:54333 - "GET /api/security/status HTTP/1.1" 404 Not Found
+[2026-06-09T16:33:54.411Z] stdout: INFO:     127.0.0.1:65003 - "GET /api/security/logs HTTP/1.1" 404 Not Found
+[2026-06-09T16:33:59.415Z] stdout: INFO:     127.0.0.1:52959 - "GET /api/security/status HTTP/1.1" 404 Not Found
+[2026-06-09T16:33:59.416Z] stdout: INFO:     127.0.0.1:62018 - "GET /api/security/logs HTTP/1.1" 404 Not Found
+[2026-06-09T16:34:00.930Z] stdout: 2026-06-09 22:04:00,927 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T16:34:00.931Z] stderr: INFO:     127.0.0.1:64462 - "WebSocket /api/ws/chat" [accepted]
+INFO:     connection open
+[2026-06-09T16:34:00.952Z] stderr: INFO:     127.0.0.1:49182 - "WebSocket /api/ws/chat" [accepted]
+INFO:     connection open
+[2026-06-09T16:34:00.952Z] stdout: 2026-06-09 22:04:00,946 - lyra - INFO - WebSocket connected. Total connections: 5
+[2026-06-09T16:34:01.006Z] stderr: INFO:     connection closed
+[2026-06-09T16:34:01.006Z] stdout: 2026-06-09 22:04:01,001 - lyra - INFO - WebSocket disconnected. Remaining connections: 4
+2026-06-09 22:04:01,001 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:34:13.340Z] stdout: 2026-06-09 22:04:13,335 - lyra - INFO - Initiating Ollama chat stream using model 'qwen2:latest'
+[2026-06-09T16:35:40.189Z] stdout: 2026-06-09 22:05:40,188 - lyra - INFO - Triggering background title generation for conversation 950c4944-1182-475d-8266-4f84683e88f5...
+[2026-06-09T16:35:41.645Z] stdout: INFO:     127.0.0.1:58190 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T16:35:50.749Z] stdout: 2026-06-09 22:05:50,746 - lyra - ERROR - Error generating asynchronous title:
+[2026-06-09T16:36:29.749Z] stdout: 2026-06-09 22:06:29,739 - lyra - INFO - Initiating Ollama chat stream using model 'qwen2:latest'
+[2026-06-09T16:39:09.655Z] stdout: 2026-06-09 22:09:09,655 - lyra - INFO - Triggering background title generation for conversation 950c4944-1182-475d-8266-4f84683e88f5...
+[2026-06-09T16:39:10.679Z] stdout: INFO:     127.0.0.1:65088 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T16:39:20.258Z] stdout: 2026-06-09 22:09:20,256 - lyra - ERROR - Error generating asynchronous title:
+[2026-06-09T16:39:23.024Z] stdout: 2026-06-09 22:09:23,023 - lyra - INFO - Initiating Ollama chat stream using model 'gemma3:1b'
+[2026-06-09T16:40:19.358Z] stdout: 2026-06-09 22:10:19,357 - lyra - INFO - Triggering background title generation for conversation 950c4944-1182-475d-8266-4f84683e88f5...
+[2026-06-09T16:40:29.946Z] stdout: 2026-06-09 22:10:29,944 - lyra - ERROR - Error generating asynchronous title:
+[2026-06-09T16:40:44.167Z] stdout: INFO:     127.0.0.1:59803 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T16:40:50.696Z] stdout: 2026-06-09 22:10:50,692 - lyra - INFO - Initiating Ollama chat stream using model 'gemma3:1b'
+[2026-06-09T16:41:18.110Z] stdout: 2026-06-09 22:11:18,103 - lyra - INFO - Triggering background title generation for conversation 950c4944-1182-475d-8266-4f84683e88f5...
+[2026-06-09T16:41:27.818Z] stdout: 2026-06-09 22:11:27,817 - lyra - INFO - Generated title: 'Service Shutdown Protocol' for conversation 950c4944-1182-475d-8266-4f84683e88f5
+[2026-06-09T16:41:49.620Z] stdout: INFO:     127.0.0.1:51839 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T16:41:54.957Z] stdout: 2026-06-09 22:11:54,953 - lyra - INFO - Initiating Ollama chat stream using model 'gemma3:1b'
+[2026-06-09T16:43:00.082Z] stdout: 2026-06-09 22:13:00,081 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+[2026-06-09T16:43:00.084Z] stdout: 2026-06-09 22:13:00,082 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:43:00.089Z] stderr: INFO:     connection closed
+[2026-06-09T16:43:00.932Z] stdout: INFO:     127.0.0.1:51398 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T16:43:00.963Z] stdout: INFO:     127.0.0.1:58106 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T16:43:00.971Z] stdout: INFO:     127.0.0.1:59392 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T16:43:00.998Z] stderr: INFO:     127.0.0.1:51225 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T16:43:00.999Z] stdout: 2026-06-09 22:13:00,997 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T16:43:01.032Z] stderr: INFO:     connection open
+[2026-06-09T16:43:01.046Z] stdout: 2026-06-09 22:13:01,045 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:13:01,045 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:43:01.051Z] stdout: INFO:     127.0.0.1:57223 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T16:43:01.055Z] stdout: INFO:     127.0.0.1:58106 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T16:43:01.057Z] stderr: INFO:     connection closed
+[2026-06-09T16:43:01.058Z] stdout: 2026-06-09 22:13:01,057 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T16:43:01.059Z] stderr: INFO:     127.0.0.1:60920 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T16:43:01.064Z] stderr: INFO:     connection open
+[2026-06-09T16:43:01.075Z] stdout: INFO:     127.0.0.1:59392 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T16:43:01.109Z] stdout: INFO:     127.0.0.1:60111 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T16:43:01.221Z] stdout: INFO:     127.0.0.1:60111 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T16:43:01.253Z] stdout: INFO:     127.0.0.1:59392 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T16:43:04.825Z] stdout: 2026-06-09 22:13:04,824 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:13:04,824 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:43:04.826Z] stderr: INFO:     connection closed
+[2026-06-09T16:43:04.849Z] stderr: INFO:     127.0.0.1:51851 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T16:43:04.851Z] stdout: 2026-06-09 22:13:04,848 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T16:43:04.851Z] stderr: INFO:     connection open
+[2026-06-09T16:43:04.870Z] stderr: INFO:     127.0.0.1:61939 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T16:43:04.870Z] stdout: 2026-06-09 22:13:04,868 - lyra - INFO - WebSocket connected. Total connections: 5
+[2026-06-09T16:43:04.872Z] stderr: INFO:     connection open
+[2026-06-09T16:43:04.921Z] stdout: INFO:     127.0.0.1:59392 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T16:43:05.113Z] stdout: 2026-06-09 22:13:05,111 - lyra - INFO - WebSocket disconnected. Remaining connections: 4
+2026-06-09 22:13:05,112 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:43:05.114Z] stderr: INFO:     connection closed
+[2026-06-09T16:45:08.959Z] stdout: 2026-06-09 22:15:08,959 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+[2026-06-09T16:45:08.961Z] stderr: INFO:     connection closed
+[2026-06-09T16:45:08.962Z] stdout: 2026-06-09 22:15:08,959 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:45:09.435Z] stdout: INFO:     127.0.0.1:50582 - "OPTIONS /api/images HTTP/1.1" 200 OK
+[2026-06-09T16:45:09.443Z] stdout: INFO:     127.0.0.1:50611 - "OPTIONS /api/settings HTTP/1.1" 200 OK
+[2026-06-09T16:45:09.445Z] stdout: INFO:     127.0.0.1:54638 - "OPTIONS /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T16:45:09.446Z] stdout: INFO:     127.0.0.1:61262 - "OPTIONS /api/models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59451 - "OPTIONS /api/images HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53403 - "OPTIONS /api/settings HTTP/1.1" 200 OK
+[2026-06-09T16:45:09.448Z] stdout: INFO:     127.0.0.1:50582 - "OPTIONS /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T16:45:09.450Z] stdout: INFO:     127.0.0.1:50611 - "OPTIONS /api/models HTTP/1.1" 200 OK
+[2026-06-09T16:45:09.457Z] stdout: INFO:     127.0.0.1:50611 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T16:45:09.495Z] stdout: INFO:     127.0.0.1:61262 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T16:45:09.501Z] stderr: INFO:     127.0.0.1:60161 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T16:45:09.502Z] stderr: INFO:     connection open
+[2026-06-09T16:45:09.503Z] stdout: 2026-06-09 22:15:09,502 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T16:45:09.505Z] stdout: INFO:     127.0.0.1:50582 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T16:45:09.557Z] stdout: INFO:     127.0.0.1:61262 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T16:45:09.562Z] stdout: INFO:     127.0.0.1:53403 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T16:45:09.564Z] stderr: INFO:     127.0.0.1:63759 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T16:45:09.565Z] stdout: 2026-06-09 22:15:09,564 - lyra - INFO - WebSocket connected. Total connections: 5
+[2026-06-09T16:45:09.566Z] stderr: INFO:     connection open
+[2026-06-09T16:45:09.571Z] stdout: 2026-06-09 22:15:09,572 - lyra - INFO - WebSocket disconnected. Remaining connections: 4
+2026-06-09 22:15:09,572 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:45:09.573Z] stderr: INFO:     connection closed
+[2026-06-09T16:45:09.588Z] stdout: INFO:     127.0.0.1:50582 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T16:45:09.612Z] stdout: INFO:     127.0.0.1:59451 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T16:45:09.639Z] stdout: INFO:     127.0.0.1:59451 - "OPTIONS /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T16:45:09.694Z] stdout: INFO:     127.0.0.1:59451 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T16:45:09.721Z] stdout: INFO:     127.0.0.1:50582 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T16:46:06.140Z] stdout: 2026-06-09 22:16:06,134 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:16:06,134 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:46:06.141Z] stderr: INFO:     connection closed
+[2026-06-09T16:46:06.172Z] stdout: 2026-06-09 22:16:06,165 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T16:46:06.173Z] stderr: INFO:     127.0.0.1:62544 - "WebSocket /api/ws/chat" [accepted]
+INFO:     connection open
+[2026-06-09T16:46:06.199Z] stdout: 2026-06-09 22:16:06,192 - lyra - INFO - WebSocket connected. Total connections: 5
+[2026-06-09T16:46:06.200Z] stderr: INFO:     127.0.0.1:60515 - "WebSocket /api/ws/chat" [accepted]
+INFO:     connection open
+[2026-06-09T16:46:06.253Z] stdout: INFO:     127.0.0.1:57245 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T16:46:06.484Z] stdout: 2026-06-09 22:16:06,477 - lyra - INFO - WebSocket disconnected. Remaining connections: 4
+2026-06-09 22:16:06,478 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:46:06.484Z] stderr: INFO:     connection closed
+[2026-06-09T16:46:44.587Z] stdout: 2026-06-09 22:16:44,586 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:16:44,587 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:46:44.588Z] stderr: INFO:     connection closed
+[2026-06-09T16:46:45.198Z] stdout: INFO:     127.0.0.1:60027 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T16:46:45.222Z] stdout: INFO:     127.0.0.1:58475 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T16:46:45.224Z] stdout: INFO:     127.0.0.1:49666 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T16:46:45.281Z] stderr: INFO:     127.0.0.1:50564 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T16:46:45.282Z] stdout: 2026-06-09 22:16:45,280 - lyra - INFO - WebSocket connected. Total connections: 4
+2026-06-09 22:16:45,281 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:16:45,282 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:46:45.283Z] stderr: INFO:     connection closed
+[2026-06-09T16:46:45.286Z] stdout: INFO:     127.0.0.1:57985 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T16:46:45.288Z] stdout: INFO:     127.0.0.1:58475 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T16:46:45.300Z] stderr: INFO:     127.0.0.1:56039 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T16:46:45.301Z] stderr: INFO:     connection open
+[2026-06-09T16:46:45.302Z] stdout: 2026-06-09 22:16:45,300 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T16:46:45.323Z] stdout: INFO:     127.0.0.1:49666 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T16:46:45.334Z] stdout: INFO:     127.0.0.1:58475 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T16:46:45.348Z] stdout: INFO:     127.0.0.1:56596 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T16:46:45.471Z] stdout: INFO:     127.0.0.1:58475 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T16:46:48.137Z] stdout: 2026-06-09 22:16:48,135 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:16:48,135 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:46:48.137Z] stderr: INFO:     connection closed
+[2026-06-09T16:46:48.162Z] stdout: 2026-06-09 22:16:48,160 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T16:46:48.163Z] stderr: INFO:     127.0.0.1:63667 - "WebSocket /api/ws/chat" [accepted]
+INFO:     connection open
+[2026-06-09T16:46:48.191Z] stdout: 2026-06-09 22:16:48,190 - lyra - INFO - WebSocket connected. Total connections: 5
+[2026-06-09T16:46:48.191Z] stderr: INFO:     127.0.0.1:65337 - "WebSocket /api/ws/chat" [accepted]
+INFO:     connection open
+[2026-06-09T16:46:48.224Z] stdout: INFO:     127.0.0.1:58475 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T16:46:48.463Z] stdout: 2026-06-09 22:16:48,462 - lyra - INFO - WebSocket disconnected. Remaining connections: 4
+2026-06-09 22:16:48,462 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:46:48.464Z] stderr: INFO:     connection closed
+[2026-06-09T16:46:57.841Z] stdout: 2026-06-09 22:16:57,839 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:16:57,839 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:46:57.845Z] stderr: INFO:     connection closed
+[2026-06-09T16:46:58.267Z] stdout: INFO:     127.0.0.1:63313 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T16:46:58.278Z] stdout: INFO:     127.0.0.1:52417 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T16:46:58.305Z] stdout: INFO:     127.0.0.1:50716 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T16:46:58.307Z] stderr: INFO:     127.0.0.1:50466 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T16:46:58.308Z] stdout: 2026-06-09 22:16:58,305 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T16:46:58.309Z] stderr: INFO:     connection open
+[2026-06-09T16:46:58.355Z] stdout: INFO:     127.0.0.1:51495 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T16:46:58.359Z] stdout: 2026-06-09 22:16:58,357 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:16:58,357 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:46:58.361Z] stdout: INFO:     127.0.0.1:52417 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T16:46:58.366Z] stderr: INFO:     127.0.0.1:57168 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T16:46:58.367Z] stdout: 2026-06-09 22:16:58,364 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T16:46:58.368Z] stderr: INFO:     connection open
+[2026-06-09T16:46:58.370Z] stderr: INFO:     connection closed
+[2026-06-09T16:46:58.378Z] stdout: INFO:     127.0.0.1:50716 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T16:46:58.393Z] stdout: INFO:     127.0.0.1:50716 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T16:46:58.420Z] stdout: INFO:     127.0.0.1:64014 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T16:46:58.529Z] stdout: INFO:     127.0.0.1:50716 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T16:47:00.403Z] stdout: 2026-06-09 22:17:00,400 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:17:00,401 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:47:00.403Z] stderr: INFO:     connection closed
+[2026-06-09T16:47:00.420Z] stdout: 2026-06-09 22:17:00,418 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T16:47:00.421Z] stderr: INFO:     127.0.0.1:59700 - "WebSocket /api/ws/chat" [accepted]
+INFO:     connection open
+[2026-06-09T16:47:00.437Z] stdout: 2026-06-09 22:17:00,435 - lyra - INFO - WebSocket connected. Total connections: 5
+[2026-06-09T16:47:00.438Z] stderr: INFO:     127.0.0.1:50540 - "WebSocket /api/ws/chat" [accepted]
+INFO:     connection open
+[2026-06-09T16:47:00.485Z] stdout: INFO:     127.0.0.1:50716 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T16:47:00.704Z] stdout: 2026-06-09 22:17:00,703 - lyra - INFO - WebSocket disconnected. Remaining connections: 4
+2026-06-09 22:17:00,703 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:47:00.705Z] stderr: INFO:     connection closed
+[2026-06-09T16:48:55.746Z] stdout: 2026-06-09 22:18:55,745 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:18:55,746 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:48:55.747Z] stderr: INFO:     connection closed
+[2026-06-09T16:48:56.178Z] stdout: INFO:     127.0.0.1:61405 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T16:48:56.203Z] stdout: INFO:     127.0.0.1:58765 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T16:48:56.205Z] stdout: INFO:     127.0.0.1:54006 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T16:48:56.207Z] stderr: INFO:     127.0.0.1:52281 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T16:48:56.208Z] stdout: 2026-06-09 22:18:56,204 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T16:48:56.209Z] stderr: INFO:     connection open
+[2026-06-09T16:48:56.265Z] stdout: 2026-06-09 22:18:56,265 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:18:56,265 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:48:56.268Z] stdout: INFO:     127.0.0.1:58765 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T16:48:56.270Z] stderr: INFO:     127.0.0.1:65219 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T16:48:56.271Z] stdout: 2026-06-09 22:18:56,269 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T16:48:56.272Z] stderr: INFO:     connection open
+[2026-06-09T16:48:56.274Z] stderr: INFO:     connection closed
+[2026-06-09T16:48:56.276Z] stdout: INFO:     127.0.0.1:64916 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T16:48:56.292Z] stdout: INFO:     127.0.0.1:58765 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T16:48:56.319Z] stdout: INFO:     127.0.0.1:58765 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T16:48:56.334Z] stdout: INFO:     127.0.0.1:52044 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T16:48:56.464Z] stdout: INFO:     127.0.0.1:58765 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T16:48:58.855Z] stdout: 2026-06-09 22:18:58,855 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:18:58,855 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:48:58.856Z] stderr: INFO:     connection closed
+[2026-06-09T16:48:58.873Z] stderr: INFO:     127.0.0.1:49927 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T16:48:58.875Z] stderr: INFO:     connection open
+[2026-06-09T16:48:58.876Z] stdout: 2026-06-09 22:18:58,872 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T16:48:58.902Z] stdout: 2026-06-09 22:18:58,901 - lyra - INFO - WebSocket connected. Total connections: 5
+[2026-06-09T16:48:58.903Z] stderr: INFO:     127.0.0.1:52784 - "WebSocket /api/ws/chat" [accepted]
+INFO:     connection open
+[2026-06-09T16:48:58.947Z] stdout: INFO:     127.0.0.1:58765 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T16:48:59.183Z] stdout: 2026-06-09 22:18:59,183 - lyra - INFO - WebSocket disconnected. Remaining connections: 4
+2026-06-09 22:18:59,183 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:48:59.185Z] stderr: INFO:     connection closed
+[2026-06-09T16:49:25.497Z] stdout: 2026-06-09 22:19:25,492 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:19:25,492 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:49:25.499Z] stderr: INFO:     connection closed
+[2026-06-09T16:49:26.019Z] stdout: INFO:     127.0.0.1:61505 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T16:49:26.044Z] stdout: INFO:     127.0.0.1:63254 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T16:49:26.049Z] stdout: INFO:     127.0.0.1:56108 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T16:49:26.051Z] stderr: INFO:     127.0.0.1:55661 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T16:49:26.052Z] stdout: 2026-06-09 22:19:26,047 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T16:49:26.054Z] stderr: INFO:     connection open
+[2026-06-09T16:49:26.110Z] stdout: 2026-06-09 22:19:26,107 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:19:26,107 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:49:26.114Z] stdout: INFO:     127.0.0.1:64977 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T16:49:26.116Z] stderr: INFO:     127.0.0.1:54187 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T16:49:26.117Z] stdout: 2026-06-09 22:19:26,109 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T16:49:26.118Z] stdout: INFO:     127.0.0.1:63254 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T16:49:26.119Z] stderr: INFO:     connection open
+[2026-06-09T16:49:26.123Z] stderr: INFO:     connection closed
+[2026-06-09T16:49:26.139Z] stdout: INFO:     127.0.0.1:56108 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T16:49:26.156Z] stdout: INFO:     127.0.0.1:63254 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T16:49:26.174Z] stdout: INFO:     127.0.0.1:60790 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T16:49:26.290Z] stdout: INFO:     127.0.0.1:63254 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T16:49:27.720Z] stdout: 2026-06-09 22:19:27,715 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:19:27,715 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:49:27.721Z] stderr: INFO:     connection closed
+[2026-06-09T16:49:27.750Z] stdout: 2026-06-09 22:19:27,747 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T16:49:27.751Z] stderr: INFO:     127.0.0.1:49301 - "WebSocket /api/ws/chat" [accepted]
+INFO:     connection open
+[2026-06-09T16:49:27.773Z] stderr: INFO:     127.0.0.1:49193 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T16:49:27.774Z] stdout: 2026-06-09 22:19:27,770 - lyra - INFO - WebSocket connected. Total connections: 5
+[2026-06-09T16:49:27.775Z] stderr: INFO:     connection open
+[2026-06-09T16:49:27.820Z] stdout: INFO:     127.0.0.1:63254 - "OPTIONS /api/conversations/16948e84-d93d-4c90-8e00-a1d6718381bf HTTP/1.1" 200 OK
+[2026-06-09T16:49:27.836Z] stdout: INFO:     127.0.0.1:63254 - "GET /api/conversations/16948e84-d93d-4c90-8e00-a1d6718381bf HTTP/1.1" 200 OK
+[2026-06-09T16:49:28.080Z] stdout: 2026-06-09 22:19:28,076 - lyra - INFO - WebSocket disconnected. Remaining connections: 4
+2026-06-09 22:19:28,076 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:49:28.080Z] stderr: INFO:     connection closed
+[2026-06-09T16:51:25.342Z] stdout: 2026-06-09 22:21:25,341 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:21:25,342 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:51:25.343Z] stderr: INFO:     connection closed
+[2026-06-09T16:51:26.139Z] stdout: INFO:     127.0.0.1:65396 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T16:51:26.169Z] stdout: INFO:     127.0.0.1:53282 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T16:51:26.176Z] stdout: INFO:     127.0.0.1:54669 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T16:51:26.241Z] stdout: INFO:     127.0.0.1:65225 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T16:51:26.245Z] stderr: INFO:     127.0.0.1:52784 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T16:51:26.245Z] stdout: 2026-06-09 22:21:26,244 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T16:51:26.246Z] stderr: INFO:     connection open
+[2026-06-09T16:51:26.248Z] stdout: INFO:     127.0.0.1:53282 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T16:51:26.263Z] stdout: INFO:     127.0.0.1:54669 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T16:51:26.276Z] stderr: INFO:     127.0.0.1:58224 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T16:51:26.278Z] stderr: INFO:     connection open
+[2026-06-09T16:51:26.279Z] stdout: 2026-06-09 22:21:26,275 - lyra - INFO - WebSocket connected. Total connections: 5
+[2026-06-09T16:51:26.286Z] stdout: 2026-06-09 22:21:26,284 - lyra - INFO - WebSocket disconnected. Remaining connections: 4
+[2026-06-09T16:51:26.287Z] stdout: 2026-06-09 22:21:26,284 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:51:26.288Z] stderr: INFO:     connection closed
+[2026-06-09T16:51:26.300Z] stdout: INFO:     127.0.0.1:58810 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T16:51:26.384Z] stdout: INFO:     127.0.0.1:58810 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T16:51:26.416Z] stdout: INFO:     127.0.0.1:54669 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T16:55:12.723Z] stdout: 2026-06-09 22:25:12,723 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:25:12,723 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:55:12.724Z] stderr: INFO:     connection closed
+[2026-06-09T16:55:12.727Z] stdout: 2026-06-09 22:25:12,728 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T16:55:12.728Z] stderr: INFO:     127.0.0.1:62536 - "WebSocket /api/ws/chat" [accepted]
+INFO:     connection open
+[2026-06-09T16:55:12.843Z] stdout: INFO:     127.0.0.1:62841 - "OPTIONS /api/images HTTP/1.1" 200 OK
+[2026-06-09T16:55:12.846Z] stdout: INFO:     127.0.0.1:61553 - "OPTIONS /api/settings HTTP/1.1" 200 OK
+[2026-06-09T16:55:12.848Z] stdout: INFO:     127.0.0.1:50734 - "OPTIONS /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T16:55:12.849Z] stdout: INFO:     127.0.0.1:62841 - "OPTIONS /api/models HTTP/1.1" 200 OK
+[2026-06-09T16:55:12.854Z] stdout: INFO:     127.0.0.1:62841 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T16:55:12.876Z] stdout: INFO:     127.0.0.1:50734 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T16:55:12.909Z] stdout: INFO:     127.0.0.1:61553 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T16:55:12.955Z] stdout: INFO:     127.0.0.1:54638 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T16:55:13.007Z] stdout: INFO:     127.0.0.1:54638 - "OPTIONS /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T16:55:13.020Z] stdout: INFO:     127.0.0.1:54638 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T16:55:13.570Z] stderr: INFO:     connection closed
+[2026-06-09T16:55:13.570Z] stdout: 2026-06-09 22:25:13,566 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:25:13,566 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:55:13.593Z] stdout: 2026-06-09 22:25:13,593 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T16:55:13.595Z] stderr: INFO:     127.0.0.1:53279 - "WebSocket /api/ws/chat" [accepted]
+INFO:     connection open
+[2026-06-09T16:55:13.737Z] stdout: INFO:     127.0.0.1:63600 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T16:55:13.742Z] stdout: INFO:     127.0.0.1:49666 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T16:55:13.743Z] stdout: INFO:     127.0.0.1:63600 - "POST /api/security/token HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62224 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T16:55:13.827Z] stdout: INFO:     127.0.0.1:62224 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T16:55:13.846Z] stdout: INFO:     127.0.0.1:63600 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T16:55:13.870Z] stdout: INFO:     127.0.0.1:49666 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T16:55:13.898Z] stdout: INFO:     127.0.0.1:62224 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T16:55:14.063Z] stdout: INFO:     127.0.0.1:62224 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T16:55:14.157Z] stdout: INFO:     127.0.0.1:62224 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T16:55:21.903Z] stdout: 2026-06-09 22:25:21,901 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:25:21,901 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:55:21.904Z] stderr: INFO:     connection closed
+[2026-06-09T16:55:22.456Z] stdout: INFO:     127.0.0.1:56212 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T16:55:22.504Z] stdout: INFO:     127.0.0.1:61105 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T16:55:22.509Z] stdout: INFO:     127.0.0.1:51935 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T16:55:22.572Z] stdout: INFO:     127.0.0.1:64846 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T16:55:22.574Z] stderr: INFO:     127.0.0.1:52792 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T16:55:22.576Z] stdout: 2026-06-09 22:25:22,576 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T16:55:22.577Z] stderr: INFO:     connection closed
+[2026-06-09T16:55:22.578Z] stdout: 2026-06-09 22:25:22,578 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:25:22,578 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:55:22.579Z] stdout: 2026-06-09 22:25:22,578 - lyra - INFO - WebSocket connected. Total connections: 4
+INFO:     127.0.0.1:61105 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T16:55:22.580Z] stderr: INFO:     127.0.0.1:62985 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T16:55:22.582Z] stderr: INFO:     connection open
+[2026-06-09T16:55:22.594Z] stdout: INFO:     127.0.0.1:51935 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T16:55:22.618Z] stdout: INFO:     127.0.0.1:51935 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T16:55:22.637Z] stdout: INFO:     127.0.0.1:49915 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T16:55:22.771Z] stdout: INFO:     127.0.0.1:51935 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T16:55:30.055Z] stdout: 2026-06-09 22:25:30,055 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:25:30,055 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:55:30.055Z] stderr: INFO:     connection closed
+[2026-06-09T16:55:30.107Z] stderr: INFO:     127.0.0.1:62172 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T16:55:30.108Z] stdout: 2026-06-09 22:25:30,107 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T16:55:30.110Z] stderr: INFO:     connection open
+[2026-06-09T16:55:30.136Z] stderr: INFO:     127.0.0.1:50326 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T16:55:30.137Z] stdout: 2026-06-09 22:25:30,137 - lyra - INFO - WebSocket connected. Total connections: 5
+[2026-06-09T16:55:30.139Z] stderr: INFO:     connection open
+[2026-06-09T16:55:30.261Z] stdout: INFO:     127.0.0.1:56350 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T16:55:31.009Z] stdout: 2026-06-09 22:25:31,010 - lyra - INFO - WebSocket disconnected. Remaining connections: 4
+2026-06-09 22:25:31,010 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:55:31.010Z] stderr: INFO:     connection closed
+[2026-06-09T16:56:09.386Z] stdout: INFO:     127.0.0.1:53063 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T16:56:09.394Z] stdout: INFO:     127.0.0.1:53063 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T16:56:10.467Z] stdout: INFO:     127.0.0.1:55036 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T16:58:20.910Z] stdout: 2026-06-09 22:28:20,910 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:28:20,910 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:58:20.910Z] stderr: INFO:     connection closed
+[2026-06-09T16:58:21.526Z] stdout: INFO:     127.0.0.1:49666 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T16:58:21.551Z] stdout: INFO:     127.0.0.1:64995 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T16:58:21.557Z] stdout: INFO:     127.0.0.1:65313 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T16:58:21.618Z] stdout: INFO:     127.0.0.1:65023 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T16:58:21.620Z] stderr: INFO:     127.0.0.1:50432 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T16:58:21.621Z] stdout: 2026-06-09 22:28:21,619 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T16:58:21.623Z] stderr: INFO:     connection open
+[2026-06-09T16:58:21.632Z] stdout: INFO:     127.0.0.1:64995 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T16:58:21.638Z] stderr: INFO:     127.0.0.1:58328 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T16:58:21.640Z] stderr: INFO:     connection open
+[2026-06-09T16:58:21.641Z] stdout: 2026-06-09 22:28:21,639 - lyra - INFO - WebSocket connected. Total connections: 5
+[2026-06-09T16:58:21.653Z] stdout: 2026-06-09 22:28:21,652 - lyra - INFO - WebSocket disconnected. Remaining connections: 4
+2026-06-09 22:28:21,652 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:58:21.654Z] stderr: INFO:     connection closed
+[2026-06-09T16:58:21.658Z] stdout: INFO:     127.0.0.1:65313 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T16:58:21.676Z] stdout: INFO:     127.0.0.1:61711 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T16:58:21.778Z] stdout: INFO:     127.0.0.1:61711 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T16:58:21.807Z] stdout: INFO:     127.0.0.1:65313 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T16:58:46.809Z] stdout: 2026-06-09 22:28:46,800 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:28:46,800 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:58:46.811Z] stderr: INFO:     connection closed
+[2026-06-09T16:58:46.819Z] stderr: INFO:     127.0.0.1:55449 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T16:58:46.820Z] stdout: 2026-06-09 22:28:46,816 - lyra - INFO - WebSocket connected. Total connections: 4
+2026-06-09 22:28:46,816 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:28:46,816 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T16:58:46.821Z] stderr: INFO:     connection open
+INFO:     connection closed
+[2026-06-09T16:58:46.824Z] stderr: INFO:     127.0.0.1:59778 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T16:58:46.825Z] stdout: 2026-06-09 22:28:46,822 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T16:58:46.828Z] stderr: INFO:     connection open
+[2026-06-09T17:00:10.446Z] stdout: 2026-06-09 22:30:10,446 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:30:10,446 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T17:00:10.447Z] stderr: INFO:     connection closed
+[2026-06-09T17:00:10.475Z] stderr: INFO:     127.0.0.1:65434 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T17:00:10.477Z] stdout: 2026-06-09 22:30:10,474 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T17:00:10.478Z] stderr: INFO:     connection open
+[2026-06-09T17:00:10.494Z] stdout: 2026-06-09 22:30:10,493 - lyra - INFO - WebSocket connected. Total connections: 5
+[2026-06-09T17:00:10.495Z] stderr: INFO:     127.0.0.1:57410 - "WebSocket /api/ws/chat" [accepted]
+INFO:     connection open
+[2026-06-09T17:00:10.864Z] stdout: 2026-06-09 22:30:10,863 - lyra - INFO - WebSocket disconnected. Remaining connections: 4
+2026-06-09 22:30:10,863 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T17:00:10.865Z] stderr: INFO:     connection closed
+[2026-06-09T17:00:26.070Z] stderr: INFO:     connection closed
+[2026-06-09T17:00:26.071Z] stdout: 2026-06-09 22:30:26,069 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:30:26,069 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T17:00:33.193Z] stdout: INFO:     127.0.0.1:58322 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:00:33.506Z] stdout: INFO:     127.0.0.1:58322 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:00:33.510Z] stdout: INFO:     127.0.0.1:62546 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:00:51.501Z] stdout: 2026-06-09 22:30:51,498 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T17:00:51.502Z] stderr: INFO:     127.0.0.1:54947 - "WebSocket /api/ws/chat" [accepted]
+INFO:     connection open
+[2026-06-09T17:00:51.524Z] stdout: 2026-06-09 22:30:51,514 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:30:51,516 - lyra - INFO - WebSocket client disconnected gracefully.
+2026-06-09 22:30:51,520 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T17:00:51.525Z] stderr: INFO:     connection closed
+INFO:     127.0.0.1:58291 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T17:00:51.531Z] stderr: INFO:     connection open
+[2026-06-09T17:00:53.793Z] stdout: 2026-06-09 22:30:53,790 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:30:53,790 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T17:00:53.795Z] stderr: INFO:     connection closed
+[2026-06-09T17:00:55.797Z] stdout: 2026-06-09 22:30:55,793 - lyra - INFO - WebSocket disconnected. Remaining connections: 2
+2026-06-09 22:30:55,793 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T17:00:55.798Z] stderr: INFO:     connection closed
+[2026-06-09T17:00:57.525Z] stdout: INFO:     127.0.0.1:61413 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:00:57.552Z] stdout: INFO:     127.0.0.1:58101 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:00:57.560Z] stdout: INFO:     127.0.0.1:49242 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T17:00:57.603Z] stdout: INFO:     127.0.0.1:63358 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T17:00:57.604Z] stdout: INFO:     127.0.0.1:58101 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T17:00:57.619Z] stdout: INFO:     127.0.0.1:49242 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T17:00:57.641Z] stderr: INFO:     127.0.0.1:59142 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T17:00:57.642Z] stdout: 2026-06-09 22:30:57,639 - lyra - INFO - WebSocket connected. Total connections: 3
+[2026-06-09T17:00:57.643Z] stderr: INFO:     connection open
+[2026-06-09T17:00:57.653Z] stdout: INFO:     127.0.0.1:49242 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T17:00:57.660Z] stderr: INFO:     127.0.0.1:65206 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T17:00:57.661Z] stderr: INFO:     connection open
+[2026-06-09T17:00:57.662Z] stdout: 2026-06-09 22:30:57,656 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T17:00:57.666Z] stdout: INFO:     127.0.0.1:55803 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T17:00:57.696Z] stdout: 2026-06-09 22:30:57,693 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:30:57,694 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T17:00:57.731Z] stderr: INFO:     connection closed
+[2026-06-09T17:00:57.766Z] stdout: INFO:     127.0.0.1:49242 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T17:00:58.654Z] stdout: INFO:     127.0.0.1:55247 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:00:58.662Z] stdout: INFO:     127.0.0.1:61411 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:00:58.664Z] stdout: INFO:     127.0.0.1:55247 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:00:58.665Z] stdout: INFO:     127.0.0.1:53817 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:00:58.670Z] stdout: INFO:     127.0.0.1:56602 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:00:58.677Z] stdout: INFO:     127.0.0.1:54056 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:00:58.678Z] stdout: INFO:     127.0.0.1:61411 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:00:58.679Z] stdout: INFO:     127.0.0.1:55247 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:00:58.701Z] stdout: INFO:     127.0.0.1:55247 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:00:58.710Z] stdout: INFO:     127.0.0.1:55247 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T17:00:58.750Z] stdout: INFO:     127.0.0.1:54056 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:00:58.800Z] stdout: INFO:     127.0.0.1:56602 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T17:00:58.817Z] stdout: INFO:     127.0.0.1:61411 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T17:00:58.889Z] stdout: INFO:     127.0.0.1:53817 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T17:00:58.945Z] stdout: INFO:     127.0.0.1:55247 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T17:00:58.951Z] stdout: INFO:     127.0.0.1:59187 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T17:00:59.083Z] stderr: INFO:     127.0.0.1:50092 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T17:00:59.084Z] stdout: 2026-06-09 22:30:59,080 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T17:00:59.085Z] stderr: INFO:     connection open
+[2026-06-09T17:00:59.108Z] stderr: INFO:     127.0.0.1:50520 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T17:00:59.110Z] stdout: 2026-06-09 22:30:59,105 - lyra - INFO - WebSocket connected. Total connections: 5
+[2026-06-09T17:00:59.112Z] stderr: INFO:     connection open
+[2026-06-09T17:00:59.292Z] stdout: INFO:     127.0.0.1:59187 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:00:59.523Z] stdout: 2026-06-09 22:30:59,515 - lyra - INFO - WebSocket disconnected. Remaining connections: 4
+2026-06-09 22:30:59,515 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T17:00:59.524Z] stderr: INFO:     connection closed
+[2026-06-09T17:00:59.702Z] stdout: 2026-06-09 22:30:59,694 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:30:59,694 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T17:00:59.703Z] stderr: INFO:     connection closed
+[2026-06-09T17:00:59.718Z] stdout: INFO:     127.0.0.1:59187 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T17:01:19.315Z] stdout: INFO:     127.0.0.1:61255 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:01:19.347Z] stdout: INFO:     127.0.0.1:53980 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:01:19.349Z] stderr: INFO:     127.0.0.1:65062 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T17:01:19.350Z] stdout: 2026-06-09 22:31:19,350 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T17:01:19.352Z] stderr: INFO:     connection open
+[2026-06-09T17:01:19.358Z] stdout: INFO:     127.0.0.1:53395 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T17:01:19.402Z] stdout: 2026-06-09 22:31:19,401 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:31:19,403 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T17:01:19.405Z] stdout: INFO:     127.0.0.1:59208 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T17:01:19.408Z] stderr: INFO:     127.0.0.1:54947 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T17:01:19.409Z] stdout: 2026-06-09 22:31:19,409 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T17:01:19.410Z] stderr: INFO:     connection open
+[2026-06-09T17:01:19.413Z] stderr: INFO:     connection closed
+[2026-06-09T17:01:19.419Z] stdout: INFO:     127.0.0.1:53980 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T17:01:19.435Z] stdout: INFO:     127.0.0.1:53395 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T17:01:19.447Z] stdout: INFO:     127.0.0.1:53980 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T17:01:19.474Z] stdout: INFO:     127.0.0.1:52784 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T17:01:19.577Z] stdout: INFO:     127.0.0.1:53980 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T17:01:21.148Z] stdout: 2026-06-09 22:31:21,141 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:31:21,141 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T17:01:21.150Z] stderr: INFO:     connection closed
+[2026-06-09T17:01:21.178Z] stdout: 2026-06-09 22:31:21,175 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T17:01:21.180Z] stderr: INFO:     127.0.0.1:61608 - "WebSocket /api/ws/chat" [accepted]
+INFO:     connection open
+[2026-06-09T17:01:21.203Z] stdout: 2026-06-09 22:31:21,202 - lyra - INFO - WebSocket connected. Total connections: 5
+[2026-06-09T17:01:21.204Z] stderr: INFO:     127.0.0.1:57766 - "WebSocket /api/ws/chat" [accepted]
+INFO:     connection open
+[2026-06-09T17:01:21.557Z] stdout: 2026-06-09 22:31:21,555 - lyra - INFO - WebSocket disconnected. Remaining connections: 4
+2026-06-09 22:31:21,555 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T17:01:21.558Z] stderr: INFO:     connection closed
+[2026-06-09T17:01:22.180Z] stdout: 2026-06-09 22:31:22,180 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:31:22,180 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T17:01:22.180Z] stderr: INFO:     connection closed
+[2026-06-09T17:01:22.559Z] stdout: INFO:     127.0.0.1:53980 - "OPTIONS /api/agents HTTP/1.1" 200 OK
+[2026-06-09T17:01:22.560Z] stdout: INFO:     127.0.0.1:52784 - "OPTIONS /api/agents/logs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53395 - "OPTIONS /api/agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59208 - "OPTIONS /api/agents/logs HTTP/1.1" 200 OK
+[2026-06-09T17:01:22.572Z] stdout: INFO:     127.0.0.1:59208 - "GET /api/agents HTTP/1.1" 500 Internal Server Error
+[2026-06-09T17:01:22.596Z] stderr: ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 421, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 56, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\api\routes.py", line 282, in get_agents_telemetry
+    import psutil
+ModuleNotFoundError: No module named 'psutil'
+[2026-06-09T17:01:22.607Z] stdout: INFO:     127.0.0.1:53395 - "GET /api/agents/logs HTTP/1.1" 200 OK
+[2026-06-09T17:01:22.609Z] stdout: INFO:     127.0.0.1:52784 - "GET /api/agents HTTP/1.1" 500 Internal Server Error
+[2026-06-09T17:01:22.611Z] stderr: ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 421, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 56, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\api\routes.py", line 282, in get_agents_telemetry
+    import psutil
+ModuleNotFoundError: No module named 'psutil'
+[2026-06-09T17:01:22.619Z] stdout: INFO:     127.0.0.1:53395 - "GET /api/agents/logs HTTP/1.1" 200 OK
+[2026-06-09T17:01:23.724Z] stdout: INFO:     127.0.0.1:53395 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:01:23.751Z] stdout: INFO:     127.0.0.1:53395 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:01:23.753Z] stdout: INFO:     127.0.0.1:53980 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:01:25.014Z] stdout: INFO:     127.0.0.1:53980 - "GET /api/agents HTTP/1.1" 500 Internal Server Error
+[2026-06-09T17:01:25.016Z] stderr: ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 421, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 56, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\api\routes.py", line 282, in get_agents_telemetry
+    import psutil
+ModuleNotFoundError: No module named 'psutil'
+[2026-06-09T17:01:25.022Z] stdout: INFO:     127.0.0.1:53395 - "GET /api/agents/logs HTTP/1.1" 200 OK
+[2026-06-09T17:01:25.029Z] stdout: INFO:     127.0.0.1:55926 - "GET /api/agents HTTP/1.1" 500 Internal Server Error
+[2026-06-09T17:01:25.035Z] stderr: ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 421, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 56, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\api\routes.py", line 282, in get_agents_telemetry
+    import psutil
+ModuleNotFoundError: No module named 'psutil'
+[2026-06-09T17:01:25.046Z] stdout: INFO:     127.0.0.1:53395 - "GET /api/agents/logs HTTP/1.1" 200 OK
+[2026-06-09T17:01:27.997Z] stdout: INFO:     127.0.0.1:53395 - "GET /api/agents HTTP/1.1" 500 Internal Server Error
+[2026-06-09T17:01:27.998Z] stderr: ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 421, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 56, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\api\routes.py", line 282, in get_agents_telemetry
+    import psutil
+ModuleNotFoundError: No module named 'psutil'
+[2026-06-09T17:01:28.013Z] stdout: INFO:     127.0.0.1:63971 - "GET /api/agents/logs HTTP/1.1" 200 OK
+[2026-06-09T17:01:30.993Z] stdout: INFO:     127.0.0.1:63971 - "GET /api/agents HTTP/1.1" 500 Internal Server Error
+[2026-06-09T17:01:30.998Z] stderr: ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 421, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 56, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\api\routes.py", line 282, in get_agents_telemetry
+    import psutil
+ModuleNotFoundError: No module named 'psutil'
+[2026-06-09T17:01:31.006Z] stdout: INFO:     127.0.0.1:57862 - "GET /api/agents/logs HTTP/1.1" 200 OK
+[2026-06-09T17:01:34.028Z] stdout: INFO:     127.0.0.1:57862 - "GET /api/agents HTTP/1.1" 500 Internal Server Error
+[2026-06-09T17:01:34.029Z] stderr: ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 421, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 56, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\api\routes.py", line 282, in get_agents_telemetry
+    import psutil
+ModuleNotFoundError: No module named 'psutil'
+[2026-06-09T17:01:34.033Z] stdout: INFO:     127.0.0.1:62882 - "GET /api/agents/logs HTTP/1.1" 200 OK
+[2026-06-09T17:01:36.999Z] stdout: INFO:     127.0.0.1:62882 - "GET /api/agents HTTP/1.1" 500 Internal Server Error
+[2026-06-09T17:01:37.004Z] stderr: ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 421, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 56, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\lib\site-packages\fastapi\routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\api\routes.py", line 282, in get_agents_telemetry
+    import psutil
+ModuleNotFoundError: No module named 'psutil'
+[2026-06-09T17:01:37.022Z] stdout: INFO:     127.0.0.1:54638 - "GET /api/agents/logs HTTP/1.1" 200 OK
+[2026-06-09T17:01:46.060Z] stdout: INFO:     127.0.0.1:59044 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:02:46.250Z] stdout: 2026-06-09 22:32:46,250 - lyra - INFO - WebSocket disconnected. Remaining connections: 2
+2026-06-09 22:32:46,250 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T17:02:46.251Z] stderr: INFO:     connection closed
+[2026-06-09T17:02:50.383Z] stdout: INFO:     127.0.0.1:62501 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:02:50.386Z] stdout: INFO:     127.0.0.1:54954 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:02:50.388Z] stdout: INFO:     127.0.0.1:62501 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:02:50.389Z] stdout: INFO:     127.0.0.1:59938 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:02:50.391Z] stdout: INFO:     127.0.0.1:57351 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:02:50.392Z] stdout: INFO:     127.0.0.1:54954 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:02:50.396Z] stdout: INFO:     127.0.0.1:62501 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:02:50.398Z] stdout: INFO:     127.0.0.1:55466 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:02:50.423Z] stdout: INFO:     127.0.0.1:55466 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:02:50.460Z] stdout: INFO:     127.0.0.1:57351 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:02:50.466Z] stdout: INFO:     127.0.0.1:55466 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T17:02:50.507Z] stdout: INFO:     127.0.0.1:59938 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T17:02:50.550Z] stdout: INFO:     127.0.0.1:62501 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T17:02:50.565Z] stdout: INFO:     127.0.0.1:59449 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T17:02:50.603Z] stderr: INFO:     127.0.0.1:61032 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T17:02:50.604Z] stdout: 2026-06-09 22:32:50,605 - lyra - INFO - WebSocket connected. Total connections: 3
+[2026-06-09T17:02:50.608Z] stderr: INFO:     connection open
+[2026-06-09T17:02:50.640Z] stderr: INFO:     127.0.0.1:51215 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T17:02:50.642Z] stdout: 2026-06-09 22:32:50,641 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T17:02:50.643Z] stderr: INFO:     connection open
+[2026-06-09T17:02:50.701Z] stdout: INFO:     127.0.0.1:54954 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T17:02:50.712Z] stdout: INFO:     127.0.0.1:57351 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T17:02:50.808Z] stdout: INFO:     127.0.0.1:57351 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:02:50.877Z] stdout: INFO:     127.0.0.1:57716 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:02:50.880Z] stdout: 2026-06-09 22:32:50,880 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:32:50,881 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T17:02:50.882Z] stderr: INFO:     connection closed
+[2026-06-09T17:02:50.930Z] stdout: INFO:     127.0.0.1:58699 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T17:02:50.935Z] stdout: INFO:     127.0.0.1:59157 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:02:50.988Z] stdout: INFO:     127.0.0.1:57716 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T17:02:50.991Z] stdout: INFO:     127.0.0.1:51273 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T17:02:51.006Z] stdout: INFO:     127.0.0.1:59157 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T17:02:51.031Z] stdout: INFO:     127.0.0.1:60218 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T17:02:51.121Z] stdout: INFO:     127.0.0.1:57351 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T17:02:51.162Z] stdout: INFO:     127.0.0.1:59157 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T17:02:51.386Z] stdout: INFO:     127.0.0.1:59157 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T17:02:51.852Z] stderr: INFO:     127.0.0.1:50322 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T17:02:51.853Z] stdout: 2026-06-09 22:32:51,852 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T17:02:51.854Z] stderr: INFO:     connection open
+[2026-06-09T17:02:51.871Z] stderr: INFO:     127.0.0.1:54270 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T17:02:51.873Z] stderr: INFO:     connection open
+[2026-06-09T17:02:51.875Z] stdout: 2026-06-09 22:32:51,872 - lyra - INFO - WebSocket connected. Total connections: 5
+[2026-06-09T17:02:52.051Z] stdout: 2026-06-09 22:32:52,051 - lyra - INFO - WebSocket disconnected. Remaining connections: 4
+2026-06-09 22:32:52,051 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T17:02:52.053Z] stderr: INFO:     connection closed
+[2026-06-09T17:02:53.992Z] stdout: 2026-06-09 22:32:53,990 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:32:53,990 - lyra - INFO - WebSocket client disconnected gracefully.
+INFO:     127.0.0.1:57351 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:02:53.996Z] stderr: INFO:     connection closed
+[2026-06-09T17:02:54.011Z] stdout: INFO:     127.0.0.1:57351 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:02:54.338Z] stdout: INFO:     127.0.0.1:57351 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:02:54.340Z] stdout: INFO:     127.0.0.1:54954 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:02:54.360Z] stdout: INFO:     127.0.0.1:54954 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:02:54.365Z] stdout: INFO:     127.0.0.1:54954 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:03:24.410Z] Wake System Launcher: Starting backend.
+[2026-06-09T17:03:24.411Z] isDev: true
+[2026-06-09T17:03:24.412Z] process.resourcesPath: C:\sabari\Lyra\frontend\node_modules\electron\dist\resources
+[2026-06-09T17:03:24.412Z] backendPath: C:\sabari\Lyra\backend
+[2026-06-09T17:03:24.413Z] pythonExe: C:\sabari\Lyra\backend\venv\Scripts\python.exe
+[2026-06-09T17:03:24.413Z] pythonExe exists: true
+[2026-06-09T17:03:24.414Z] backendPath exists: true
+[2026-06-09T17:03:24.415Z] Creating stream to logPath: C:\sabari\Lyra\backend\backend_spawn.log
+[2026-06-09T17:03:24.416Z] Spawning backendProcess...
+[2026-06-09T17:03:24.475Z] backendProcess PID: 31812
+[2026-06-09T17:03:26.131Z] stderr: INFO:     Started server process [16232]
+INFO:     Waiting for application startup.
+[2026-06-09T17:03:26.135Z] stdout: 2026-06-09 22:33:26,126 - lyra - INFO - Initializing Lyra V1 Core platform services...
+2026-06-09 22:33:26,131 - lyra - INFO - Initializing database tables...
+[2026-06-09T17:03:26.169Z] stdout: 2026-06-09 22:33:26,168 - lyra - INFO - Database initialized successfully.
+2026-06-09 22:33:26,168 - lyra - INFO - Lyra V1 startup routine completed successfully.
+[2026-06-09T17:03:26.171Z] stderr: INFO:     Application startup complete.
+ERROR:    [Errno 10048] error while attempting to bind on address ('127.0.0.1', 8000): only one usage of each socket address (protocol/network address/port) is normally permitted
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+[2026-06-09T17:03:26.174Z] stdout: 2026-06-09 22:33:26,169 - lyra - INFO - Shutting down Lyra V1 backend processes...
+[2026-06-09T17:03:26.517Z] Process EXIT event: exited with code 1, signal null
+[2026-06-09T17:03:26.518Z] Process CLOSE event: exited with code 1
+[2026-06-09T17:03:33.809Z] stdout: INFO:     127.0.0.1:64094 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:03:33.823Z] stdout: INFO:     127.0.0.1:61482 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:03:33.825Z] stdout: INFO:     127.0.0.1:64094 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:03:33.827Z] stdout: INFO:     127.0.0.1:57350 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:03:33.830Z] stdout: INFO:     127.0.0.1:64590 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:03:33.831Z] stdout: INFO:     127.0.0.1:60037 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:03:33.832Z] stdout: INFO:     127.0.0.1:56956 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:03:33.833Z] stdout: INFO:     127.0.0.1:61482 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:03:34.362Z] stdout: INFO:     127.0.0.1:61482 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:03:34.417Z] stdout: INFO:     127.0.0.1:64590 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:03:34.427Z] stdout: INFO:     127.0.0.1:61482 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T17:03:34.473Z] stdout: INFO:     127.0.0.1:57350 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T17:03:34.540Z] stdout: INFO:     127.0.0.1:56956 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T17:03:34.599Z] stdout: INFO:     127.0.0.1:64094 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T17:03:34.632Z] stderr: INFO:     127.0.0.1:60165 - "WebSocket /api/ws/chat" [accepted]
+INFO:     connection open
+[2026-06-09T17:03:34.633Z] stdout: 2026-06-09 22:33:34,629 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T17:03:34.651Z] stderr: INFO:     127.0.0.1:53535 - "WebSocket /api/ws/chat" [accepted]
+INFO:     connection open
+[2026-06-09T17:03:34.653Z] stdout: 2026-06-09 22:33:34,647 - lyra - INFO - WebSocket connected. Total connections: 5
+[2026-06-09T17:03:34.716Z] stdout: INFO:     127.0.0.1:60037 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T17:03:34.731Z] stdout: INFO:     127.0.0.1:64590 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T17:03:34.883Z] stdout: 2026-06-09 22:33:34,880 - lyra - INFO - WebSocket disconnected. Remaining connections: 4
+2026-06-09 22:33:34,881 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T17:03:34.886Z] stderr: INFO:     connection closed
+[2026-06-09T17:03:35.262Z] stdout: INFO:     127.0.0.1:64590 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:03:35.496Z] stdout: 2026-06-09 22:33:35,492 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:33:35,492 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T17:03:35.497Z] stderr: INFO:     connection closed
+[2026-06-09T17:03:35.740Z] stdout: INFO:     127.0.0.1:64590 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T17:03:36.531Z] stdout: INFO:     127.0.0.1:60718 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:03:36.581Z] stdout: INFO:     127.0.0.1:55622 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:03:36.589Z] stdout: INFO:     127.0.0.1:60718 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T17:03:36.657Z] stdout: INFO:     127.0.0.1:61077 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T17:03:36.662Z] stdout: INFO:     127.0.0.1:55622 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T17:03:36.682Z] stdout: INFO:     127.0.0.1:60718 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T17:03:36.726Z] stdout: INFO:     127.0.0.1:52938 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T17:03:36.831Z] stdout: INFO:     127.0.0.1:52938 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T17:03:36.863Z] stdout: INFO:     127.0.0.1:60718 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T17:03:37.178Z] stderr: INFO:     127.0.0.1:61886 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T17:03:37.179Z] stdout: 2026-06-09 22:33:37,175 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T17:03:37.180Z] stderr: INFO:     connection open
+[2026-06-09T17:03:37.209Z] stderr: INFO:     127.0.0.1:65403 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T17:03:37.211Z] stderr: INFO:     connection open
+[2026-06-09T17:03:37.212Z] stdout: 2026-06-09 22:33:37,207 - lyra - INFO - WebSocket connected. Total connections: 5
+[2026-06-09T17:03:37.260Z] stdout: 2026-06-09 22:33:37,256 - lyra - INFO - WebSocket disconnected. Remaining connections: 4
+2026-06-09 22:33:37,257 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T17:03:37.262Z] stderr: INFO:     connection closed
+[2026-06-09T17:03:40.923Z] stdout: 2026-06-09 22:33:40,913 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:33:40,913 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T17:03:40.925Z] stderr: INFO:     connection closed
+[2026-06-09T17:05:22.639Z] stdout: INFO:     127.0.0.1:56946 - "OPTIONS /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:05:22.644Z] stdout: INFO:     127.0.0.1:55247 - "OPTIONS /api/settings HTTP/1.1" 200 OK
+[2026-06-09T17:05:22.645Z] stdout: INFO:     127.0.0.1:60754 - "OPTIONS /api/conversations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50846 - "OPTIONS /api/models HTTP/1.1" 200 OK
+[2026-06-09T17:05:22.651Z] stdout: INFO:     127.0.0.1:50846 - "OPTIONS /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:05:22.653Z] stdout: INFO:     127.0.0.1:60754 - "OPTIONS /api/settings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55247 - "OPTIONS /api/conversations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56946 - "OPTIONS /api/models HTTP/1.1" 200 OK
+[2026-06-09T17:05:22.655Z] stdout: INFO:     127.0.0.1:50846 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:05:22.693Z] stdout: INFO:     127.0.0.1:56946 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:05:22.701Z] stdout: INFO:     127.0.0.1:54436 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T17:05:22.759Z] stdout: INFO:     127.0.0.1:56946 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T17:05:22.775Z] stdout: INFO:     127.0.0.1:55142 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T17:05:22.797Z] stdout: INFO:     127.0.0.1:56946 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T17:05:22.818Z] stdout: INFO:     127.0.0.1:60754 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T17:05:22.913Z] stdout: INFO:     127.0.0.1:60754 - "OPTIONS /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T17:05:22.932Z] stdout: INFO:     127.0.0.1:60754 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T17:05:22.971Z] stdout: INFO:     127.0.0.1:56946 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T17:05:23.034Z] stderr: INFO:     127.0.0.1:52171 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T17:05:23.035Z] stdout: 2026-06-09 22:35:23,033 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T17:05:23.036Z] stderr: INFO:     connection open
+[2026-06-09T17:05:23.053Z] stderr: INFO:     127.0.0.1:52139 - "WebSocket /api/ws/chat" [accepted]
+INFO:     connection open
+[2026-06-09T17:05:23.055Z] stdout: 2026-06-09 22:35:23,050 - lyra - INFO - WebSocket connected. Total connections: 5
+[2026-06-09T17:05:23.257Z] stdout: 2026-06-09 22:35:23,257 - lyra - INFO - WebSocket disconnected. Remaining connections: 4
+2026-06-09 22:35:23,257 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T17:05:23.259Z] stderr: INFO:     connection closed
+[2026-06-09T17:06:20.754Z] stdout: 2026-06-09 22:36:20,745 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:36:20,745 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T17:06:20.754Z] stderr: INFO:     connection closed
+[2026-06-09T17:06:20.893Z] stdout: INFO:     127.0.0.1:55811 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:06:20.899Z] stdout: INFO:     127.0.0.1:50060 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:06:20.901Z] stdout: INFO:     127.0.0.1:55811 - "POST /api/security/token HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62985 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:06:20.908Z] stdout: INFO:     127.0.0.1:62985 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:06:20.935Z] stdout: INFO:     127.0.0.1:55811 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T17:06:20.992Z] stdout: INFO:     127.0.0.1:50060 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T17:06:21.027Z] stdout: INFO:     127.0.0.1:62985 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T17:06:21.117Z] stdout: INFO:     127.0.0.1:62985 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:06:21.198Z] stdout: INFO:     127.0.0.1:62985 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T17:06:21.532Z] stdout: 2026-06-09 22:36:21,526 - lyra - INFO - WebSocket disconnected. Remaining connections: 2
+2026-06-09 22:36:21,526 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T17:06:21.533Z] stderr: INFO:     connection closed
+[2026-06-09T17:06:21.770Z] stdout: INFO:     127.0.0.1:63575 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:06:21.824Z] stdout: INFO:     127.0.0.1:56947 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T17:06:21.874Z] stdout: INFO:     127.0.0.1:50061 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T17:06:21.912Z] stdout: INFO:     127.0.0.1:63479 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T17:06:22.134Z] stdout: INFO:     127.0.0.1:63479 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T17:06:47.321Z] stdout: INFO:     127.0.0.1:54355 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:06:47.330Z] stdout: INFO:     127.0.0.1:50305 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T17:06:47.382Z] stdout: INFO:     127.0.0.1:54355 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:06:47.409Z] stdout: INFO:     127.0.0.1:57240 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T17:06:47.450Z] stdout: INFO:     127.0.0.1:58803 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:06:47.454Z] stdout: INFO:     127.0.0.1:54948 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:06:47.456Z] stdout: INFO:     127.0.0.1:55449 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:06:47.464Z] stdout: INFO:     127.0.0.1:61654 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T17:06:47.467Z] stdout: INFO:     127.0.0.1:58545 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:06:47.469Z] stdout: INFO:     127.0.0.1:58803 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:06:47.471Z] stdout: INFO:     127.0.0.1:51666 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:06:47.475Z] stdout: INFO:     127.0.0.1:54948 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:06:47.479Z] stdout: INFO:     127.0.0.1:61172 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:06:47.481Z] stdout: INFO:     127.0.0.1:55449 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:06:47.524Z] stdout: INFO:     127.0.0.1:61172 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:06:47.581Z] stdout: INFO:     127.0.0.1:58545 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T17:06:47.653Z] stdout: INFO:     127.0.0.1:57240 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T17:06:47.698Z] stdout: INFO:     127.0.0.1:51666 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T17:06:47.710Z] stdout: INFO:     127.0.0.1:55449 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T17:06:47.718Z] stdout: INFO:     127.0.0.1:61172 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T17:06:47.796Z] stdout: INFO:     127.0.0.1:60649 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T17:06:47.852Z] stdout: INFO:     127.0.0.1:54948 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T17:06:47.918Z] stdout: INFO:     127.0.0.1:58803 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T17:06:47.968Z] stdout: INFO:     127.0.0.1:60649 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T17:06:47.992Z] stdout: INFO:     127.0.0.1:57240 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T17:06:48.168Z] stdout: INFO:     127.0.0.1:58803 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:06:48.889Z] stdout: INFO:     127.0.0.1:58803 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T17:10:14.072Z] stdout: 2026-06-09 22:40:14,066 - lyra - INFO - WebSocket connected. Total connections: 3
+[2026-06-09T17:10:14.073Z] stderr: INFO:     127.0.0.1:60906 - "WebSocket /api/ws/chat" [accepted]
+INFO:     connection open
+[2026-06-09T17:10:14.091Z] stderr: INFO:     127.0.0.1:51137 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T17:10:14.092Z] stdout: 2026-06-09 22:40:14,089 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T17:10:14.094Z] stderr: INFO:     connection open
+[2026-06-09T17:10:14.553Z] stdout: 2026-06-09 22:40:14,550 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:40:14,550 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T17:10:14.554Z] stderr: INFO:     connection closed
+[2026-06-09T17:11:26.773Z] stdout: INFO:     127.0.0.1:64302 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:11:26.783Z] stdout: INFO:     127.0.0.1:64302 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:11:27.304Z] stdout: 2026-06-09 22:41:27,299 - lyra - INFO - WebSocket disconnected. Remaining connections: 2
+2026-06-09 22:41:27,299 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T17:11:27.304Z] stderr: INFO:     connection closed
+[2026-06-09T17:11:27.363Z] stdout: 2026-06-09 22:41:27,357 - lyra - INFO - WebSocket connected. Total connections: 3
+[2026-06-09T17:11:27.364Z] stderr: INFO:     127.0.0.1:57549 - "WebSocket /api/ws/chat" [accepted]
+INFO:     connection open
+[2026-06-09T17:11:28.740Z] stdout: INFO:     127.0.0.1:54390 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:11:55.915Z] stderr: INFO:     connection closed
+[2026-06-09T17:11:55.916Z] stdout: 2026-06-09 22:41:55,913 - lyra - INFO - WebSocket disconnected. Remaining connections: 2
+2026-06-09 22:41:55,913 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T17:11:55.923Z] stderr: INFO:     127.0.0.1:54183 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T17:11:55.923Z] stdout: 2026-06-09 22:41:55,920 - lyra - INFO - WebSocket connected. Total connections: 3
+[2026-06-09T17:11:55.924Z] stderr: INFO:     connection open
+[2026-06-09T17:12:39.857Z] stdout: 2026-06-09 22:42:39,857 - lyra - INFO - WebSocket disconnected. Remaining connections: 2
+2026-06-09 22:42:39,857 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T17:12:39.859Z] stderr: INFO:     connection closed
+[2026-06-09T17:12:40.833Z] stdout: INFO:     127.0.0.1:64673 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:12:40.864Z] stdout: INFO:     127.0.0.1:56596 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:12:40.875Z] stdout: INFO:     127.0.0.1:58084 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T17:12:40.937Z] stdout: INFO:     127.0.0.1:60241 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T17:12:40.942Z] stdout: INFO:     127.0.0.1:56596 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T17:12:40.961Z] stdout: INFO:     127.0.0.1:58084 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T17:12:40.987Z] stdout: INFO:     127.0.0.1:52784 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T17:12:41.089Z] stdout: INFO:     127.0.0.1:58084 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T17:12:41.100Z] stdout: INFO:     127.0.0.1:52784 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T17:12:52.488Z] stdout: INFO:     127.0.0.1:54169 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:12:52.525Z] stdout: INFO:     127.0.0.1:50395 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:12:52.532Z] stdout: INFO:     127.0.0.1:61411 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T17:12:52.581Z] stdout: INFO:     127.0.0.1:64547 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T17:12:52.589Z] stdout: INFO:     127.0.0.1:50395 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T17:12:52.605Z] stdout: INFO:     127.0.0.1:61411 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T17:12:52.629Z] stdout: INFO:     127.0.0.1:61295 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T17:12:52.711Z] stdout: INFO:     127.0.0.1:61295 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T17:12:52.732Z] stdout: INFO:     127.0.0.1:61411 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T17:13:55.279Z] stdout: INFO:     127.0.0.1:61487 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:13:55.286Z] stdout: INFO:     127.0.0.1:60031 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:13:55.304Z] stdout: INFO:     127.0.0.1:60031 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:13:55.306Z] stdout: INFO:     127.0.0.1:61487 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:13:55.308Z] stdout: INFO:     127.0.0.1:64829 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:13:55.310Z] stdout: INFO:     127.0.0.1:49965 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:13:55.311Z] stdout: INFO:     127.0.0.1:60620 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:13:55.312Z] stdout: INFO:     127.0.0.1:57651 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:13:55.411Z] stdout: INFO:     127.0.0.1:57651 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:13:55.454Z] stdout: INFO:     127.0.0.1:64829 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:13:55.462Z] stdout: INFO:     127.0.0.1:57651 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T17:13:55.535Z] stdout: INFO:     127.0.0.1:61487 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T17:13:55.541Z] stdout: INFO:     127.0.0.1:60620 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T17:13:55.555Z] stdout: INFO:     127.0.0.1:57651 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T17:13:55.589Z] stdout: INFO:     127.0.0.1:49965 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T17:13:55.666Z] stdout: INFO:     127.0.0.1:49965 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:13:55.714Z] stdout: INFO:     127.0.0.1:49965 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T17:13:55.724Z] stdout: INFO:     127.0.0.1:57651 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T17:14:09.278Z] stderr: INFO:     127.0.0.1:54351 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T17:14:09.279Z] stdout: 2026-06-09 22:44:09,277 - lyra - INFO - WebSocket connected. Total connections: 3
+[2026-06-09T17:14:09.280Z] stderr: INFO:     connection open
+[2026-06-09T17:14:09.301Z] stderr: INFO:     127.0.0.1:61480 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T17:14:09.302Z] stdout: 2026-06-09 22:44:09,299 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T17:14:09.303Z] stderr: INFO:     connection open
+[2026-06-09T17:14:10.390Z] stdout: 2026-06-09 22:44:10,386 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:44:10,386 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T17:14:10.393Z] stderr: INFO:     connection closed
+[2026-06-09T17:14:23.650Z] stdout: 2026-06-09 22:44:23,645 - lyra - INFO - WebSocket disconnected. Remaining connections: 2
+2026-06-09 22:44:23,645 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T17:14:23.651Z] stderr: INFO:     connection closed
+[2026-06-09T17:14:38.626Z] stdout: INFO:     127.0.0.1:57940 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:14:38.630Z] stdout: INFO:     127.0.0.1:65032 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:14:38.633Z] stdout: INFO:     127.0.0.1:57940 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:14:38.637Z] stdout: INFO:     127.0.0.1:58142 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:14:38.649Z] stdout: INFO:     127.0.0.1:60297 - "POST /api/security/token HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58162 - "POST /api/security/token HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58247 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:14:38.652Z] stdout: INFO:     127.0.0.1:65032 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:14:38.696Z] stdout: INFO:     127.0.0.1:65032 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:14:38.731Z] stdout: INFO:     127.0.0.1:60297 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:14:38.785Z] stdout: INFO:     127.0.0.1:65032 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T17:14:38.798Z] stdout: INFO:     127.0.0.1:58247 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T17:14:38.810Z] stdout: INFO:     127.0.0.1:60297 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T17:14:38.827Z] stdout: INFO:     127.0.0.1:65032 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T17:14:38.843Z] stdout: INFO:     127.0.0.1:58162 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T17:14:38.957Z] stdout: INFO:     127.0.0.1:65032 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T17:14:39.008Z] stdout: INFO:     127.0.0.1:65032 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:14:39.326Z] stdout: INFO:     127.0.0.1:65032 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T17:14:49.699Z] stdout: INFO:     127.0.0.1:64430 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:14:49.723Z] stdout: INFO:     127.0.0.1:64430 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:14:50.051Z] stdout: INFO:     127.0.0.1:64430 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:14:50.054Z] stdout: INFO:     127.0.0.1:56390 - "POST /api/security/token HTTP/1.1" 404 Not Found
+[2026-06-09T17:14:50.076Z] stdout: INFO:     127.0.0.1:56390 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:14:50.079Z] stdout: INFO:     127.0.0.1:64430 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:15:13.796Z] stdout: 2026-06-09 22:45:13,796 - lyra - INFO - WebSocket connected. Total connections: 3
+[2026-06-09T17:15:13.797Z] stderr: INFO:     127.0.0.1:60851 - "WebSocket /api/ws/chat" [accepted]
+INFO:     connection open
+[2026-06-09T17:15:13.815Z] stderr: INFO:     127.0.0.1:56597 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-09T17:15:13.817Z] stderr: INFO:     connection open
+[2026-06-09T17:15:13.818Z] stdout: 2026-06-09 22:45:13,814 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T17:15:13.836Z] stdout: 2026-06-09 22:45:13,833 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 22:45:13,833 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T17:15:13.837Z] stderr: INFO:     connection closed
+[2026-06-09T17:15:26.220Z] stdout: 2026-06-09 22:45:26,217 - lyra - INFO - WebSocket disconnected. Remaining connections: 2
+2026-06-09 22:45:26,218 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T17:15:26.221Z] stderr: INFO:     connection closed
+[2026-06-09T17:27:25.570Z] stdout: INFO:     127.0.0.1:51619 - "OPTIONS /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:27:25.611Z] stdout: INFO:     127.0.0.1:63274 - "OPTIONS /api/settings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51619 - "OPTIONS /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T17:27:25.618Z] stdout: INFO:     127.0.0.1:63274 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:27:25.646Z] stdout: INFO:     127.0.0.1:53757 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T17:27:25.651Z] stdout: INFO:     127.0.0.1:51619 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T17:27:25.764Z] stdout: INFO:     127.0.0.1:51619 - "OPTIONS /api/models HTTP/1.1" 200 OK
+[2026-06-09T17:27:25.885Z] stdout: INFO:     127.0.0.1:53757 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:27:25.911Z] stdout: INFO:     127.0.0.1:63274 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T17:27:25.927Z] stdout: INFO:     127.0.0.1:60567 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T17:27:26.079Z] stdout: INFO:     127.0.0.1:51619 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T17:27:26.715Z] stdout: INFO:     127.0.0.1:60567 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T17:27:27.612Z] stdout: INFO:     127.0.0.1:60567 - "OPTIONS /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T17:27:27.627Z] stdout: INFO:     127.0.0.1:60567 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T17:34:09.722Z] stdout: INFO:     127.0.0.1:59645 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:34:09.808Z] stdout: INFO:     127.0.0.1:53999 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-09T17:34:09.816Z] stdout: INFO:     127.0.0.1:51975 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T17:34:09.881Z] stdout: INFO:     127.0.0.1:53999 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-09T17:34:09.886Z] stdout: INFO:     127.0.0.1:50060 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T17:34:09.905Z] stdout: INFO:     127.0.0.1:51975 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-09T17:34:09.941Z] stdout: INFO:     127.0.0.1:55116 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T17:34:10.080Z] stdout: INFO:     127.0.0.1:51975 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-09T17:34:10.164Z] stdout: INFO:     127.0.0.1:51975 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-09T17:34:16.895Z] stdout: 2026-06-09 23:04:16,688 - lyra - INFO - WebSocket connected. Total connections: 3
+2026-06-09 23:04:16,711 - lyra - INFO - WebSocket connected. Total connections: 4
+[2026-06-09T17:34:16.896Z] stderr: INFO:     127.0.0.1:49920 - "WebSocket /api/ws/chat" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:52973 - "WebSocket /api/ws/chat" [accepted]
+INFO:     connection open
+[2026-06-09T17:34:17.387Z] stderr: INFO:     connection closed
+[2026-06-09T17:34:17.388Z] stdout: 2026-06-09 23:04:17,378 - lyra - INFO - WebSocket disconnected. Remaining connections: 3
+2026-06-09 23:04:17,378 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T17:34:21.955Z] stdout: 2026-06-09 23:04:21,954 - lyra - INFO - WebSocket disconnected. Remaining connections: 2
+2026-06-09 23:04:21,954 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T17:34:21.956Z] stderr: INFO:     connection closed
+[2026-06-09T17:35:01.739Z] stdout: 2026-06-09 23:05:01,736 - lyra - INFO - WebSocket disconnected. Remaining connections: 1
+2026-06-09 23:05:01,737 - lyra - INFO - WebSocket client disconnected gracefully.
+[2026-06-09T17:35:01.741Z] stderr: INFO:     connection closed
+[2026-06-11T03:39:29.454Z] Wake System Launcher: Starting backend.
+[2026-06-11T03:39:29.455Z] isDev: false
+[2026-06-11T03:39:29.455Z] process.resourcesPath: C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources
+[2026-06-11T03:39:29.456Z] backendPath: C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend
+[2026-06-11T03:39:29.456Z] pythonExe: C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\Scripts\python.exe
+[2026-06-11T03:39:29.456Z] pythonExe exists: true
+[2026-06-11T03:39:29.457Z] backendPath exists: true
+[2026-06-11T03:39:29.457Z] Creating stream to logPath: C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\backend_spawn.log
+[2026-06-11T03:39:29.458Z] Spawning backendProcess...
+[2026-06-11T03:39:29.475Z] backendProcess PID: 10308
+[2026-06-11T03:39:31.951Z] stderr: INFO:     Started server process [52380]
+INFO:     Waiting for application startup.
+[2026-06-11T03:39:31.952Z] stdout: 2026-06-11 09:09:30,489 - lyra - INFO - Initializing Lyra V1 Core platform services...
+2026-06-11 09:09:30,489 - lyra - INFO - Initializing database tables...
+[2026-06-11T03:39:31.962Z] stdout: 2026-06-11 09:09:30,498 - lyra - INFO - Database initialized successfully.
+2026-06-11 09:09:30,498 - lyra - INFO - Lyra V1 startup routine completed successfully.
+[2026-06-11T03:39:31.963Z] stderr: INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+[2026-06-11T03:39:33.215Z] stdout: INFO:     127.0.0.1:64173 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-11T03:39:33.288Z] stderr: INFO:     127.0.0.1:52247 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-11T03:39:33.289Z] stdout: 2026-06-11 09:09:31,826 - lyra - INFO - WebSocket connected. Total connections: 1
+[2026-06-11T03:39:33.290Z] stderr: INFO:     connection open
+[2026-06-11T03:39:34.940Z] stdout: INFO:     127.0.0.1:64173 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-11T03:39:34.956Z] stdout: INFO:     127.0.0.1:54313 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-11T03:39:34.972Z] stdout: INFO:     127.0.0.1:54313 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-11T03:39:36.960Z] stdout: 2026-06-11 09:09:35,498 - lyra - WARNING - Ollama is not running. Unable to sync models.
+[2026-06-11T03:39:36.964Z] stdout: INFO:     127.0.0.1:65413 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-11T03:40:49.450Z] Wake System Launcher: Starting backend.
+[2026-06-11T03:40:49.450Z] isDev: false
+[2026-06-11T03:40:49.451Z] process.resourcesPath: C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources
+[2026-06-11T03:40:49.451Z] backendPath: C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend
+[2026-06-11T03:40:49.451Z] pythonExe: C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\Scripts\python.exe
+[2026-06-11T03:40:49.452Z] pythonExe exists: true
+[2026-06-11T03:40:49.452Z] backendPath exists: true
+[2026-06-11T03:40:49.452Z] Creating stream to logPath: C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\backend_spawn.log
+[2026-06-11T03:40:49.453Z] Spawning backendProcess...
+[2026-06-11T03:40:49.468Z] backendProcess PID: 44656
+[2026-06-11T03:40:51.319Z] stderr: INFO:     Started server process [39748]
+INFO:     Waiting for application startup.
+[2026-06-11T03:40:51.321Z] stdout: 2026-06-11 09:10:51,318 - lyra - INFO - Initializing Lyra V1 Core platform services...
+2026-06-11 09:10:51,318 - lyra - INFO - Initializing database tables...
+[2026-06-11T03:40:51.330Z] stdout: 2026-06-11 09:10:51,329 - lyra - INFO - Database initialized successfully.
+2026-06-11 09:10:51,330 - lyra - INFO - Lyra V1 startup routine completed successfully.
+[2026-06-11T03:40:51.331Z] stdout: 2026-06-11 09:10:51,331 - lyra - INFO - Shutting down Lyra V1 backend processes...
+[2026-06-11T03:40:51.332Z] stderr: INFO:     Application startup complete.
+ERROR:    [Errno 10048] error while attempting to bind on address ('127.0.0.1', 8000): only one usage of each socket address (protocol/network address/port) is normally permitted
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+[2026-06-11T03:40:51.518Z] Process EXIT event: exited with code 1, signal null
+[2026-06-11T03:40:51.519Z] Process CLOSE event: exited with code 1
+[2026-06-11T03:40:58.639Z] stdout: INFO:     127.0.0.1:56859 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-11T03:40:58.644Z] stderr: INFO:     127.0.0.1:51726 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-11T03:40:58.645Z] stdout: 2026-06-11 09:10:58,644 - lyra - INFO - WebSocket connected. Total connections: 2
+[2026-06-11T03:40:58.647Z] stderr: INFO:     connection open
+[2026-06-11T03:41:01.094Z] stdout: INFO:     127.0.0.1:56859 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-11T03:41:01.112Z] stdout: INFO:     127.0.0.1:59910 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-11T03:41:01.179Z] stdout: INFO:     127.0.0.1:59910 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-11T03:41:03.146Z] stdout: 2026-06-11 09:11:03,145 - lyra - WARNING - Ollama is not running. Unable to sync models.
+[2026-06-11T03:41:03.155Z] stdout: INFO:     127.0.0.1:56938 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-11T21:02:29.750Z] Wake System Launcher: Starting backend.
+[2026-06-11T21:02:29.751Z] isDev: false
+[2026-06-11T21:02:29.751Z] process.resourcesPath: C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources
+[2026-06-11T21:02:29.751Z] backendPath: C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend
+[2026-06-11T21:02:29.751Z] pythonExe: C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\Scripts\python.exe
+[2026-06-11T21:02:29.752Z] pythonExe exists: true
+[2026-06-11T21:02:29.752Z] backendPath exists: true
+[2026-06-11T21:02:29.752Z] Creating stream to logPath: C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\backend_spawn.log
+[2026-06-11T21:02:29.753Z] Spawning backendProcess...
+[2026-06-11T21:02:29.770Z] backendProcess PID: 35120
+[2026-06-11T21:02:31.584Z] stderr: INFO:     Started server process [63420]
+INFO:     Waiting for application startup.
+[2026-06-11T21:02:31.585Z] stdout: 2026-06-12 02:32:31,593 - lyra - INFO - Initializing Lyra V1 Core platform services...
+2026-06-12 02:32:31,593 - lyra - INFO - Initializing database tables...
+[2026-06-11T21:02:31.605Z] stderr: INFO:     Application startup complete.
+[2026-06-11T21:02:31.606Z] stdout: 2026-06-12 02:32:31,613 - lyra - INFO - Database initialized successfully.
+2026-06-12 02:32:31,614 - lyra - INFO - Lyra V1 startup routine completed successfully.
+[2026-06-11T21:02:31.607Z] stderr: INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+[2026-06-11T21:02:33.747Z] stdout: INFO:     127.0.0.1:61018 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-11T21:02:33.756Z] stderr: INFO:     127.0.0.1:55727 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-11T21:02:33.757Z] stdout: 2026-06-12 02:32:33,765 - lyra - INFO - WebSocket connected. Total connections: 1
+[2026-06-11T21:02:33.758Z] stderr: INFO:     connection open
+[2026-06-11T21:02:35.750Z] stdout: INFO:     127.0.0.1:61018 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-11T21:02:35.762Z] stdout: INFO:     127.0.0.1:62744 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-11T21:02:35.783Z] stdout: INFO:     127.0.0.1:62744 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-11T21:02:37.790Z] stdout: 2026-06-12 02:32:37,798 - lyra - WARNING - Ollama is not running. Unable to sync models.
+[2026-06-11T21:02:37.795Z] stdout: INFO:     127.0.0.1:51146 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-11T21:02:59.339Z] Wake System Launcher: Starting backend.
+[2026-06-11T21:02:59.340Z] isDev: false
+[2026-06-11T21:02:59.340Z] process.resourcesPath: C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources
+[2026-06-11T21:02:59.340Z] backendPath: C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend
+[2026-06-11T21:02:59.340Z] pythonExe: C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\Scripts\python.exe
+[2026-06-11T21:02:59.343Z] pythonExe exists: true
+[2026-06-11T21:02:59.343Z] backendPath exists: true
+[2026-06-11T21:02:59.343Z] Creating stream to logPath: C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\backend_spawn.log
+[2026-06-11T21:02:59.345Z] Spawning backendProcess...
+[2026-06-11T21:02:59.370Z] backendProcess PID: 24932
+[2026-06-11T21:03:00.853Z] stderr: INFO:     Started server process [61496]
+INFO:     Waiting for application startup.
+[2026-06-11T21:03:00.854Z] stdout: 2026-06-12 02:33:00,851 - lyra - INFO - Initializing Lyra V1 Core platform services...
+2026-06-12 02:33:00,851 - lyra - INFO - Initializing database tables...
+[2026-06-11T21:03:00.863Z] stderr: INFO:     Application startup complete.
+[2026-06-11T21:03:00.863Z] stdout: 2026-06-12 02:33:00,862 - lyra - INFO - Database initialized successfully.
+2026-06-12 02:33:00,862 - lyra - INFO - Lyra V1 startup routine completed successfully.
+2026-06-12 02:33:00,863 - lyra - INFO - Shutting down Lyra V1 backend processes...
+[2026-06-11T21:03:00.864Z] stderr: ERROR:    [Errno 10048] error while attempting to bind on address ('127.0.0.1', 8000): only one usage of each socket address (protocol/network address/port) is normally permitted
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+[2026-06-11T21:03:01.016Z] Process EXIT event: exited with code 1, signal null
+[2026-06-11T21:03:01.017Z] Process CLOSE event: exited with code 1
+[2026-06-11T21:03:06.018Z] stdout: INFO:     127.0.0.1:60229 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-11T21:03:06.025Z] stderr: INFO:     127.0.0.1:65112 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-11T21:03:06.026Z] stdout: 2026-06-12 02:33:06,035 - lyra - INFO - WebSocket connected. Total connections: 2
+[2026-06-11T21:03:06.027Z] stderr: INFO:     connection open
+[2026-06-11T21:03:08.937Z] stdout: INFO:     127.0.0.1:60229 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-11T21:03:08.949Z] stdout: INFO:     127.0.0.1:55470 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-11T21:03:08.971Z] stdout: INFO:     127.0.0.1:55470 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-11T21:03:10.973Z] stdout: 2026-06-12 02:33:10,983 - lyra - WARNING - Ollama is not running. Unable to sync models.
+[2026-06-11T21:03:10.976Z] stdout: INFO:     127.0.0.1:60044 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-12T05:07:53.222Z] Wake System Launcher: Starting backend.
+[2026-06-12T05:07:53.222Z] isDev: false
+[2026-06-12T05:07:53.223Z] process.resourcesPath: C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources
+[2026-06-12T05:07:53.223Z] backendPath: C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend
+[2026-06-12T05:07:53.223Z] pythonExe: C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\Scripts\python.exe
+[2026-06-12T05:07:53.224Z] pythonExe exists: true
+[2026-06-12T05:07:53.224Z] backendPath exists: true
+[2026-06-12T05:07:53.224Z] Creating stream to logPath: C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\backend_spawn.log
+[2026-06-12T05:07:53.226Z] Spawning backendProcess...
+[2026-06-12T05:07:53.242Z] backendProcess PID: 55924
+[2026-06-12T05:07:58.751Z] stderr: INFO:     Started server process [31964]
+INFO:     Waiting for application startup.
+[2026-06-12T05:07:58.753Z] stdout: 2026-06-12 10:37:58,751 - lyra - INFO - Initializing Lyra V1 Core platform services...
+2026-06-12 10:37:58,751 - lyra - INFO - Initializing database tables...
+[2026-06-12T05:07:58.776Z] stderr: INFO:     Application startup complete.
+[2026-06-12T05:07:58.776Z] stdout: 2026-06-12 10:37:58,776 - lyra - INFO - Database initialized successfully.
+2026-06-12 10:37:58,776 - lyra - INFO - Lyra V1 startup routine completed successfully.
+[2026-06-12T05:07:58.777Z] stderr: INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+[2026-06-12T05:07:58.860Z] stderr: INFO:     127.0.0.1:49726 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-12T05:07:58.861Z] stdout: 2026-06-12 10:37:58,860 - lyra - INFO - WebSocket connected. Total connections: 1
+[2026-06-12T05:07:58.861Z] stderr: INFO:     connection open
+[2026-06-12T05:07:59.016Z] stdout: INFO:     127.0.0.1:59599 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-12T05:07:59.548Z] stdout: INFO:     127.0.0.1:59599 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-12T05:07:59.564Z] stdout: INFO:     127.0.0.1:50199 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-12T05:07:59.583Z] stdout: INFO:     127.0.0.1:50199 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-12T05:08:01.584Z] stdout: 2026-06-12 10:38:01,583 - lyra - WARNING - Ollama is not running. Unable to sync models.
+[2026-06-12T05:08:01.587Z] stdout: INFO:     127.0.0.1:65447 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-12T05:08:14.948Z] Wake System Launcher: Starting backend.
+[2026-06-12T05:08:14.948Z] isDev: false
+[2026-06-12T05:08:14.949Z] process.resourcesPath: C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources
+[2026-06-12T05:08:14.949Z] backendPath: C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend
+[2026-06-12T05:08:14.949Z] pythonExe: C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\Scripts\python.exe
+[2026-06-12T05:08:14.949Z] pythonExe exists: true
+[2026-06-12T05:08:14.949Z] backendPath exists: true
+[2026-06-12T05:08:14.950Z] Creating stream to logPath: C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\backend_spawn.log
+[2026-06-12T05:08:14.951Z] Spawning backendProcess...
+[2026-06-12T05:08:14.963Z] backendProcess PID: 52580
+[2026-06-12T05:08:15.937Z] stderr: INFO:     Started server process [63992]
+INFO:     Waiting for application startup.
+[2026-06-12T05:08:15.938Z] stdout: 2026-06-12 10:38:15,933 - lyra - INFO - Initializing Lyra V1 Core platform services...
+2026-06-12 10:38:15,933 - lyra - INFO - Initializing database tables...
+[2026-06-12T05:08:15.944Z] stdout: 2026-06-12 10:38:15,941 - lyra - INFO - Database initialized successfully.
+2026-06-12 10:38:15,941 - lyra - INFO - Lyra V1 startup routine completed successfully.
+[2026-06-12T05:08:15.945Z] stdout: 2026-06-12 10:38:15,941 - lyra - INFO - Shutting down Lyra V1 backend processes...
+[2026-06-12T05:08:15.945Z] stderr: INFO:     Application startup complete.
+ERROR:    [Errno 10048] error while attempting to bind on address ('127.0.0.1', 8000): only one usage of each socket address (protocol/network address/port) is normally permitted
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+[2026-06-12T05:08:16.096Z] Process EXIT event: exited with code 1, signal null
+[2026-06-12T05:08:16.096Z] Process CLOSE event: exited with code 1
+[2026-06-12T05:08:21.380Z] stdout: INFO:     127.0.0.1:59518 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-12T05:08:21.424Z] stderr: INFO:     127.0.0.1:52627 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-12T05:08:21.425Z] stdout: 2026-06-12 10:38:21,423 - lyra - INFO - WebSocket connected. Total connections: 2
+[2026-06-12T05:08:21.426Z] stderr: INFO:     connection open
+[2026-06-12T05:08:23.609Z] stdout: INFO:     127.0.0.1:59518 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-12T05:08:23.617Z] stdout: INFO:     127.0.0.1:54949 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-12T05:08:23.633Z] stdout: INFO:     127.0.0.1:54949 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-12T05:08:25.633Z] stdout: 2026-06-12 10:38:25,632 - lyra - WARNING - Ollama is not running. Unable to sync models.
+[2026-06-12T05:08:25.637Z] stdout: INFO:     127.0.0.1:56963 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-12T05:09:12.460Z] Process EXIT event: exited with code 1073807364, signal null
+[2026-06-12T05:09:12.461Z] Process CLOSE event: exited with code 1073807364
+[2026-06-12T13:19:03.995Z] Wake System Launcher: Starting backend.
+[2026-06-12T13:19:03.995Z] isDev: false
+[2026-06-12T13:19:03.995Z] process.resourcesPath: C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources
+[2026-06-12T13:19:03.996Z] backendPath: C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend
+[2026-06-12T13:19:03.996Z] pythonExe: C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\Scripts\python.exe
+[2026-06-12T13:19:03.996Z] pythonExe exists: true
+[2026-06-12T13:19:03.997Z] backendPath exists: true
+[2026-06-12T13:19:03.997Z] Creating stream to logPath: C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\backend_spawn.log
+[2026-06-12T13:19:03.998Z] Spawning backendProcess...
+[2026-06-12T13:19:04.011Z] backendProcess PID: 19964
+[2026-06-12T13:19:05.106Z] stderr: INFO:     Started server process [5988]
+INFO:     Waiting for application startup.
+[2026-06-12T13:19:05.107Z] stdout: 2026-06-12 18:49:05,106 - lyra - INFO - Initializing Lyra V1 Core platform services...
+2026-06-12 18:49:05,106 - lyra - INFO - Initializing database tables...
+[2026-06-12T13:19:05.113Z] stdout: 2026-06-12 18:49:05,112 - lyra - INFO - Database initialized successfully.
+2026-06-12 18:49:05,112 - lyra - INFO - Lyra V1 startup routine completed successfully.
+[2026-06-12T13:19:05.114Z] stderr: INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+[2026-06-12T13:19:06.768Z] stdout: INFO:     127.0.0.1:60981 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-12T13:19:06.774Z] stderr: INFO:     127.0.0.1:61315 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-12T13:19:06.774Z] stdout: 2026-06-12 18:49:06,774 - lyra - INFO - WebSocket connected. Total connections: 1
+[2026-06-12T13:19:06.775Z] stderr: INFO:     connection open
+[2026-06-12T13:19:08.241Z] stdout: INFO:     127.0.0.1:60981 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-12T13:19:08.250Z] stdout: INFO:     127.0.0.1:55449 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-12T13:19:08.259Z] stdout: INFO:     127.0.0.1:55449 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-12T13:19:10.266Z] stdout: 2026-06-12 18:49:10,266 - lyra - WARNING - Ollama is not running. Unable to sync models.
+[2026-06-12T13:19:10.268Z] stdout: INFO:     127.0.0.1:64828 - "GET /api/models HTTP/1.1" 200 OK
+[2026-06-12T13:19:25.138Z] Wake System Launcher: Starting backend.
+[2026-06-12T13:19:25.139Z] isDev: false
+[2026-06-12T13:19:25.139Z] process.resourcesPath: C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources
+[2026-06-12T13:19:25.139Z] backendPath: C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend
+[2026-06-12T13:19:25.139Z] pythonExe: C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\venv\Scripts\python.exe
+[2026-06-12T13:19:25.139Z] pythonExe exists: true
+[2026-06-12T13:19:25.140Z] backendPath exists: true
+[2026-06-12T13:19:25.140Z] Creating stream to logPath: C:\sabari\Lyra\frontend\dist\packaged\Lyra AI-win32-x64\resources\backend\backend_spawn.log
+[2026-06-12T13:19:25.141Z] Spawning backendProcess...
+[2026-06-12T13:19:25.149Z] backendProcess PID: 8268
+[2026-06-12T13:19:25.944Z] stderr: INFO:     Started server process [52308]
+INFO:     Waiting for application startup.
+[2026-06-12T13:19:25.945Z] stdout: 2026-06-12 18:49:25,944 - lyra - INFO - Initializing Lyra V1 Core platform services...
+2026-06-12 18:49:25,944 - lyra - INFO - Initializing database tables...
+[2026-06-12T13:19:25.952Z] stdout: 2026-06-12 18:49:25,951 - lyra - INFO - Database initialized successfully.
+2026-06-12 18:49:25,951 - lyra - INFO - Lyra V1 startup routine completed successfully.
+[2026-06-12T13:19:25.953Z] stdout: 2026-06-12 18:49:25,952 - lyra - INFO - Shutting down Lyra V1 backend processes...
+[2026-06-12T13:19:25.953Z] stderr: INFO:     Application startup complete.
+ERROR:    [Errno 10048] error while attempting to bind on address ('127.0.0.1', 8000): only one usage of each socket address (protocol/network address/port) is normally permitted
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+[2026-06-12T13:19:26.213Z] Process EXIT event: exited with code 1, signal null
+[2026-06-12T13:19:26.213Z] Process CLOSE event: exited with code 1
+[2026-06-12T13:19:31.325Z] stdout: INFO:     127.0.0.1:50138 - "GET /api/images HTTP/1.1" 200 OK
+[2026-06-12T13:19:31.330Z] stderr: INFO:     127.0.0.1:49220 - "WebSocket /api/ws/chat" [accepted]
+[2026-06-12T13:19:31.331Z] stderr: INFO:     connection open
+[2026-06-12T13:19:31.331Z] stdout: 2026-06-12 18:49:30,062 - lyra - INFO - WebSocket connected. Total connections: 2
+[2026-06-12T13:19:32.689Z] stdout: INFO:     127.0.0.1:50138 - "GET /api/settings HTTP/1.1" 200 OK
+[2026-06-12T13:19:32.692Z] stdout: INFO:     127.0.0.1:50957 - "GET /api/conversations HTTP/1.1" 200 OK
+[2026-06-12T13:19:32.698Z] stdout: INFO:     127.0.0.1:50957 - "GET /api/conversations/950c4944-1182-475d-8266-4f84683e88f5 HTTP/1.1" 200 OK
+[2026-06-12T13:19:34.710Z] stdout: 2026-06-12 18:49:33,442 - lyra - WARNING - Ollama is not running. Unable to sync models.
+[2026-06-12T13:19:34.712Z] stdout: INFO:     127.0.0.1:57557 - "GET /api/models HTTP/1.1" 200 OK

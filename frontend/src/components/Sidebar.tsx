@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useAppStore } from '../store/useAppStore';
-import { Plus, Search, Trash2, Edit2, Check, MessageSquare, Settings, Image, Users, Mic, Shield } from 'lucide-react';
+import { Plus, Search, Trash2, Edit2, Check, MessageSquare, Settings, Database, Cpu, Mic, Shield, Network, Activity } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function Sidebar() {
   const {
@@ -15,7 +16,6 @@ export default function Sidebar() {
     currentView,
     setView,
     fetchGalleryImages,
-    galleryImages,
     settings,
   } = useAppStore();
 
@@ -33,7 +33,7 @@ export default function Sidebar() {
 
   const handleCreate = async () => {
     try {
-      const id = await createConversation('New Conversation');
+      const id = await createConversation('New Mission Thread');
       setView('chat');
       await selectConversation(id);
     } catch (e) {
@@ -58,104 +58,105 @@ export default function Sidebar() {
 
   const handleDelete = async (id: string, e: React.MouseEvent) => {
     e.stopPropagation();
-    if (confirm("Are you sure you want to delete this session?")) {
+    if (confirm("Are you sure you want to terminate this mission thread?")) {
       await deleteConversation(id);
     }
   };
 
+  const navItems = [
+    { id: 'home', label: 'Command Hub', icon: Shield, show: true, color: 'text-gold-primary', bg: 'bg-gold-primary' },
+    { id: 'chat', label: 'Mission Console', icon: MessageSquare, show: settings.chat_enabled, color: 'text-gold-bright', bg: 'bg-gold-bright' },
+    { id: 'agents', label: 'Autonomous Units', icon: Cpu, show: true, color: 'text-gold-elite', bg: 'bg-gold-elite' },
+    { id: 'gallery', label: 'Intelligence Db', icon: Database, show: true, color: 'text-gold-primary', bg: 'bg-gold-primary' },
+    { id: 'workflows', label: 'Mission Planner', icon: Network, show: true, color: 'text-gold-bright', bg: 'bg-gold-bright' },
+    { id: 'voice', label: 'Tactical Voice', icon: Mic, show: true, color: 'text-gold-primary', bg: 'bg-gold-primary' },
+    { id: 'security', label: 'Security Command', icon: Shield, show: true, color: 'text-gold-elite', bg: 'bg-gold-elite' },
+    { id: 'observability', label: 'Observability', icon: Activity, show: true, color: 'text-gold-bright', bg: 'bg-gold-bright' },
+  ];
+
   return (
     <aside
-      className={`h-full bg-darkSurface flex flex-col border-r border-slate-800/40 select-none font-sans transition-all duration-300 ${
+      className={`h-full bg-panel-bg flex flex-col border-r border-border-primary select-none font-sans transition-all duration-300 ${
         sidebarOpen ? 'w-72' : 'w-0 overflow-hidden border-r-0'
       }`}
     >
-      {/* Brand logo bar */}
-      <div className="flex items-center justify-between px-5 py-5 border-b border-slate-800/40">
-        <div className="flex items-center gap-2">
-          <div className="w-6.5 h-6.5 rounded bg-gradient-to-tr from-cyan-500 to-brandPurple flex items-center justify-center p-0.5 shadow-glow">
-            <span className="font-extrabold text-[13px] text-white tracking-tighter">LY</span>
+      {/* Tactical Brand logo bar */}
+      <div className="flex items-center justify-between px-5 py-5 border-b border-border-primary bg-darkBg">
+        <div className="flex items-center gap-3">
+          <div className="w-8 h-8 rounded bg-primary-gradient flex items-center justify-center shadow-glow border border-gold-bright/30">
+            <Shield className="w-4 h-4 text-black" />
           </div>
           <div className="flex flex-col">
-            <span className="text-[14px] font-bold text-slate-100 tracking-wider">LYRA CORE</span>
-            <span className="text-[9px] text-brandBlue font-bold uppercase tracking-widest leading-none">Intelligence v1</span>
+            <span className="text-sm font-bold text-text-primary tracking-wider">LYRA AIOS</span>
+            <span className="text-[9px] text-gold-primary font-mono uppercase tracking-widest leading-none">Elite Operations</span>
           </div>
         </div>
 
         <button
           onClick={toggleSettings}
-          className="p-1.5 hover:bg-slate-800/50 rounded-lg text-slate-400 hover:text-slate-200 transition-all"
-          title="App Settings"
+          className="p-1.5 hover:bg-panel-hover rounded-lg text-text-secondary hover:text-gold-primary hover:shadow-glow transition-all"
+          title="System Control"
         >
           <Settings className="w-4.5 h-4.5" />
         </button>
       </div>
 
       {/* Modern Navigation Tabs */}
-      <div className="flex flex-wrap px-3 py-3 gap-1 border-b border-slate-800/30 bg-slate-900/10">
-        {settings.chat_enabled && (
-          <button
-            onClick={() => setView('chat')}
-            className={`flex-1 min-w-[30%] flex items-center justify-center gap-1.5 py-1.5 rounded-lg text-[10px] font-extrabold transition-all duration-300 border ${
-              currentView === 'chat'
-                ? 'bg-darkAccent/50 border-brandBlue/30 text-slate-100 shadow-[0_0_10px_rgba(6,182,212,0.06)]'
-                : 'bg-transparent border-transparent text-slate-500 hover:text-slate-300'
-            }`}
-          >
-            <MessageSquare className="w-3 h-3" />
-            <span>Chat</span>
-          </button>
-        )}
-        
-        <button
-          onClick={() => {
-            setView('gallery');
-            fetchGalleryImages();
-          }}
-          className={`flex-1 min-w-[30%] flex items-center justify-center gap-1.5 py-1.5 rounded-lg text-[10px] font-extrabold transition-all duration-300 border ${
-            currentView === 'gallery'
-              ? 'bg-darkAccent/50 border-brandPurple/30 text-slate-100 shadow-[0_0_10px_rgba(168,85,247,0.06)]'
-              : 'bg-transparent border-transparent text-slate-500 hover:text-slate-300'
-          }`}
-        >
-          <Image className="w-3 h-3" />
-          <span>Gallery</span>
-        </button>
-
-        <button
-          onClick={() => setView('voice')}
-          className={`flex-1 min-w-[30%] flex items-center justify-center gap-1.5 py-1.5 rounded-lg text-[10px] font-extrabold transition-all duration-300 border ${
-            currentView === 'voice'
-              ? 'bg-darkAccent/50 border-cyan-400/30 text-slate-100 shadow-[0_0_10px_rgba(34,211,238,0.06)]'
-              : 'bg-transparent border-transparent text-slate-500 hover:text-slate-300'
-          }`}
-        >
-          <Mic className="w-3 h-3" />
-          <span>Voice</span>
-        </button>
-        
-        <button
-          onClick={() => setView('security')}
-          className={`flex-1 min-w-[30%] flex items-center justify-center gap-1.5 py-1.5 rounded-lg text-[10px] font-extrabold transition-all duration-300 border ${
-            currentView === 'security'
-              ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400 shadow-[0_0_10px_rgba(16,185,129,0.1)]'
-              : 'bg-transparent border-transparent text-slate-500 hover:text-emerald-500/70'
-          }`}
-        >
-          <Shield className="w-3 h-3" />
-          <span>Security</span>
-        </button>
+      <div className="flex flex-col px-3 py-4 gap-1.5 border-b border-border-primary bg-darkBg/50">
+        {navItems.filter(item => item.show).map((item) => {
+          const isActive = currentView === item.id;
+          const Icon = item.icon;
+          return (
+            <motion.button
+              key={item.id}
+              whileHover={{ x: 4 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={() => {
+                setView(item.id as any);
+                if (item.id === 'gallery') fetchGalleryImages();
+              }}
+              className={`flex items-center gap-3 px-3 py-2.5 text-xs font-semibold transition-all duration-200 relative overflow-hidden group hover:bg-[linear-gradient(90deg,rgba(255,215,0,.15),rgba(255,215,0,.03))] ${
+                isActive
+                  ? `text-gold-primary`
+                  : 'text-text-secondary hover:text-text-primary'
+              }`}
+              style={{
+                ...(isActive ? { 
+                  background: 'linear-gradient(90deg, rgba(255,215,0,.15), rgba(255,215,0,.03))',
+                  borderLeft: '3px solid #FFD700'
+                } : {
+                  borderLeft: '3px solid transparent'
+                })
+              }}
+            >
+              {isActive && (
+                <motion.div 
+                  initial={{ x: '-100%' }}
+                  animate={{ x: '200%' }}
+                  transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
+                  className="absolute inset-0 w-1/2 bg-gradient-to-r from-transparent via-gold-primary/20 to-transparent skew-x-12"
+                />
+              )}
+              <Icon className={`w-4 h-4 z-10 ${isActive ? item.color : 'text-text-secondary'}`} />
+              <span className="tracking-wide z-10">{item.label}</span>
+              {isActive && (
+                <div className={`ml-auto w-1.5 h-1.5 rounded-full z-10 ${item.bg} shadow-glow`} />
+              )}
+            </motion.button>
+          );
+        })}
       </div>
 
       {settings.chat_enabled ? (
         <>
           {/* Action triggers */}
-          <div className="px-4 pt-4 pb-2">
+          <div className="px-4 pt-5 pb-2">
             <button
               onClick={handleCreate}
-              className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-gradient-to-r from-brandBlue to-brandPurple/90 hover:from-cyan-400 hover:to-brandPurple text-white font-semibold text-sm transition-all duration-300 shadow-glow hover:scale-[1.02]"
+              className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg bg-panel-hover border border-border-primary hover:border-gold-primary/50 text-gold-primary font-mono text-xs transition-all duration-300 hover:shadow-glow"
             >
-              <Plus className="w-4 h-4" />
-              <span>New Core Session</span>
+              <Plus className="w-3.5 h-3.5" />
+              <span>NEW THREAD</span>
             </button>
           </div>
 
@@ -163,19 +164,19 @@ export default function Sidebar() {
           <div className="px-4 py-2 relative">
             <input
               type="text"
-              placeholder="Filter history..."
+              placeholder="Search logs..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full bg-darkBg border border-slate-800/50 rounded-xl pl-9 pr-3 py-2 text-xs text-slate-300 placeholder-slate-600 focus:outline-none focus:border-brandBlue/40 focus:shadow-glow transition-all"
+              className="w-full bg-darkBg border border-border-primary rounded-lg pl-9 pr-3 py-2 text-xs text-text-primary placeholder-[#888] focus:outline-none focus:border-gold-primary/40 transition-all font-mono"
             />
-            <Search className="w-3.5 h-3.5 text-slate-600 absolute left-7 top-4.5" />
+            <Search className="w-3.5 h-3.5 text-text-secondary absolute left-7 top-4.5" />
           </div>
 
           {/* Conversations history list */}
           <div className="flex-1 overflow-y-auto px-2 py-2 space-y-1">
             {filteredConversations.length === 0 ? (
-              <div className="text-center py-10 text-[11px] text-slate-600">
-                No session threads found
+              <div className="text-center py-10 text-[11px] text-text-secondary font-mono uppercase tracking-widest">
+                No active operations
               </div>
             ) : (
               filteredConversations.map((c) => {
@@ -186,14 +187,14 @@ export default function Sidebar() {
                   <div
                     key={c.id}
                     onClick={() => !isEditing && (setView('chat'), selectConversation(c.id))}
-                    className={`group flex items-center justify-between px-3 py-2.5 rounded-xl border text-sm cursor-pointer transition-all duration-300 ${
+                    className={`group flex items-center justify-between px-3 py-2.5 rounded-lg border text-xs cursor-pointer transition-all duration-300 ${
                       isActive
-                        ? 'bg-darkAccent/50 border-brandBlue/20 text-slate-100'
-                        : 'bg-transparent border-transparent text-slate-400 hover:bg-slate-800/20 hover:text-slate-200'
+                        ? 'bg-panel-hover border-gold-primary/20 text-text-primary'
+                        : 'bg-transparent border-transparent text-text-secondary hover:bg-panel-hover/50 hover:text-text-primary'
                     }`}
                   >
                     <div className="flex items-center gap-2.5 min-w-0 flex-1">
-                      <MessageSquare className={`w-4 h-4 flex-shrink-0 ${isActive ? 'text-brandBlue' : 'text-slate-600'}`} />
+                      <div className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${isActive ? 'bg-gold-primary shadow-glow' : 'bg-panel-hover'}`} />
                       
                       {isEditing ? (
                         <form
@@ -204,19 +205,19 @@ export default function Sidebar() {
                             type="text"
                             value={editTitle}
                             onChange={(e) => setEditTitle(e.target.value)}
-                            className="bg-darkBg border border-brandBlue/30 text-xs px-1.5 py-0.5 rounded text-slate-200 w-full focus:outline-none"
+                            className="bg-darkBg border border-gold-primary/30 text-xs px-1.5 py-0.5 rounded text-text-primary w-full focus:outline-none font-mono"
                             onClick={(e) => e.stopPropagation()}
                             autoFocus
                           />
                           <button
                             type="submit"
-                            className="p-0.5 hover:bg-slate-800 rounded text-brandBlue"
+                            className="p-0.5 hover:bg-panel-bg rounded text-gold-primary"
                           >
                             <Check className="w-3.5 h-3.5" />
                           </button>
                         </form>
                       ) : (
-                        <span className="truncate font-medium text-xs leading-none">{c.title}</span>
+                        <span className="truncate font-medium font-sans leading-none">{c.title}</span>
                       )}
                     </div>
 
@@ -224,15 +225,15 @@ export default function Sidebar() {
                       <div className="flex items-center opacity-0 group-hover:opacity-100 transition-opacity gap-0.5 ml-1">
                         <button
                           onClick={(e) => handleStartRename(c.id, c.title, e)}
-                          className="p-1 hover:bg-slate-800 rounded text-slate-500 hover:text-brandBlue"
+                          className="p-1 hover:bg-panel-bg rounded text-text-secondary hover:text-gold-primary"
                           title="Rename"
                         >
                           <Edit2 className="w-3 h-3" />
                         </button>
                         <button
                           onClick={(e) => handleDelete(c.id, e)}
-                          className="p-1 hover:bg-slate-800 rounded text-slate-500 hover:text-red-400"
-                          title="Delete"
+                          className="p-1 hover:bg-panel-bg rounded text-text-secondary hover:text-socCritical"
+                          title="Terminate"
                         >
                           <Trash2 className="w-3 h-3" />
                         </button>
@@ -245,19 +246,19 @@ export default function Sidebar() {
           </div>
         </>
       ) : (
-        <div className="flex-1 flex flex-col items-center justify-center p-6 text-center text-slate-500">
-          <Mic className="w-8 h-8 mb-4 opacity-20" />
-          <p className="text-xs font-semibold uppercase tracking-wider mb-2">Voice First Mode</p>
-          <p className="text-[10px] leading-relaxed">Text chat is disabled. You are interacting with Lyra completely via voice commands.</p>
+        <div className="flex-1 flex flex-col items-center justify-center p-6 text-center text-text-secondary">
+          <Shield className="w-8 h-8 mb-4 opacity-20" />
+          <p className="text-xs font-semibold uppercase tracking-wider mb-2">Tactical Core Mode</p>
+          <p className="text-[10px] leading-relaxed">Console disabled. Voice operations active.</p>
         </div>
       )}
 
       {/* Footer bar */}
-      <div className="px-4 py-3 bg-darkBg/60 border-t border-slate-800/40 text-center flex items-center justify-between text-[10px] text-slate-600 font-semibold">
-        <span>Ollama Core</span>
-        <span className="flex items-center gap-1">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-          <span>Active network</span>
+      <div className="px-5 py-3 bg-darkBg border-t border-border-primary flex items-center justify-between text-[10px] text-text-secondary font-mono">
+        <span>SYS.STAT: <span className="text-socSuccess">NOMINAL</span></span>
+        <span className="flex items-center gap-1.5">
+          <span className="w-1.5 h-1.5 rounded-full bg-socSuccess animate-pulse shadow-[0_0_8px_#00E676]" />
+          <span>SECURED</span>
         </span>
       </div>
     </aside>

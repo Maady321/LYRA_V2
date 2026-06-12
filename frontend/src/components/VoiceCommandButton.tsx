@@ -73,7 +73,7 @@ export default function VoiceCommandButton({ onTranscript, disabled }: VoiceComm
       className={`p-3.5 rounded-2xl border transition-all duration-300 relative flex items-center justify-center ${
         isListening
           ? 'bg-red-500/10 border-red-500/40 text-red-500 shadow-[0_0_12px_rgba(239,68,68,0.3)] hover:bg-red-500/20'
-          : 'bg-darkSurface border-slate-800/40 text-slate-500 hover:border-slate-700/50 hover:text-slate-300 hover:scale-105'
+          : 'bg-panel-bg border-border-primary/40 text-text-secondary hover:border-border-hover/50 hover:text-text-primary hover:scale-105'
       } ${disabled ? 'opacity-40 cursor-not-allowed' : 'cursor-pointer'}`}
       title={isListening ? "Listening... Click to stop" : "Use Voice Command"}
     >

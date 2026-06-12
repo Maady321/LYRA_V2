@@ -118,50 +118,50 @@ export default function ChatWindow({ sendPrompt }: ChatWindowProps) {
               transition={{ duration: 0.5 }}
               className="text-center space-y-3 mb-10"
             >
-              <div className="inline-flex p-3 bg-brandBlue/5 border border-brandBlue/15 rounded-2xl pulsing-glow mb-2">
-                <Sparkles className="w-8 h-8 text-brandBlue animate-pulse" />
+              <div className="inline-flex p-3 bg-gold-primary/5 border border-gold-primary/15 rounded-2xl pulsing-glow mb-2">
+                <Sparkles className="w-8 h-8 text-gold-primary animate-pulse" />
               </div>
-              <h1 className="text-3xl font-extrabold text-slate-100 tracking-wider">
+              <h1 className="text-3xl font-extrabold text-text-primary tracking-wider">
                 Lyra V1 AI Core
               </h1>
-              <p className="text-slate-400 text-sm max-w-md mx-auto leading-relaxed">
+              <p className="text-text-secondary text-sm max-w-md mx-auto leading-relaxed">
                 Your modular, offline-first local AI operating environment. Secure, fast, and extensible.
               </p>
             </motion.div>
 
             {/* Extensible modules teaser panels */}
             <div className="grid grid-cols-3 gap-4 max-w-3xl mx-auto">
-              <div className="p-4 bg-darkSurface/30 border border-slate-800/40 rounded-2xl glass-panel-light flex items-start gap-3">
-                <div className="p-2 bg-brandBlue/10 rounded-xl text-brandBlue">
+              <div className="p-4 bg-panel-bg/30 border border-border-primary/40 rounded-2xl glass-panel-light flex items-start gap-3">
+                <div className="p-2 bg-gold-primary/10 rounded-xl text-gold-primary">
                   <Cpu className="w-4.5 h-4.5" />
                 </div>
                 <div>
-                  <span className="text-xs font-bold text-slate-300">Local Inference Engine</span>
-                  <p className="text-[10px] text-slate-500 mt-1 leading-normal">
+                  <span className="text-xs font-bold text-text-primary">Local Inference Engine</span>
+                  <p className="text-[10px] text-text-secondary mt-1 leading-normal">
                     Powered by Ollama APIs. Runs Llama3, Mistral, and DeepSeek model files privately.
                   </p>
                 </div>
               </div>
 
-              <div className="p-4 bg-darkSurface/30 border border-slate-800/40 rounded-2xl glass-panel-light flex items-start gap-3 opacity-60">
-                <div className="p-2 bg-brandBlue/10 rounded-xl text-brandBlue">
+              <div className="p-4 bg-panel-bg/30 border border-border-primary/40 rounded-2xl glass-panel-light flex items-start gap-3 opacity-60">
+                <div className="p-2 bg-gold-primary/10 rounded-xl text-gold-primary">
                   <Compass className="w-4.5 h-4.5" />
                 </div>
                 <div>
-                  <span className="text-xs font-bold text-slate-300">Autonomous Agents (Planned)</span>
-                  <p className="text-[10px] text-slate-500 mt-1 leading-normal">
+                  <span className="text-xs font-bold text-text-primary">Autonomous Agents (Planned)</span>
+                  <p className="text-[10px] text-text-secondary mt-1 leading-normal">
                     Tool execution pipelines for local bash tools, file managers, and task compilers.
                   </p>
                 </div>
               </div>
 
-              <div className="p-4 bg-darkSurface/30 border border-slate-800/40 rounded-2xl glass-panel-light flex items-start gap-3 opacity-60">
+              <div className="p-4 bg-panel-bg/30 border border-border-primary/40 rounded-2xl glass-panel-light flex items-start gap-3 opacity-60">
                 <div className="p-2 bg-brandPurple/10 rounded-xl text-brandPurple">
                   <AppWindow className="w-4.5 h-4.5" />
                 </div>
                 <div>
-                  <span className="text-xs font-bold text-slate-300">Browser Automation (Planned)</span>
-                  <p className="text-[10px] text-slate-500 mt-1 leading-normal">
+                  <span className="text-xs font-bold text-text-primary">Browser Automation (Planned)</span>
+                  <p className="text-[10px] text-text-secondary mt-1 leading-normal">
                     Agentic browser controls to surf the web, scrape information, and submit forms automatically.
                   </p>
                 </div>
@@ -172,7 +172,7 @@ export default function ChatWindow({ sendPrompt }: ChatWindowProps) {
               <div className="mt-8 text-center animate-bounce">
                 <button
                   onClick={handleQuickSession}
-                  className="px-5 py-2 rounded-xl bg-slate-800/40 border border-slate-700/30 text-xs font-semibold text-brandBlue hover:border-brandBlue/30 hover:bg-brandBlue/5 transition-all"
+                  className="px-5 py-2 rounded-xl bg-panel-bg/40 border border-border-hover/30 text-xs font-semibold text-gold-primary hover:border-gold-primary/30 hover:bg-gold-primary/5 transition-all"
                 >
                   Spawn Quick Session thread
                 </button>
@@ -193,14 +193,14 @@ export default function ChatWindow({ sendPrompt }: ChatWindowProps) {
       {showScrollBottom && (
         <button
           onClick={() => scrollToBottom('smooth')}
-          className="absolute bottom-28 right-8 p-2 rounded-full bg-slate-800/70 border border-slate-700/50 text-brandBlue hover:text-cyan-400 hover:scale-105 shadow-glow transition-all duration-300 z-10"
+          className="absolute bottom-28 right-8 p-2 rounded-full bg-panel-bg/70 border border-border-hover/50 text-gold-primary hover:text-gold-primary hover:scale-105 shadow-glow transition-all duration-300 z-10"
         >
           <ArrowDown className="w-4 h-4" />
         </button>
       )}
 
       {/* Primary user input drawer */}
-      <div className="w-full bg-darkBg border-t border-slate-850/40 px-6 py-5 select-none">
+      <div className="w-full bg-darkBg border-t border-border-primary/40 px-6 py-5 select-none">
         <div className="max-w-3xl mx-auto space-y-4">
           
           {/* Error notifications with retry */}
@@ -218,7 +218,7 @@ export default function ChatWindow({ sendPrompt }: ChatWindowProps) {
                 </div>
                 <button
                   onClick={() => setError(null)}
-                  className="text-[10px] font-bold text-slate-500 hover:text-slate-300 uppercase tracking-widest"
+                  className="text-[10px] font-bold text-text-secondary hover:text-text-primary uppercase tracking-widest"
                 >
                   Dismiss
                 </button>
@@ -228,15 +228,15 @@ export default function ChatWindow({ sendPrompt }: ChatWindowProps) {
 
           {/* Typing Indicator */}
           {isStreaming && messages[messages.length - 1]?.role === 'user' && (
-            <div className="flex items-center gap-2 px-1 text-[11px] text-slate-500 select-none">
-              <Cpu className="w-3.5 h-3.5 text-brandBlue animate-spin" />
+            <div className="flex items-center gap-2 px-1 text-[11px] text-text-secondary select-none">
+              <Cpu className="w-3.5 h-3.5 text-gold-primary animate-spin" />
               <span>Lyra is compiling output...</span>
             </div>
           )}
 
           {/* Input text form */}
           <form onSubmit={handleSubmit} className="relative flex items-end gap-2.5">
-            <div className="flex-1 bg-darkSurface border border-slate-800/50 rounded-2xl px-4 py-3 focus-within:border-brandBlue/40 focus-within:shadow-glow transition-all duration-300 flex items-end">
+            <div className="flex-1 bg-panel-bg border border-border-primary/50 rounded-2xl px-4 py-3 focus-within:border-gold-primary/40 focus-within:shadow-glow transition-all duration-300 flex items-end">
               <textarea
                 ref={textareaRef}
                 value={input}
@@ -251,7 +251,7 @@ export default function ChatWindow({ sendPrompt }: ChatWindowProps) {
                     : `Command Lyra (${activeModel})...`
                 }
                 disabled={!currentConversationId || isStreaming}
-                className="w-full bg-transparent border-0 outline-none text-slate-200 text-sm placeholder-slate-600 resize-none font-sans focus:ring-0 p-0 leading-normal max-h-40 min-h-[20px]"
+                className="w-full bg-transparent border-0 outline-none text-text-primary text-sm placeholder-[#888] resize-none font-sans focus:ring-0 p-0 leading-normal max-h-40 min-h-[20px]"
               />
             </div>
 
@@ -278,8 +278,8 @@ export default function ChatWindow({ sendPrompt }: ChatWindowProps) {
                 disabled={!currentConversationId || isStreaming || !input.trim()}
                 className={`p-3.5 rounded-2xl transition-all duration-300 shadow-md ${
                   !input.trim() || isStreaming || !currentConversationId
-                    ? 'bg-slate-900/60 text-slate-700 cursor-not-allowed border border-transparent'
-                    : 'bg-gradient-to-tr from-brandBlue to-brandPurple text-white hover:shadow-glow hover:scale-105'
+                    ? 'bg-darkBg/60 text-text-secondary cursor-not-allowed border border-transparent'
+                    : 'bg-gradient-to-tr from-gold-primary to-brandPurple text-white hover:shadow-glow hover:scale-105'
                 }`}
               >
                 <Send className="w-4.5 h-4.5" />
@@ -287,7 +287,7 @@ export default function ChatWindow({ sendPrompt }: ChatWindowProps) {
             </div>
           </form>
 
-          <div className="flex items-center justify-between text-[10px] text-slate-600 font-medium px-1.5 select-none">
+          <div className="flex items-center justify-between text-[10px] text-text-secondary font-medium px-1.5 select-none">
             <span>Lyra processes prompts 100% locally on your computer.</span>
             <span>Enter sends • Shift+Enter new line</span>
           </div>

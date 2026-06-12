@@ -12,20 +12,20 @@ export default function ModelSelector() {
         onClick={() => isConnected && setIsOpen(!isOpen)}
         className={`flex items-center gap-2.5 px-3 py-1.5 rounded-lg border text-sm font-medium cursor-pointer transition-all duration-300 ${
           isConnected
-            ? 'bg-darkSurface/90 border-brandBlue/20 text-slate-100 hover:border-brandBlue/40 hover:shadow-glow'
+            ? 'bg-panel-bg/90 border-gold-primary/20 text-text-primary hover:border-gold-primary/40 hover:shadow-glow'
             : 'bg-red-950/20 border-red-800/30 text-red-400 cursor-not-allowed'
         }`}
       >
-        <Cpu className={`w-4 h-4 ${isConnected ? 'text-brandBlue animate-pulse' : 'text-red-500'}`} />
+        <Cpu className={`w-4 h-4 ${isConnected ? 'text-gold-primary animate-pulse' : 'text-red-500'}`} />
         
         <div className="flex flex-col items-start leading-tight">
-          <span className="text-xs text-slate-500 font-semibold uppercase tracking-wider">Active Core</span>
+          <span className="text-xs text-text-secondary font-semibold uppercase tracking-wider">Active Core</span>
           <span className="font-medium max-w-[140px] truncate">
             {isConnected ? activeModel : 'Ollama Offline'}
           </span>
         </div>
 
-        <ChevronDown className="w-4 h-4 text-slate-500 ml-1.5" />
+        <ChevronDown className="w-4 h-4 text-text-secondary ml-1.5" />
       </div>
 
       {isOpen && isConnected && (
@@ -34,14 +34,14 @@ export default function ModelSelector() {
           <div className="fixed inset-0 z-40" onClick={() => setIsOpen(false)} />
           
           <div className="absolute right-0 mt-2 w-72 rounded-xl glass-panel shadow-premium z-50 py-1.5 animate-in fade-in slide-in-from-top-2 duration-200">
-            <div className="flex items-center justify-between px-4 py-2 border-b border-slate-800/40 mb-1">
-              <span className="text-xs font-semibold text-slate-400 uppercase tracking-widest">Available Engines</span>
+            <div className="flex items-center justify-between px-4 py-2 border-b border-border-primary/40 mb-1">
+              <span className="text-xs font-semibold text-text-secondary uppercase tracking-widest">Available Engines</span>
               <button
                 onClick={() => {
                   fetchModels();
                   setIsOpen(false);
                 }}
-                className="p-1 hover:bg-slate-800/50 rounded text-slate-400 hover:text-brandBlue transition-all"
+                className="p-1 hover:bg-panel-bg/50 rounded text-text-secondary hover:text-gold-primary transition-all"
                 title="Refresh list"
               >
                 <RefreshCw className="w-3.5 h-3.5" />
@@ -51,9 +51,9 @@ export default function ModelSelector() {
             <div className="max-h-60 overflow-y-auto">
               {models.length === 0 ? (
                 <div className="flex flex-col items-center justify-center p-5 text-center gap-2">
-                  <AlertCircle className="w-8 h-8 text-amber-500/80" />
-                  <span className="text-xs text-slate-400">No active models detected.</span>
-                  <span className="text-[10px] text-slate-500">Run <code className="text-slate-300">ollama run llama3</code> in your terminal</span>
+                  <AlertCircle className="w-8 h-8 text-socWarning/80" />
+                  <span className="text-xs text-text-secondary">No active models detected.</span>
+                  <span className="text-[10px] text-text-secondary">Run <code className="text-text-primary">ollama run llama3</code> in your terminal</span>
                 </div>
               ) : (
                 models.map((model) => (
@@ -63,16 +63,16 @@ export default function ModelSelector() {
                       setActiveModel(model.name);
                       setIsOpen(false);
                     }}
-                    className={`flex flex-col px-4 py-2 hover:bg-slate-800/30 cursor-pointer border-l-2 transition-all ${
+                    className={`flex flex-col px-4 py-2 hover:bg-panel-bg/30 cursor-pointer border-l-2 transition-all ${
                       activeModel === model.name
-                        ? 'border-brandBlue bg-brandBlue/5 text-slate-100'
-                        : 'border-transparent text-slate-400 hover:text-slate-200'
+                        ? 'border-gold-primary bg-gold-primary/5 text-text-primary'
+                        : 'border-transparent text-text-secondary hover:text-text-primary'
                     }`}
                   >
                     <span className="text-sm font-semibold truncate">{model.name}</span>
-                    <div className="flex items-center gap-2 mt-0.5 text-[10px] text-slate-500">
+                    <div className="flex items-center gap-2 mt-0.5 text-[10px] text-text-secondary">
                       {model.parameter_size && (
-                        <span className="bg-slate-800/50 px-1.5 py-0.5 rounded border border-slate-700/20">
+                        <span className="bg-panel-bg/50 px-1.5 py-0.5 rounded border border-border-hover/20">
                           {model.parameter_size} parameters
                         </span>
                       )}

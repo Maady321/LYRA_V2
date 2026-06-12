@@ -45,14 +45,14 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
           <div className="max-w-md w-full bg-[#0E1424] border border-red-500/20 rounded-2xl p-8 text-center shadow-xl">
             <div className="text-4xl mb-4">⚠️</div>
             <h2 className="text-xl font-semibold text-white mb-2">Something went wrong</h2>
-            <p className="text-gray-400 text-sm mb-4">
+            <p className="text-text-secondary text-sm mb-4">
               {this.state.error?.message || 'An unexpected error occurred in this component.'}
             </p>
             <button
               onClick={this.handleRetry}
-              className="px-6 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white 
-                         rounded-lg text-sm font-medium hover:from-cyan-400 hover:to-blue-500 
-                         transition-all duration-200 shadow-lg shadow-cyan-500/20"
+              className="px-6 py-2.5 bg-gradient-to-r from-gold-primary to-gold-bright text-white 
+                         rounded-lg text-sm font-medium hover:from-gold-bright hover:to-gold-elite 
+                         transition-all duration-200 shadow-lg shadow-gold-primary/20"
             >
               Try Again
             </button>

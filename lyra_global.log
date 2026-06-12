@@ -452,3 +452,73 @@
 [2026-06-09T16:04:19.123Z] createWindow: shouldHide=true
 [2026-06-09T16:04:19.178Z] createWindow() finished.
 [2026-06-09T16:04:19.210Z] createTray() finished.
+[2026-06-09T16:33:31.710Z] Main script loaded at top-level.
+[2026-06-09T16:33:31.762Z] app.whenReady() fired.
+[2026-06-09T16:33:31.763Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-09T16:33:31.819Z] startBackend() finished.
+[2026-06-09T16:33:31.819Z] createWindow: shouldHide=false
+[2026-06-09T16:33:31.955Z] createWindow() finished.
+[2026-06-09T16:33:31.985Z] createTray() finished.
+[2026-06-09T17:03:24.326Z] Main script loaded at top-level.
+[2026-06-09T17:03:24.408Z] app.whenReady() fired.
+[2026-06-09T17:03:24.409Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-09T17:03:24.477Z] startBackend() finished.
+[2026-06-09T17:03:24.478Z] createWindow: shouldHide=false
+[2026-06-09T17:03:24.579Z] createWindow() finished.
+[2026-06-09T17:03:25.131Z] createTray() finished.
+[2026-06-11T03:39:29.399Z] Main script loaded at top-level.
+[2026-06-11T03:39:29.453Z] app.whenReady() fired.
+[2026-06-11T03:39:29.454Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-11T03:39:29.476Z] startBackend() finished.
+[2026-06-11T03:39:29.477Z] createWindow: shouldHide=true
+[2026-06-11T03:39:29.530Z] createWindow() finished.
+[2026-06-11T03:39:29.566Z] createTray() finished.
+[2026-06-11T03:40:49.402Z] Main script loaded at top-level.
+[2026-06-11T03:40:49.448Z] app.whenReady() fired.
+[2026-06-11T03:40:49.449Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-11T03:40:49.469Z] startBackend() finished.
+[2026-06-11T03:40:49.470Z] createWindow: shouldHide=true
+[2026-06-11T03:40:49.507Z] createWindow() finished.
+[2026-06-11T03:40:49.528Z] createTray() finished.
+[2026-06-11T21:02:29.701Z] Main script loaded at top-level.
+[2026-06-11T21:02:29.749Z] app.whenReady() fired.
+[2026-06-11T21:02:29.749Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-11T21:02:29.771Z] startBackend() finished.
+[2026-06-11T21:02:29.772Z] createWindow: shouldHide=true
+[2026-06-11T21:02:29.829Z] createWindow() finished.
+[2026-06-11T21:02:29.859Z] createTray() finished.
+[2026-06-11T21:02:59.270Z] Main script loaded at top-level.
+[2026-06-11T21:02:59.337Z] app.whenReady() fired.
+[2026-06-11T21:02:59.338Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-11T21:02:59.371Z] startBackend() finished.
+[2026-06-11T21:02:59.376Z] createWindow: shouldHide=true
+[2026-06-11T21:02:59.472Z] createWindow() finished.
+[2026-06-11T21:02:59.502Z] createTray() finished.
+[2026-06-12T05:07:53.176Z] Main script loaded at top-level.
+[2026-06-12T05:07:53.221Z] app.whenReady() fired.
+[2026-06-12T05:07:53.221Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-12T05:07:53.244Z] startBackend() finished.
+[2026-06-12T05:07:53.244Z] createWindow: shouldHide=true
+[2026-06-12T05:07:53.291Z] createWindow() finished.
+[2026-06-12T05:07:53.323Z] createTray() finished.
+[2026-06-12T05:08:14.905Z] Main script loaded at top-level.
+[2026-06-12T05:08:14.946Z] app.whenReady() fired.
+[2026-06-12T05:08:14.947Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-12T05:08:14.964Z] startBackend() finished.
+[2026-06-12T05:08:14.964Z] createWindow: shouldHide=true
+[2026-06-12T05:08:14.999Z] createWindow() finished.
+[2026-06-12T05:08:15.026Z] createTray() finished.
+[2026-06-12T13:19:03.960Z] Main script loaded at top-level.
+[2026-06-12T13:19:03.994Z] app.whenReady() fired.
+[2026-06-12T13:19:03.994Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-12T13:19:04.012Z] startBackend() finished.
+[2026-06-12T13:19:04.012Z] createWindow: shouldHide=true
+[2026-06-12T13:19:04.043Z] createWindow() finished.
+[2026-06-12T13:19:04.064Z] createTray() finished.
+[2026-06-12T13:19:25.104Z] Main script loaded at top-level.
+[2026-06-12T13:19:25.138Z] app.whenReady() fired.
+[2026-06-12T13:19:25.138Z] Successfully registered Lyra AI auto-boot login settings.
+[2026-06-12T13:19:25.149Z] startBackend() finished.
+[2026-06-12T13:19:25.150Z] createWindow: shouldHide=true
+[2026-06-12T13:19:25.178Z] createWindow() finished.
+[2026-06-12T13:19:25.197Z] createTray() finished.

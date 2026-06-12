@@ -46,16 +46,16 @@ export default function MessageItem({ message }: MessageItemProps) {
     <div
       className={`flex gap-4 p-5 rounded-2xl border transition-all duration-300 ${
         isUser
-          ? 'bg-darkAccent/10 border-slate-800/10'
-          : 'bg-darkSurface/40 border-slate-800/20 glass-panel-light'
+          ? 'bg-panel-hover/10 border-border-primary/10'
+          : 'bg-panel-bg/40 border-border-primary/20 glass-panel-light'
       }`}
     >
       {/* Avatar block */}
       <div
-        className={`w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md ${
+        className={`w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 shadow-glow ${
           isUser
-            ? 'bg-brandPurple/20 border border-brandPurple/30 text-brandPurple'
-            : 'bg-brandBlue/10 border border-brandBlue/30 text-brandBlue animate-pulse'
+            ? 'bg-gold-primary/10 border border-gold-primary/30 text-gold-primary'
+            : 'bg-gold-bright/10 border border-gold-bright/30 text-gold-bright animate-pulse'
         }`}
       >
         {isUser ? <User className="w-5 h-5" /> : <Cpu className="w-5 h-5" />}
@@ -64,19 +64,19 @@ export default function MessageItem({ message }: MessageItemProps) {
       {/* Main message text & structure */}
       <div className="flex-1 min-w-0 space-y-2.5">
         <div className="flex items-center justify-between">
-          <span className="text-xs font-bold tracking-wider uppercase text-slate-500">
+          <span className="text-xs font-bold tracking-wider uppercase text-text-secondary">
             {isUser ? 'Core Command' : 'Lyra Engine'}
           </span>
           <div className="flex items-center gap-2">
 
-            <span className="text-[10px] font-semibold text-slate-600 font-mono select-none">
+            <span className="text-[10px] font-semibold text-text-secondary font-mono select-none">
               {formatTime(message.timestamp)}
             </span>
           </div>
         </div>
 
         {/* Markdown parser content */}
-        <div className="text-slate-200 text-sm leading-relaxed font-sans select-text select-all-inside break-words prose prose-invert max-w-none">
+        <div className="text-text-primary text-sm leading-relaxed font-sans select-text select-all-inside break-words prose prose-invert max-w-none">
           <ReactMarkdown
             children={message.content}
             components={{
@@ -88,7 +88,7 @@ export default function MessageItem({ message }: MessageItemProps) {
                 
                 if (inline) {
                   return (
-                    <code className="bg-darkBg/90 text-brandBlue border border-slate-800/60 rounded px-1.5 py-0.5 text-xs font-mono font-medium break-words whitespace-pre-wrap">
+                    <code className="bg-darkBg/90 text-gold-primary border border-gold-primary/30 rounded px-1.5 py-0.5 text-xs font-mono font-medium break-words whitespace-pre-wrap shadow-glow">
                       {children}
                     </code>
                   );
@@ -98,13 +98,13 @@ export default function MessageItem({ message }: MessageItemProps) {
                 const { ref, ...cleanProps } = props;
 
                 return (
-                  <div className="relative group my-4 rounded-xl overflow-hidden border border-slate-850 shadow-premium">
+                  <div className="relative group my-4 rounded-xl overflow-hidden border border-border-primary shadow-premium">
                     {/* Header bar of code block */}
-                    <div className="flex items-center justify-between px-4 py-2 bg-darkBg border-b border-slate-800/30 text-[10px] text-slate-500 font-mono font-semibold select-none">
+                    <div className="flex items-center justify-between px-4 py-2 bg-darkBg border-b border-border-primary/30 text-[10px] text-text-secondary font-mono font-semibold select-none">
                       <span>{lang.toUpperCase()}</span>
                       <button
                         onClick={() => handleCopyCode(codeString, blockId)}
-                        className="flex items-center gap-1.5 hover:text-slate-200 transition-colors"
+                        className="flex items-center gap-1.5 hover:text-text-primary transition-colors"
                       >
                         {copiedCodeId === blockId ? (
                           <>
@@ -145,27 +145,27 @@ export default function MessageItem({ message }: MessageItemProps) {
 
         {/* Statistics metadata ribbon */}
         {!isUser && (promptTokens || completionTokens) && (
-          <div className="flex flex-wrap gap-x-4 gap-y-2 mt-4 pt-3.5 border-t border-slate-800/30 text-[10px] text-slate-500 font-mono select-none">
+          <div className="flex flex-wrap gap-x-4 gap-y-2 mt-4 pt-3.5 border-t border-border-primary/30 text-[10px] text-text-secondary font-mono select-none">
             {message.model_used && (
               <span className="flex items-center gap-1">
-                <Cpu className="w-3 h-3 text-slate-600" />
+                <Cpu className="w-3 h-3 text-text-secondary" />
                 <span>{message.model_used}</span>
               </span>
             )}
             {durationSec > 0 && (
               <span className="flex items-center gap-1">
-                <Clock className="w-3 h-3 text-slate-600" />
+                <Clock className="w-3 h-3 text-text-secondary" />
                 <span>{durationSec.toFixed(2)}s generation</span>
               </span>
             )}
             {speedTps > 0 && (
               <span className="flex items-center gap-1">
-                <Zap className="w-3 h-3 text-brandBlue/70 animate-pulse" />
-                <span className="font-semibold text-brandBlue">{speedTps.toFixed(1)} tok/s</span>
+                <Zap className="w-3 h-3 text-gold-bright/70 animate-pulse" />
+                <span className="font-semibold text-gold-bright">{speedTps.toFixed(1)} tok/s</span>
               </span>
             )}
             {completionTokens && (
-              <span className="text-slate-600">
+              <span className="text-text-secondary">
                 ({promptTokens} in / {completionTokens} out)
               </span>
             )}

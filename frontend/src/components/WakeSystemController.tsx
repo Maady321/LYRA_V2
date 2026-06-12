@@ -130,8 +130,8 @@ export default function WakeSystemController() {
       const textarea = document.querySelector('textarea');
       if (textarea) {
         textarea.focus();
-        textarea.classList.add('border-brandBlue');
-        setTimeout(() => textarea.classList.remove('border-brandBlue'), 1500);
+        textarea.classList.add('border-gold-primary');
+        setTimeout(() => textarea.classList.remove('border-gold-primary'), 1500);
       }
       
       // Auto-trigger voice button microphone if available
@@ -271,32 +271,32 @@ export default function WakeSystemController() {
             exit={{ opacity: 0, y: -40, scale: 0.95 }}
             className="fixed top-20 left-1/2 transform -translate-x-1/2 z-[100] w-full max-w-sm px-4 pointer-events-none select-none font-sans"
           >
-            <div className="bg-[#0b0f19]/90 backdrop-blur-md border border-brandBlue/20 rounded-2xl p-4 shadow-[0_0_25px_rgba(6,182,212,0.1)] flex flex-col items-center gap-2">
+            <div className="bg-[#0b0f19]/90 backdrop-blur-md border border-gold-primary/20 rounded-2xl p-4 shadow-[0_0_25px_rgba(255,215,0,0.1)] flex flex-col items-center gap-2">
               <div className="flex items-center gap-3 w-full">
-                <div className="p-2 bg-brandBlue/10 border border-brandBlue/20 rounded-xl text-brandBlue animate-pulse flex items-center justify-center">
+                <div className="p-2 bg-gold-primary/10 border border-gold-primary/20 rounded-xl text-gold-primary animate-pulse flex items-center justify-center">
                   <Mic className="w-4 h-4" />
                 </div>
                 
                 <div className="flex-1 text-left">
-                  <span className="text-[11px] font-bold text-slate-100 flex items-center gap-1.5 leading-none">
-                    <Sparkles className="w-3 h-3 text-brandBlue animate-spin-slow" />
+                  <span className="text-[11px] font-bold text-text-primary flex items-center gap-1.5 leading-none">
+                    <Sparkles className="w-3 h-3 text-gold-primary animate-spin-slow" />
                     Voice Wake Active
                   </span>
-                  <p className="text-[9px] text-slate-500 mt-1 leading-tight">
-                    Say <b className="text-brandBlue font-semibold">"Hai Lyra"</b> to wake up
+                  <p className="text-[9px] text-text-secondary mt-1 leading-tight">
+                    Say <b className="text-gold-primary font-semibold">"Hai Lyra"</b> to wake up
                   </p>
                 </div>
                 
                 {/* Visual pulse status */}
                 <div className="relative flex h-2 w-2 items-center justify-center">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brandBlue opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-brandBlue"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold-primary opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-gold-primary"></span>
                 </div>
               </div>
 
               {/* Interim transcription feedback */}
-              <div className="w-full bg-[#05070d] border border-slate-900 rounded-lg py-1 px-3 min-h-[22px] flex items-center justify-center">
-                <span className="text-[9px] font-mono text-slate-500 italic text-center truncate max-w-xs">
+              <div className="w-full bg-[#05070d] border border-border-primary rounded-lg py-1 px-3 min-h-[22px] flex items-center justify-center">
+                <span className="text-[9px] font-mono text-text-secondary italic text-center truncate max-w-xs">
                   {speechTranscript ? `"${speechTranscript}"` : "Listening..."}
                 </span>
               </div>
@@ -319,19 +319,19 @@ export default function WakeSystemController() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
               transition={{ type: 'spring', damping: 15 }}
-              className="p-5 bg-brandBlue/5 border border-brandBlue/20 rounded-full flex items-center justify-center text-brandBlue shadow-[0_0_60px_rgba(6,182,212,0.15)]"
+              className="p-5 bg-gold-primary/5 border border-gold-primary/20 rounded-full flex items-center justify-center text-gold-primary shadow-[0_0_60px_rgba(255,215,0,0.15)]"
             >
-              <Sparkles className="w-12 h-12 animate-spin-slow text-brandBlue" />
+              <Sparkles className="w-12 h-12 animate-spin-slow text-gold-primary" />
             </motion.div>
             
             <motion.h2
               initial={{ y: 15, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              className="text-lg font-extrabold text-slate-100 uppercase tracking-widest text-center"
+              className="text-lg font-extrabold text-text-primary uppercase tracking-widest text-center"
             >
               Lyra Waking Up
             </motion.h2>
-            <p className="text-[10px] text-slate-500 -mt-2">Connecting voice environment...</p>
+            <p className="text-[10px] text-text-secondary -mt-2">Connecting voice environment...</p>
           </motion.div>
         )}
       </AnimatePresence>

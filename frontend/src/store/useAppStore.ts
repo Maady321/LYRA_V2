@@ -26,7 +26,7 @@ interface AppState {
   sidebarOpen: boolean;
   settingsOpen: boolean;
   
-  currentView: 'chat' | 'gallery' | 'agents' | 'voice' | 'security';
+  currentView: 'home' | 'chat' | 'gallery' | 'agents' | 'voice' | 'security' | 'observability' | 'workflows';
   galleryImages: GalleryImage[];
   galleryLoading: boolean;
 
@@ -35,7 +35,7 @@ interface AppState {
   agentsLoading: boolean;
 
   // Actions
-  setView: (view: 'chat' | 'gallery' | 'agents' | 'voice' | 'security') => void;
+  setView: (view: 'home' | 'chat' | 'gallery' | 'agents' | 'voice' | 'security' | 'observability' | 'workflows') => void;
   fetchGalleryImages: () => Promise<void>;
   openImageNatively: (filename: string) => Promise<void>;
   deleteGalleryImage: (filename: string) => Promise<void>;
@@ -86,7 +86,7 @@ export const useAppStore = create<AppState>((set, get) => ({
   error: null,
   sidebarOpen: true,
   settingsOpen: false,
-  currentView: 'voice',
+  currentView: 'home',
   galleryImages: [],
   galleryLoading: false,
   agentsTelemetry: null,

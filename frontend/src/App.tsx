@@ -9,13 +9,16 @@ const GalleryPage = lazy(() => import('./pages/GalleryPage'));
 const AgentsPage = lazy(() => import('./pages/AgentsPage'));
 const VoicePage = lazy(() => import('./pages/VoicePage'));
 const SecurityCenterPage = lazy(() => import('./pages/SecurityCenterPage'));
+const ObservabilityPage = lazy(() => import('./pages/ObservabilityPage'));
+const MissionPlannerPage = lazy(() => import('./pages/MissionPlannerPage'));
+const LandingPage = lazy(() => import('./pages/LandingPage'));
 
 function PageLoader() {
   return (
     <div className="flex items-center justify-center h-full">
       <div className="flex flex-col items-center gap-4">
-        <div className="w-10 h-10 border-2 border-cyan-400/30 border-t-cyan-400 rounded-full animate-spin" />
-        <span className="text-gray-400 text-sm font-medium">Loading module...</span>
+        <div className="w-10 h-10 border-2 border-gold-primary/30 border-t-gold-primary rounded-full animate-spin" />
+        <span className="text-text-secondary text-sm font-medium">Loading module...</span>
       </div>
     </div>
   );
@@ -90,6 +93,21 @@ export default function App() {
         {currentView === 'security' && (
           <Suspense fallback={<PageLoader />}>
             <SecurityCenterPage />
+          </Suspense>
+        )}
+        {currentView === 'observability' && (
+          <Suspense fallback={<PageLoader />}>
+            <ObservabilityPage />
+          </Suspense>
+        )}
+        {currentView === 'workflows' && (
+          <Suspense fallback={<PageLoader />}>
+            <MissionPlannerPage />
+          </Suspense>
+        )}
+        {currentView === 'home' && (
+          <Suspense fallback={<PageLoader />}>
+            <LandingPage />
           </Suspense>
         )}
       </ErrorBoundary>
